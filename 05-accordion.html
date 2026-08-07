@@ -1,0 +1,762 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Accordion — wireframes</title>
+<style>
+/* ============================================================
+   Frontier Economics — lo-fi wireframe kit
+   Greyscale, deliberately unbranded. Annotations in yellow.
+   ============================================================ */
+
+:root{
+  --ink:#333;
+  --ink-soft:#6b6b6b;
+  --ink-faint:#9a9a9a;
+  --line:#c4c4c4;
+  --line-strong:#8a8a8a;
+  --fill:#efefef;
+  --fill-mid:#dedede;
+  --fill-dark:#cfcfcf;
+  --bar:#565656;
+  --bar-2:#6e6e6e;
+  --paper:#fff;
+  --canvas:#f6f6f6;
+  --anno-bg:#fdf9e3;
+  --anno-line:#cbb85a;
+  --anno-ink:#6d5c14;
+  --accent:#333;
+}
+
+*{box-sizing:border-box}
+
+html{scroll-behavior:smooth}
+
+body{
+  margin:0;
+  background:var(--canvas);
+  color:var(--ink);
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+  font-size:14px;
+  line-height:1.5;
+  -webkit-font-smoothing:antialiased;
+}
+
+a{color:inherit}
+
+/* ---------- Prototype chrome (not part of the design) ---------- */
+
+.proto-nav{
+  position:sticky;top:0;z-index:60;
+  background:#2f2f2f;color:#fff;
+  border-bottom:1px solid #000;
+}
+.proto-nav__inner{
+  max-width:1240px;margin:0 auto;padding:0 20px;
+  display:flex;align-items:center;gap:18px;flex-wrap:wrap;
+  min-height:52px;
+}
+.proto-nav__brand{
+  font-size:12px;letter-spacing:.14em;text-transform:uppercase;
+  font-weight:700;padding-right:18px;border-right:1px solid #555;
+  white-space:nowrap;
+}
+.proto-nav__links{display:flex;gap:2px;flex-wrap:wrap;flex:1}
+.proto-nav a.pn{
+  color:#d6d6d6;text-decoration:none;font-size:12.5px;
+  padding:7px 11px;border-radius:2px;white-space:nowrap;
+}
+.proto-nav a.pn:hover{background:#454545;color:#fff}
+.proto-nav a.pn.is-current{background:#fff;color:#222;font-weight:600}
+.anno-toggle{
+  background:transparent;border:1px solid #6d6d6d;color:#d6d6d6;
+  font:inherit;font-size:11.5px;padding:6px 12px;border-radius:2px;cursor:pointer;
+  white-space:nowrap;
+}
+.anno-toggle:hover{border-color:#aaa;color:#fff}
+
+.wrap{max-width:1240px;margin:0 auto;padding:0 20px}
+
+.page-head{padding:38px 0 8px}
+.page-head .eyebrow{
+  font-size:11px;letter-spacing:.16em;text-transform:uppercase;
+  color:var(--ink-faint);margin:0 0 8px;
+}
+.page-head h1{font-size:30px;margin:0 0 14px;font-weight:700;letter-spacing:-.01em}
+.brief{
+  background:var(--paper);border:1px solid var(--line);
+  padding:16px 18px;max-width:900px;font-size:13.5px;
+}
+.brief p{margin:0 0 8px}
+.brief p:last-child{margin:0}
+.brief strong{font-weight:700}
+.brief .src{font-size:12px;color:var(--ink-soft)}
+.brief .src a{color:var(--ink-soft)}
+
+/* ---------- Idea blocks ---------- */
+
+.idea{padding:34px 0 10px;border-top:1px solid var(--line);margin-top:34px}
+.idea:first-of-type{border-top:0}
+.idea__head{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;margin-bottom:6px}
+.idea__num{
+  font-size:11px;letter-spacing:.14em;text-transform:uppercase;
+  background:var(--ink);color:#fff;padding:4px 9px;font-weight:700;
+}
+.idea__head h2{font-size:21px;margin:0;font-weight:700}
+.idea__ref{
+  font-size:11px;letter-spacing:.08em;text-transform:uppercase;
+  border:1px solid var(--line-strong);color:var(--ink-soft);
+  padding:3px 8px;border-radius:2px;
+}
+.idea__sub{color:var(--ink-soft);margin:0 0 18px;max-width:820px;font-size:13.5px}
+
+/* Frame that holds a wireframe */
+.frame{
+  background:var(--paper);
+  border:1px solid var(--line-strong);
+  box-shadow:0 1px 0 rgba(0,0,0,.05);
+}
+.frame__label{
+  background:var(--fill);border-bottom:1px solid var(--line);
+  padding:6px 12px;font-size:10.5px;letter-spacing:.12em;
+  text-transform:uppercase;color:var(--ink-soft);
+}
+.frame__body{padding:0}
+.pad{padding:26px 28px}
+
+/* ---------- Annotations ---------- */
+
+.anno{
+  border:1px dashed var(--anno-line);background:var(--anno-bg);
+  color:var(--anno-ink);padding:12px 14px;font-size:12.5px;
+  margin:14px 0 0;line-height:1.55;
+}
+.anno strong{color:#4f4210}
+.anno ul{margin:6px 0 0;padding-left:18px}
+.anno li{margin:3px 0}
+.mk{
+  display:inline-block;background:#f0e6a8;border:1px solid var(--anno-line);
+  color:var(--anno-ink);font-size:10px;font-weight:700;
+  padding:1px 5px;border-radius:2px;margin-right:5px;vertical-align:1px;
+}
+.mk-in{
+  display:inline-block;background:#f0e6a8;border:1px solid var(--anno-line);
+  color:var(--anno-ink);font-size:9.5px;font-weight:700;
+  padding:0 4px;border-radius:2px;
+}
+body.anno-off .anno,body.anno-off .mk-in{display:none}
+
+/* ---------- Mock site chrome inside wireframes ---------- */
+
+.site-top{background:var(--bar);color:#fff;padding:10px 20px;display:flex;align-items:center;gap:20px}
+.site-logo{background:#8e8e8e;color:#fff;font-size:10px;letter-spacing:.1em;padding:8px 12px}
+.site-top nav{margin-left:auto;display:flex;gap:16px;font-size:12px;color:#e2e2e2}
+.site-sub{background:var(--bar-2);color:#fff;display:flex;font-size:11.5px;letter-spacing:.08em;text-transform:uppercase}
+.site-sub div{flex:1;padding:10px 18px;border-right:1px solid rgba(255,255,255,.22)}
+.site-sub div:last-child{border-right:0}
+.crumb{font-size:11.5px;color:var(--ink-soft);padding:12px 28px;border-bottom:1px solid var(--fill-mid)}
+
+/* ---------- Primitives ---------- */
+
+.ph{
+  background:var(--fill);border:1px solid var(--line);
+  display:flex;align-items:center;justify-content:center;
+  color:var(--ink-faint);font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;
+  text-align:center;padding:6px;
+}
+.ph--x{
+  background-image:
+    linear-gradient(to top right,transparent 49.6%,var(--line) 49.6%,var(--line) 50.4%,transparent 50.4%),
+    linear-gradient(to bottom right,transparent 49.6%,var(--line) 49.6%,var(--line) 50.4%,transparent 50.4%);
+}
+.ph--dark{background:var(--fill-dark);border-color:var(--line-strong)}
+.avatar{border-radius:50%;background:var(--fill-mid);border:1px solid var(--line);flex:none}
+
+.tline{background:var(--fill-mid);height:9px;border-radius:1px;display:block;margin:7px 0}
+.tline.s{height:7px;background:#e6e6e6}
+
+.btn{
+  display:inline-block;border:1px solid var(--ink);background:transparent;
+  color:var(--ink);font:inherit;font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;
+  padding:8px 16px;cursor:pointer;text-decoration:none;
+}
+.btn:hover{background:var(--ink);color:#fff}
+.btn--pill{border-radius:40px}
+.btn--solid{background:var(--ink);color:#fff}
+.btn--solid:hover{background:#000}
+.btn--sm{padding:5px 11px;font-size:10.5px}
+.btn--ghost{border-color:var(--line-strong);color:var(--ink-soft)}
+
+.tag{
+  display:inline-block;font-size:10px;letter-spacing:.12em;text-transform:uppercase;
+  color:var(--ink-soft);border:1px solid var(--line);padding:3px 7px;
+}
+.tag--solid{background:var(--fill);border-color:var(--fill)}
+.eyebrow-sm{font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-soft)}
+.date{font-size:11.5px;color:var(--ink-soft)}
+
+.chip{
+  display:inline-flex;align-items:center;gap:6px;
+  border:1px solid var(--line-strong);background:var(--paper);
+  font:inherit;font-size:11.5px;padding:5px 11px;border-radius:40px;cursor:pointer;
+  color:var(--ink);
+}
+.chip:hover{border-color:var(--ink)}
+.chip.is-on{background:var(--ink);color:#fff;border-color:var(--ink)}
+
+.field{
+  border:1px solid var(--line-strong);background:var(--paper);
+  padding:10px 12px;font-size:12.5px;color:var(--ink-faint);
+  display:flex;align-items:center;justify-content:space-between;gap:10px;
+}
+.select{
+  border:1px solid var(--line-strong);background:var(--paper);
+  padding:9px 12px;font-size:12px;color:var(--ink);
+  display:flex;align-items:center;justify-content:space-between;gap:12px;cursor:pointer;
+}
+
+.grid{display:grid;gap:20px}
+.g2{grid-template-columns:repeat(2,1fr)}
+.g3{grid-template-columns:repeat(3,1fr)}
+.g4{grid-template-columns:repeat(4,1fr)}
+
+.card{border:1px solid var(--line);background:var(--paper);display:flex;flex-direction:column}
+.card__body{padding:14px 15px;display:flex;flex-direction:column;flex:1}
+.card h4{margin:6px 0 8px;font-size:15px;line-height:1.3;font-weight:700}
+.card p{margin:0 0 12px;font-size:12.5px;color:var(--ink-soft);line-height:1.5}
+.card .foot{margin-top:auto}
+
+.sec-head{display:flex;align-items:flex-end;justify-content:space-between;gap:20px;margin-bottom:18px}
+.sec-head h3{margin:0;font-size:20px;font-weight:700}
+.sec-head .rt{display:flex;align-items:center;gap:10px}
+.arrow-btn{
+  width:32px;height:32px;border-radius:50%;border:1px solid var(--line-strong);
+  background:var(--paper);cursor:pointer;font-size:13px;color:var(--ink);
+  display:inline-flex;align-items:center;justify-content:center;
+}
+.arrow-btn:hover{background:var(--fill)}
+
+.hr{height:1px;background:var(--line);margin:22px 0}
+.hr-strong{height:2px;background:var(--ink);margin:0 0 14px}
+
+.clamp2{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.clamp3{display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+
+.muted{color:var(--ink-soft)}
+.small{font-size:12px}
+.tiny{font-size:11px}
+.center{text-align:center}
+.stack{display:flex;flex-direction:column;gap:10px}
+.row{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+
+/* fold marker used on the banner page */
+.fold{
+  position:relative;border-top:2px dashed #b04a4a;margin:0;
+}
+.fold span{
+  position:absolute;right:8px;top:-9px;background:#fff;color:#b04a4a;
+  font-size:10px;letter-spacing:.1em;text-transform:uppercase;padding:0 6px;
+}
+
+/* people card */
+.person{display:flex;flex-direction:column}
+.person .ph{aspect-ratio:1/1}
+.person h5{margin:10px 0 2px;font-size:14px;font-weight:700}
+.person .role{font-size:12px;color:var(--ink-soft)}
+
+.tabs{display:flex;gap:0;border-bottom:1px solid var(--line);margin-bottom:20px;flex-wrap:wrap}
+.tab{
+  background:transparent;border:0;border-bottom:3px solid transparent;
+  font:inherit;font-size:13px;padding:10px 16px;cursor:pointer;color:var(--ink-soft);
+}
+.tab:hover{color:var(--ink)}
+.tab.is-on{color:var(--ink);font-weight:700;border-bottom-color:var(--ink)}
+.tabpane{display:none}
+.tabpane.is-on{display:block}
+
+/* accordion */
+.acc-item{border-bottom:1px solid var(--line)}
+.acc-btn{
+  width:100%;background:transparent;border:0;font:inherit;text-align:left;
+  padding:18px 0;display:flex;align-items:center;justify-content:space-between;
+  gap:20px;cursor:pointer;color:var(--ink);
+}
+.acc-btn h4{margin:0;font-size:17px;font-weight:700}
+.acc-sign{font-size:18px;color:var(--ink-soft);flex:none;transition:transform .18s}
+.acc-item.is-open .acc-sign{transform:rotate(45deg)}
+.acc-panel{display:none;padding:0 0 20px}
+.acc-item.is-open .acc-panel{display:block}
+.acc-panel p{margin:0 0 12px;font-size:13px;color:var(--ink-soft);max-width:70ch}
+
+.check{display:flex;align-items:center;gap:9px;font-size:12.5px;padding:5px 0;cursor:pointer;color:var(--ink)}
+.check .box{width:13px;height:13px;border:1px solid var(--line-strong);flex:none;background:#fff}
+.check.is-on .box{background:var(--ink);border-color:var(--ink)}
+
+.filter-group{border:1px solid var(--line);background:var(--paper);padding:12px 14px;margin-bottom:12px}
+.filter-group h6{margin:0 0 8px;font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink)}
+
+.footer-note{
+  margin:56px 0 0;border-top:1px solid var(--line);
+  padding:22px 0 60px;color:var(--ink-soft);font-size:12.5px;
+}
+.footer-note a{color:var(--ink-soft)}
+
+.acc-btn > span{display:block;flex:1}
+
+@media (max-width:900px){
+  .g3,.g4{grid-template-columns:repeat(2,1fr)}
+  .dir-split,.pro-split,.vsplit,.bnr-split,.lead,.profile-head{grid-template-columns:1fr !important}
+  .pro-rail{position:static !important}
+  .track > *{flex:0 0 calc((100% - 20px)/2) !important}
+}
+@media (max-width:620px){
+  .g2,.g3,.g4{grid-template-columns:1fr}
+}
+
+</style>
+</head>
+<body>
+
+<header class="proto-nav">
+  <div class="proto-nav__inner">
+    <span class="proto-nav__brand">Frontier &mdash; wireframes</span>
+    <nav class="proto-nav__links">
+        <a class="pn" href="index.html">Overview</a>
+        <a class="pn" href="01-featured-items.html">Featured items</a>
+        <a class="pn" href="02-banner.html">Banner</a>
+        <a class="pn" href="03-people-directory.html">People directory</a>
+        <a class="pn" href="04-people-profile.html">People profile</a>
+        <a class="pn is-current" href="05-accordion.html">Accordion</a>
+        <a class="pn" href="06-image-and-text.html">Image and text</a>
+    </nav>
+    <button class="anno-toggle" type="button">Hide notes</button>
+  </div>
+</header>
+
+<main class="wrap">
+<style>
+  .vsplit{display:grid;grid-template-columns:300px 1fr;gap:0;border:1px solid var(--line)}
+  .vlist{border-right:1px solid var(--line);background:var(--fill)}
+  .vlist button{
+    display:block;width:100%;text-align:left;background:transparent;border:0;
+    border-bottom:1px solid var(--line);font:inherit;font-size:14.5px;font-weight:600;
+    padding:16px 18px;cursor:pointer;color:var(--ink-soft);
+  }
+  .vlist button:last-child{border-bottom:0}
+  .vlist button:hover{color:var(--ink);background:#ececec}
+  .vlist button.is-on{background:var(--paper);color:var(--ink);box-shadow:inset 3px 0 0 var(--ink)}
+  .vpane{display:none;padding:26px 28px}
+  .vpane.is-on{display:block}
+  .vpane p{margin:0 0 12px;max-width:66ch;color:var(--ink-soft);font-size:13.5px}
+  .acc-card{border:1px solid var(--line);margin-bottom:12px;background:var(--paper)}
+  .acc-card .acc-btn{padding:18px 20px}
+  .acc-card .acc-panel{padding:0 20px 20px}
+  .acc-card.is-open{border-color:var(--ink-soft)}
+  .teaser{font-size:12.5px;color:var(--ink-faint);margin:4px 0 0;max-width:70ch}
+  .acc-item.is-open .teaser{display:none}
+  .statbox{border-left:3px solid var(--ink);padding:4px 0 4px 14px}
+  .statbox strong{font-size:24px;display:block;line-height:1.1}
+</style>
+
+<div class="page-head">
+  <p class="eyebrow">Feature 05</p>
+  <h1>Accordion</h1>
+  <div class="brief">
+    <p><strong>The ask:</strong> a refresh.</p>
+    <p class="src">Currently on <a href="https://www.frontier-economics.com/uk/en/about/who-we-are/" target="_blank" rel="noopener">Who we are</a>. The existing pattern works, but the closed rows give no clue what is inside them, the hairline rules and doubled borders make the spacing look uneven, and an opened panel indents its text away from the heading it belongs to.</p>
+  </div>
+</div>
+
+<!-- ================= IDEA 1 ================= -->
+<section class="idea">
+  <div class="idea__head">
+    <span class="idea__num">Idea 1</span>
+    <h2>Same pattern, properly tuned</h2>
+  </div>
+  <p class="idea__sub">The lowest-risk option: keep the full-width list, but add a teaser line to every closed row, align the panel text with its heading, and give the whole thing a consistent vertical rhythm.</p>
+
+  <div class="frame">
+    <div class="frame__label">Who we are — accordion</div>
+    <div class="frame__body pad">
+      <div class="row" style="justify-content:space-between;align-items:flex-end;margin-bottom:6px">
+        <h3 style="margin:0;font-size:20px">More about Frontier</h3>
+        <button class="btn btn--sm btn--ghost" data-acc-all="#acc1" data-state="closed">Expand all <span class="mk-in">1</span></button>
+      </div>
+      <div class="hr-strong" style="margin-bottom:0"></div>
+
+      <div id="acc1" data-acc-group="multi">
+        <div class="acc-item is-open">
+          <button class="acc-btn" data-acc>
+            <span>
+              <h4>Our past, present and future</h4>
+              <p class="teaser">Founded in 1999, owned entirely by our staff — and why that still shapes the work.</p>
+            </span>
+            <span class="acc-sign">+</span>
+          </button>
+          <div class="acc-panel">
+            <p>Frontier Economics was founded by a team of economists with imagination. We wanted to create a sustainable business, working on the most interesting problems for the most interesting clients.</p>
+            <p>The bedrock of our business is that we are owned entirely by our staff. This means everyone is driven to deliver the highest quality work, with an independent mind, for clients we really care about.</p>
+            <p>People like what we do, and our business has grown. The problems we solve change constantly, but our values do not. Our clients come back again and again, and many of our founders still work within the business. <span class="mk-in">2</span></p>
+          </div>
+        </div>
+
+        <div class="acc-item">
+          <button class="acc-btn" data-acc>
+            <span>
+              <h4>Valuing diversity and inclusion</h4>
+              <p class="teaser">A diverse workforce across nine offices, and what we do to make it an inclusive one.</p>
+            </span>
+            <span class="acc-sign">+</span>
+          </button>
+          <div class="acc-panel">
+            <p>We are a firm with a diverse workforce spread across different countries, encompassing many cultures and outlooks. We want to reflect and embrace the power of diversity and cultural difference in everything we do for our clients and through our internal work.</p>
+            <p>We are an inclusive workplace where people are free to be who they want to be and able to bring their true selves into the workplace. We will be bold, visible and proactive to make sure that Frontier is and continues to be a workplace that embraces diversity.</p>
+            <p><a href="#">Read more about our D&amp;I initiatives &rarr;</a></p>
+          </div>
+        </div>
+
+        <div class="acc-item">
+          <button class="acc-btn" data-acc>
+            <span>
+              <h4>A shared work ethic</h4>
+              <p class="teaser">Nine offices, decades of client relationships, and one way of working.</p>
+            </span>
+            <span class="acc-sign">+</span>
+          </button>
+          <div class="acc-panel">
+            <p>We work with clients all over the world from our offices in Amsterdam, Berlin, Brussels, Cologne, Dublin, Madrid, London, Paris and Prague.</p>
+            <p>We’ve grown through recessions, booms and busts and count some of the most admired organisations in the world among our long-standing clients.</p>
+            <p>We believe in strong client relationships, have a passion for understanding the truth and employ people who want to make a difference.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="anno">
+    <ul style="margin-top:0">
+      <li><span class="mk">1</span><strong>Expand all.</strong> Useful when someone wants to read or print the whole section, and it helps search engines and screen readers reach content that is otherwise hidden.</li>
+      <li><span class="mk">2</span><strong>Panel text aligns with its heading.</strong> The current indent breaks the connection between a title and its content, which is part of why the section feels loose.</li>
+      <li>A one-line teaser under each closed row means the visitor can decide what to open without guessing. Multiple rows can be open at once — the current behaviour.</li>
+      <li>Rules are single and consistent: one line between items, a heavier rule above the group. Vertical padding is one value throughout.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ================= IDEA 2 ================= -->
+<section class="idea">
+  <div class="idea__head">
+    <span class="idea__num">Idea 2</span>
+    <h2>Index left, content right</h2>
+  </div>
+  <p class="idea__sub">All the section titles stay visible while you read, so it works more like a set of chapters than a stack of drawers. The page does not jump as panels open and close, which is the main irritation with long accordions.</p>
+
+  <div class="frame">
+    <div class="frame__label">Who we are — sectioned content</div>
+    <div class="frame__body pad">
+      <h3 style="margin:0 0 16px;font-size:20px">More about Frontier</h3>
+      <div class="vsplit" data-vtab-group>
+        <div class="vlist">
+          <button data-vtab="a" class="is-on">Our past, present and future</button>
+          <button data-vtab="b">Valuing diversity and inclusion</button>
+          <button data-vtab="c">A shared work ethic</button>
+          <button data-vtab="d">What defines Frontier <span class="mk-in">3</span></button>
+        </div>
+        <div>
+          <div class="vpane is-on" data-vpane="a">
+            <p>Frontier Economics was founded by a team of economists with imagination. We wanted to create a sustainable business, working on the most interesting problems for the most interesting clients.</p>
+            <p>The bedrock of our business is that we are owned entirely by our staff. This means everyone is driven to deliver the highest quality work, with an independent mind, for clients we really care about.</p>
+            <p>People like what we do, and our business has grown. The problems we solve change constantly, but our values do not.</p>
+          </div>
+          <div class="vpane" data-vpane="b">
+            <p>We are a firm with a diverse workforce spread across different countries, encompassing many cultures and outlooks. We want to reflect and embrace the power of diversity and cultural difference in everything we do for our clients and through our internal work.</p>
+            <p>We are an inclusive workplace where people are free to be who they want to be and able to bring their true selves into the workplace. We will be bold, visible and proactive to make sure that Frontier is and continues to be a workplace that embraces diversity.</p>
+            <p><a href="#">Read more about our D&amp;I initiatives &rarr;</a></p>
+          </div>
+          <div class="vpane" data-vpane="c">
+            <p>We work with clients all over the world from our offices in Amsterdam, Berlin, Brussels, Cologne, Dublin, Madrid, London, Paris and Prague.</p>
+            <p>We’ve grown through recessions, booms and busts and count some of the most admired organisations in the world among our long-standing clients.</p>
+            <p>We believe in strong client relationships, have a passion for understanding the truth and employ people who want to make a difference.</p>
+          </div>
+          <div class="vpane" data-vpane="d">
+            <p><strong>Uncompromising thinking</strong> — we deliver exceptional work with integrity and objectivity.</p>
+            <p><strong>Looking beyond the obvious</strong> — we think more widely than the immediate question, and deliver more than expected.</p>
+            <p><strong>A refreshing experience</strong> — we’re smart and friendly people who communicate complex ideas with clarity.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="anno">
+    <ul style="margin-top:0">
+      <li><span class="mk">3</span><strong>Scales past three items.</strong> The current section has three; this pattern stays readable at six or eight, so it can absorb content that sits loose elsewhere on the page.</li>
+      <li>On mobile this collapses back to a standard accordion — same content, same order, no separate build.</li>
+      <li><strong>Trade-off:</strong> only one section is visible at a time, and it is harder to scan the full text in one pass. If Frontier wants everything readable in a single scroll, Idea 1 is the safer choice.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ================= IDEA 3 ================= -->
+<section class="idea">
+  <div class="idea__head">
+    <span class="idea__num">Idea 3</span>
+    <h2>Cards that can carry more than text</h2>
+  </div>
+  <p class="idea__sub">Each row becomes a bordered card with optional extras — a figure, an image, a link out. This turns the accordion from a place to hide long copy into a genuine content module, and it can absorb the “In numbers” content that currently sits separately on the page.</p>
+
+  <div class="frame">
+    <div class="frame__label">Who we are — accordion cards</div>
+    <div class="frame__body pad">
+      <div class="row" style="justify-content:space-between;align-items:flex-end;margin-bottom:16px">
+        <h3 style="margin:0;font-size:20px">More about Frontier</h3>
+        <button class="btn btn--sm btn--ghost" data-acc-all="#acc3" data-state="closed">Expand all</button>
+      </div>
+
+      <div id="acc3" data-acc-group="single">
+        <div class="acc-item acc-card is-open">
+          <button class="acc-btn" data-acc>
+            <span>
+              <span class="eyebrow-sm">Our story <span class="mk-in">4</span></span>
+              <h4 style="margin-top:4px">Our past, present and future</h4>
+            </span>
+            <span class="acc-sign">+</span>
+          </button>
+          <div class="acc-panel">
+            <div class="grid g2" style="gap:26px">
+              <div>
+                <p>Frontier Economics was founded by a team of economists with imagination. We wanted to create a sustainable business, working on the most interesting problems for the most interesting clients.</p>
+                <p>The bedrock of our business is that we are owned entirely by our staff. This means everyone is driven to deliver the highest quality work, with an independent mind, for clients we really care about.</p>
+                <a class="btn btn--sm" href="#">How we created Frontier</a>
+              </div>
+              <div class="stack" style="gap:18px">
+                <div class="statbox"><strong>1999</strong><span class="tiny muted">Founded in London</span></div>
+                <div class="statbox"><strong>100%</strong><span class="tiny muted">Owned by our staff</span></div>
+                <div class="statbox"><strong>423</strong><span class="tiny muted">People across nine offices</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="acc-item acc-card">
+          <button class="acc-btn" data-acc>
+            <span>
+              <span class="eyebrow-sm">Our people</span>
+              <h4 style="margin-top:4px">Valuing diversity and inclusion</h4>
+            </span>
+            <span class="acc-sign">+</span>
+          </button>
+          <div class="acc-panel">
+            <div class="grid g2" style="gap:26px">
+              <div>
+                <p>We are a firm with a diverse workforce spread across different countries, encompassing many cultures and outlooks. We want to reflect and embrace the power of diversity and cultural difference in everything we do for our clients and through our internal work.</p>
+                <p>We are an inclusive workplace where people are free to be who they want to be and able to bring their true selves into the workplace.</p>
+                <a class="btn btn--sm" href="#">Our D&amp;I initiatives</a>
+              </div>
+              <div class="ph ph--x" style="aspect-ratio:4/3">Optional image <span class="mk-in">5</span></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="acc-item acc-card">
+          <button class="acc-btn" data-acc>
+            <span>
+              <span class="eyebrow-sm">How we work</span>
+              <h4 style="margin-top:4px">A shared work ethic</h4>
+            </span>
+            <span class="acc-sign">+</span>
+          </button>
+          <div class="acc-panel">
+            <div class="grid g2" style="gap:26px">
+              <div>
+                <p>We work with clients all over the world from our offices in Amsterdam, Berlin, Brussels, Cologne, Dublin, Madrid, London, Paris and Prague.</p>
+                <p>We’ve grown through recessions, booms and busts and count some of the most admired organisations in the world among our long-standing clients.</p>
+              </div>
+              <div class="stack" style="gap:18px">
+                <div class="statbox"><strong>62</strong><span class="tiny muted">Countries we’ve worked in</span></div>
+                <div class="statbox"><strong>32</strong><span class="tiny muted">Languages spoken between us</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="anno">
+    <ul style="margin-top:0">
+      <li><span class="mk">4</span><strong>An eyebrow label above each title</strong> groups the items and gives editors a place to say what kind of content this is.</li>
+      <li><span class="mk">5</span><strong>Optional second column.</strong> Each panel can hold text alone, text plus figures, or text plus an image — all from the same component, so editors are not choosing between three different modules.</li>
+      <li>This example opens one card at a time, which keeps the page short. That is a setting, not a fixed behaviour — compare with Idea 1 above, where several can be open together.</li>
+      <li>Each card can take a permanent anchor link, so a specific section can be linked to directly from elsewhere on the site and opens already expanded.</li>
+    </ul>
+  </div>
+</section>
+
+
+  <div class="footer-note">
+    Lo-fi wireframes for discussion. Greyscale and unstyled on purpose &mdash; layout, hierarchy and behaviour only.
+    Content taken from <a href="https://www.frontier-economics.com/uk/en/home/" target="_blank" rel="noopener">frontier-economics.com</a>.
+    <br>Use the tabs above to move between features.
+  </div>
+</main>
+
+<script>
+/* Lo-fi wireframe interactions — deliberately minimal */
+(function () {
+  document.addEventListener('click', function (e) {
+    var t = e.target;
+
+    /* annotation visibility */
+    var at = t.closest('.anno-toggle');
+    if (at) {
+      document.body.classList.toggle('anno-off');
+      at.textContent = document.body.classList.contains('anno-off')
+        ? 'Show notes' : 'Hide notes';
+      return;
+    }
+
+    /* accordion */
+    var accBtn = t.closest('[data-acc]');
+    if (accBtn) {
+      var item = accBtn.closest('.acc-item');
+      var group = accBtn.closest('[data-acc-group]');
+      if (group && group.dataset.accGroup === 'single' && !item.classList.contains('is-open')) {
+        group.querySelectorAll('.acc-item.is-open').forEach(function (o) { o.classList.remove('is-open'); });
+      }
+      item.classList.toggle('is-open');
+      return;
+    }
+
+    /* expand / collapse all */
+    var all = t.closest('[data-acc-all]');
+    if (all) {
+      var scope = document.querySelector(all.dataset.accAll);
+      var open = all.dataset.state !== 'open';
+      scope.querySelectorAll('.acc-item').forEach(function (i) {
+        i.classList.toggle('is-open', open);
+      });
+      all.dataset.state = open ? 'open' : 'closed';
+      all.textContent = open ? 'Collapse all' : 'Expand all';
+      return;
+    }
+
+    /* vertical tab-style accordion (list left, panel right) */
+    var vt = t.closest('[data-vtab]');
+    if (vt) {
+      var vgroup = vt.closest('[data-vtab-group]');
+      vgroup.querySelectorAll('[data-vtab]').forEach(function (b) { b.classList.remove('is-on'); });
+      vt.classList.add('is-on');
+      vgroup.querySelectorAll('[data-vpane]').forEach(function (p) {
+        p.classList.toggle('is-on', p.dataset.vpane === vt.dataset.vtab);
+      });
+      return;
+    }
+
+    /* tabs */
+    var tab = t.closest('[data-tab]');
+    if (tab) {
+      var tgroup = tab.closest('[data-tab-group]');
+      tgroup.querySelectorAll('[data-tab]').forEach(function (b) { b.classList.remove('is-on'); });
+      tab.classList.add('is-on');
+      tgroup.querySelectorAll('[data-pane]').forEach(function (p) {
+        p.classList.toggle('is-on', p.dataset.pane === tab.dataset.tab);
+      });
+      return;
+    }
+
+    /* filter chips — single-select within a group */
+    var chip = t.closest('.chip[data-filter]');
+    if (chip) {
+      var cgroup = chip.closest('[data-filter-group]');
+      cgroup.querySelectorAll('.chip[data-filter]').forEach(function (c) { c.classList.remove('is-on'); });
+      chip.classList.add('is-on');
+      var scopeSel = cgroup.dataset.filterGroup;
+      var target = scopeSel ? document.querySelector(scopeSel) : null;
+      if (target) {
+        var want = chip.dataset.filter;
+        target.querySelectorAll('[data-cat]').forEach(function (card) {
+          var show = want === 'all' || card.dataset.cat.split(' ').indexOf(want) > -1;
+          card.style.display = show ? '' : 'none';
+        });
+        var count = target.querySelectorAll('[data-cat]:not([style*="none"])').length;
+        var out = cgroup.querySelector('[data-count]');
+        if (out) out.textContent = count;
+      }
+      return;
+    }
+
+    /* multi-select checkbox filters */
+    var chk = t.closest('.check');
+    if (chk) {
+      chk.classList.toggle('is-on');
+      var panel = chk.closest('[data-checks]');
+      if (panel) {
+        var bar = document.querySelector(panel.dataset.checks);
+        if (bar) {
+          var on = [].map.call(panel.querySelectorAll('.check.is-on'), function (c) {
+            return c.dataset.label || c.textContent.trim();
+          });
+          bar.innerHTML = on.length
+            ? on.map(function (l) { return '<span class="chip is-on">' + l + ' &times;</span>'; }).join('')
+            : '<span class="tiny muted">No filters applied</span>';
+          var res = document.querySelector('[data-result-count]');
+          if (res) res.textContent = on.length ? Math.max(6, 423 - on.length * 97) : 423;
+        }
+      }
+      return;
+    }
+
+    /* clear filters */
+    var clr = t.closest('[data-clear]');
+    if (clr) {
+      var cp = document.querySelector(clr.dataset.clear);
+      cp.querySelectorAll('.check.is-on').forEach(function (c) { c.classList.remove('is-on'); });
+      var bar2 = document.querySelector(cp.dataset.checks);
+      if (bar2) bar2.innerHTML = '<span class="tiny muted">No filters applied</span>';
+      var res2 = document.querySelector('[data-result-count]');
+      if (res2) res2.textContent = 423;
+      return;
+    }
+
+    /* carousel */
+    var nav = t.closest('[data-slide]');
+    if (nav) {
+      var car = nav.closest('[data-carousel]');
+      var track = car.querySelector('[data-track]');
+      var step = track.firstElementChild.getBoundingClientRect().width + 20;
+      var max = track.scrollWidth - track.clientWidth;
+      var next = track.scrollLeft + (nav.dataset.slide === 'next' ? step : -step);
+      track.scrollTo({ left: Math.max(0, Math.min(next, max)), behavior: 'smooth' });
+      return;
+    }
+
+    /* generic two-state switch (e.g. auto vs manual curation) */
+    var sw = t.closest('[data-switch]');
+    if (sw) {
+      var sgroup = sw.closest('[data-switch-group]');
+      sgroup.querySelectorAll('[data-switch]').forEach(function (b) { b.classList.remove('is-on'); });
+      sw.classList.add('is-on');
+      sgroup.querySelectorAll('[data-switch-pane]').forEach(function (p) {
+        p.classList.toggle('is-on', p.dataset.switchPane === sw.dataset.switch);
+      });
+      return;
+    }
+
+    /* view toggle: grid vs list */
+    var vw = t.closest('[data-view]');
+    if (vw) {
+      var vgrp = vw.closest('[data-view-group]');
+      vgrp.querySelectorAll('[data-view]').forEach(function (b) { b.classList.remove('is-on'); });
+      vw.classList.add('is-on');
+      var vtarget = document.querySelector(vgrp.dataset.viewGroup);
+      vtarget.classList.toggle('is-list', vw.dataset.view === 'list');
+      return;
+    }
+  });
+})();
+
+</script>
+</body>
+</html>
