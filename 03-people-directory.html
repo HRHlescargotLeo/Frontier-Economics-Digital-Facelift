@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>People directory — wireframes</title>
+<title>People directory — final</title>
 <style>
 /* ============================================================
    Frontier Economics — lo-fi wireframe kit
@@ -320,7 +320,7 @@ body.anno-off .anno,body.anno-off .mk-in{display:none}
 
 <header class="proto-nav">
   <div class="proto-nav__inner">
-    <span class="proto-nav__brand">Frontier &mdash; wireframes</span>
+    <span class="proto-nav__brand">Frontier &mdash; final direction</span>
     <nav class="proto-nav__links">
         <a class="pn" href="index.html">Overview</a>
         <a class="pn" href="01-featured-items.html">Featured items</a>
@@ -337,66 +337,73 @@ body.anno-off .anno,body.anno-off .mk-in{display:none}
 <main class="wrap">
 <style>
   .dir-split{display:grid;grid-template-columns:230px 1fr;gap:28px}
-  .az{display:flex;flex-wrap:wrap;gap:2px}
-  .az a{
-    display:inline-block;min-width:22px;text-align:center;padding:4px 5px;
-    font-size:12px;text-decoration:none;color:var(--ink-soft);border:1px solid transparent;
+  .searchwrap{position:relative;max-width:660px;z-index:20}
+  .bigsearch{display:flex;border:2px solid var(--ink);background:#fff}
+  .bigsearch .f{
+    flex:1;padding:14px 16px;font-size:14px;font-family:inherit;color:var(--ink);
+    border:0;outline:0;background:transparent;min-width:0;
   }
-  .az a:hover{border-color:var(--line);color:var(--ink)}
-  .az a.is-on{background:var(--ink);color:#fff}
-  .az a.is-off{color:#cfcfcf;pointer-events:none}
-  .people-grid.is-list{display:block}
-  .people-grid.is-list .person{
-    display:grid;grid-template-columns:56px 1fr 200px 140px;gap:16px;align-items:center;
-    border-bottom:1px solid var(--line);padding:10px 0;
+  .bigsearch .f::placeholder{color:var(--ink-faint)}
+  .bigsearch .f:focus{background:#fbfbfb}
+  .suggest{
+    position:absolute;left:0;right:0;top:100%;
+    border:1px solid var(--ink);border-top:0;background:#fff;
+    box-shadow:0 6px 14px rgba(0,0,0,.10);max-height:330px;overflow:auto;
   }
-  .people-grid.is-list .person .ph{aspect-ratio:1/1;height:48px;width:48px}
-  .people-grid.is-list .person h5{margin:0}
-  .people-grid.is-list .person .blurb{display:none}
-  .sector-tile{
-    border:1px solid var(--line);padding:16px 16px 14px;background:var(--paper);
-    display:flex;flex-direction:column;gap:6px;text-decoration:none;color:inherit;
-  }
-  .sector-tile:hover{border-color:var(--ink)}
-  .sector-tile strong{font-size:14px}
-  .bigsearch{display:flex;gap:0;border:2px solid var(--ink);background:#fff}
-  .bigsearch .f{flex:1;padding:14px 16px;color:var(--ink-faint);font-size:14px}
+  .suggest[hidden]{display:none}
+  .suggest .grp{font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-faint);padding:8px 14px 4px;background:var(--fill)}
+  .suggest a{display:flex;gap:10px;align-items:center;padding:9px 14px;text-decoration:none;color:inherit;font-size:13px;border-bottom:1px solid var(--fill-mid)}
+  .suggest a:hover,.suggest a:focus{background:var(--fill);outline:0}
+  .suggest a:last-child{border-bottom:0}
+  .suggest mark{background:#f0e6a8;color:inherit;padding:0 1px}
+  .suggest .none{padding:14px;font-size:13px;color:var(--ink-soft)}
 </style>
 
 <div class="page-head">
-  <p class="eyebrow">Feature 03</p>
+  <p class="eyebrow">Feature 03 &middot; Final direction</p>
   <h1>People directory — landing page</h1>
   <div class="brief">
-    <p><strong>The ask:</strong> a new template for the people landing page.</p>
-    <p class="src">The <a href="https://www.frontier-economics.com/uk/en/about/people/" target="_blank" rel="noopener">current page</a> is an alphabetical grid of 423 people across 34 pages, with a search box and a filter panel that opens as a full-width overlay. There is no result count, no indication of which filters are active once the panel closes, and the cards carry only a name and job title — so a visitor looking for the right expert has very little to go on.</p>
+    <p><strong>What changed:</strong> the layout, filter rail and descriptive cards from Idea 1, with the prominent expertise-aware search from Idea 3 lifted to the top of the page.</p>
+    <p class="src">The two mechanisms now sit on separate jobs rather than competing. Search answers “I know roughly who or what I want.” The rail and grid answer “show me who could help.” Neither hides the other.</p>
   </div>
 </div>
 
-<!-- ================= IDEA 1 ================= -->
 <section class="idea">
   <div class="idea__head">
-    <span class="idea__num">Idea 1</span>
-    <h2>Persistent filter rail with descriptive cards</h2>
-    <span class="idea__ref">Closest to the LCP reference</span>
+    <span class="idea__num">Final</span>
+    <h2>Search first, then browse and filter</h2>
   </div>
-  <p class="idea__sub">Filters stay visible down the left while results update on the right, so the visitor always knows what they are looking at. Each card carries a single line describing how that person helps clients — the change that does most to make the directory useful.</p>
+  <p class="idea__sub">Tick boxes in the rail to see the result count and active-filter chips update. The search suggestions below show what the field returns as you type.</p>
 
   <div class="frame">
     <div class="frame__label">People — landing page</div>
     <div class="frame__body">
       <div class="site-top"><span class="site-logo">LOGO</span><nav><span>People</span><span>Careers</span><span>Contact us</span></nav></div>
+      <div class="site-sub"><div>Sectors</div><div>Expertise</div><div>News &amp; Insights</div><div>About us</div></div>
       <div class="crumb">Home &rsaquo; About &rsaquo; People</div>
 
-      <div class="pad">
+      <div class="pad" style="border-bottom:1px solid var(--line)">
         <span class="eyebrow-sm">People</span>
-        <h2 style="font-size:26px;margin:6px 0 8px">Who we are says a lot about what we do</h2>
-        <p class="muted" style="max-width:62ch;margin:0 0 24px">423 economists across nine offices. Search by name, or filter by the sector, service or office you need.</p>
+        <h2 style="font-size:27px;margin:6px 0 8px;max-width:24ch">Who we are says a lot about what we do</h2>
+        <p class="muted" style="max-width:62ch;margin:0 0 18px">423 economists across nine offices. Search for someone by name, or by the problem you are working on.</p>
 
+        <div class="searchwrap">
+          <div class="bigsearch">
+            <input class="f" id="peopleSearch" type="text" autocomplete="off" placeholder="Search people and expertise — try &ldquo;energy&rdquo; or &ldquo;merger&rdquo;">
+            <button class="btn btn--solid" style="border:0;padding:14px 24px">Search</button>
+          </div>
+          <div class="suggest" id="peopleSuggest" hidden></div>
+        </div>
+
+        <p class="tiny muted" style="margin:10px 0 0">Popular: <a href="#" data-seed="energy">Energy regulation</a> &middot; <a href="#" data-seed="merger">Merger benefits</a> &middot; <a href="#" data-seed="water">Water price review</a> &middot; <a href="#" data-seed="behavioural">Behavioural economics</a> &middot; <a href="#" data-seed="transfer">Transfer pricing</a> <span class="mk-in">2</span></p>
+      </div>
+
+      <div class="pad">
         <div class="dir-split">
-          <aside data-checks="#chipbar1" id="filters1">
+          <aside data-checks="#chipbarF" id="filtersF">
             <div class="row" style="justify-content:space-between;margin-bottom:10px">
               <strong style="font-size:12px;letter-spacing:.1em;text-transform:uppercase">Filter by</strong>
-              <button class="tiny" data-clear="#filters1" style="background:none;border:0;text-decoration:underline;cursor:pointer;color:var(--ink-soft);font:inherit;font-size:11px">Clear all</button>
+              <button class="tiny" data-clear="#filtersF" style="background:none;border:0;text-decoration:underline;cursor:pointer;color:var(--ink-soft);font:inherit;font-size:11px">Clear all</button>
             </div>
             <div class="filter-group">
               <h6>Sector</h6>
@@ -425,56 +432,74 @@ body.anno-off .anno,body.anno-off .mk-in{display:none}
             </div>
             <div class="filter-group" style="margin-bottom:0">
               <h6>Role</h6>
-              <div class="check" data-label="Director"><span class="box"></span>Director</div>
+              <div class="check" data-label="Executive Director"><span class="box"></span>Executive Director</div>
               <div class="check" data-label="Principal"><span class="box"></span>Principal</div>
               <div class="check" data-label="Consultant"><span class="box"></span>Consultant</div>
             </div>
           </aside>
 
           <div>
-            <div class="field" style="margin-bottom:12px">Search by name, job title or expertise <span>&#9906;</span></div>
             <div class="row" style="justify-content:space-between;margin-bottom:6px">
-              <span class="small"><strong data-result-count>423</strong> people <span class="mk-in">1</span></span>
+              <span class="small"><strong data-result-count>423</strong> people <span class="mk-in">3</span></span>
               <span class="small muted">Sort: A–Z</span>
             </div>
-            <div class="row" id="chipbar1" style="margin-bottom:18px;min-height:26px"><span class="tiny muted">No filters applied</span></div>
+            <div class="row" id="chipbarF" style="margin-bottom:18px;min-height:26px"><span class="tiny muted">No filters applied</span></div>
 
             <div class="grid g3">
               <article class="person">
                 <div class="ph ph--x" style="aspect-ratio:1/1">Photo</div>
                 <h5>Jon Adlard</h5>
                 <span class="role">Executive Director &middot; London</span>
-                <p class="small muted blurb" style="margin:8px 0 0">I help energy clients and regulators work through the economics of network investment. <span class="mk-in">2</span></p>
+                <p class="small muted" style="margin:8px 0 0">I help energy clients and regulators work through the economics of network investment. <span class="mk-in">4</span></p>
               </article>
               <article class="person">
                 <div class="ph ph--x" style="aspect-ratio:1/1">Photo</div>
                 <h5>Mette Alfter</h5>
                 <span class="role">Executive Director &middot; Cologne</span>
-                <p class="small muted blurb" style="margin:8px 0 0">I advise on competition and regulatory questions across European communications markets.</p>
+                <p class="small muted" style="margin:8px 0 0">I advise on competition and regulatory questions across European communications markets.</p>
               </article>
               <article class="person">
                 <div class="ph ph--x" style="aspect-ratio:1/1">Photo</div>
                 <h5>Moritz Absenger</h5>
                 <span class="role">Senior Consultant &middot; London</span>
-                <p class="small muted blurb" style="margin:8px 0 0">I work on regulatory design in energy markets, social care reform and digital business models.</p>
+                <p class="small muted" style="margin:8px 0 0">I work on regulatory design in energy markets, social care reform and digital business models.</p>
               </article>
               <article class="person">
                 <div class="ph ph--x" style="aspect-ratio:1/1">Photo</div>
                 <h5>Kristine Appleton</h5>
                 <span class="role">Senior Principal &middot; London</span>
-                <p class="small muted blurb" style="margin:8px 0 0">I lead public policy evaluations, helping government understand whether programmes work.</p>
+                <p class="small muted" style="margin:8px 0 0">I lead public policy evaluations, helping government understand whether programmes work.</p>
               </article>
               <article class="person">
                 <div class="ph ph--x" style="aspect-ratio:1/1">Photo</div>
                 <h5>Chiara Anselmetti</h5>
                 <span class="role">Senior Consultant &middot; Brussels</span>
-                <p class="small muted blurb" style="margin:8px 0 0">I support clients through merger and antitrust proceedings before the European Commission.</p>
+                <p class="small muted" style="margin:8px 0 0">I support clients through merger and antitrust proceedings before the European Commission.</p>
+              </article>
+              <article class="person">
+                <div class="ph ph--x" style="aspect-ratio:1/1">Photo</div>
+                <h5>Lia Alscher</h5>
+                <span class="role">Consultant &middot; Berlin</span>
+                <p class="small muted" style="margin:8px 0 0"><em class="muted">No summary written yet — the card shows sector tags instead <span class="mk-in">5</span></em></p>
+                <div class="row" style="gap:6px;margin-top:6px"><span class="tag">Public Policy</span><span class="tag">Health</span></div>
+              </article>
+              <article class="person">
+                <div class="ph ph--x" style="aspect-ratio:1/1">Photo</div>
+                <h5>Frédéric Axisa</h5>
+                <span class="role">Senior Consultant &middot; Paris</span>
+                <p class="small muted" style="margin:8px 0 0">I model transport demand and appraise infrastructure schemes for French public bodies.</p>
               </article>
               <article class="person">
                 <div class="ph ph--x" style="aspect-ratio:1/1">Photo</div>
                 <h5>Thomas Badger</h5>
                 <span class="role">Principal &middot; London</span>
-                <p class="small muted blurb" style="margin:8px 0 0">I build the models behind our transport and infrastructure appraisal work.</p>
+                <p class="small muted" style="margin:8px 0 0">I build the models behind our transport and infrastructure appraisal work.</p>
+              </article>
+              <article class="person">
+                <div class="ph ph--x" style="aspect-ratio:1/1">Photo</div>
+                <h5>Acacia To</h5>
+                <span class="role">Consultant &middot; London</span>
+                <p class="small muted" style="margin:8px 0 0">I apply data science and machine learning to competition and consumer market questions.</p>
               </article>
             </div>
 
@@ -485,162 +510,149 @@ body.anno-off .anno,body.anno-off .mk-in{display:none}
     </div>
   </div>
 
-  <div class="anno">
-    <ul style="margin-top:0">
-      <li><span class="mk">1</span><strong>Result count and active filter chips.</strong> Tick some boxes on the left — the chips and the count update. The current overlay panel hides this state as soon as it closes, which is the main reason the filters feel unreliable.</li>
-      <li><span class="mk">2</span><strong>One line per person, written in the first person.</strong> This is the LCP device Frontier liked, and it turns a staff list into something a prospective client can actually navigate. It does need a new short field on the person record, and 423 people to fill it — worth discussing whether it is mandatory, or shown only where written.</li>
-      <li>“Show more” replaces 34 pages of pagination. The current alphabetical paging means anyone whose surname begins after B is effectively unreachable by browsing.</li>
-    </ul>
-  </div>
-</section>
+  <script>
+  (function () {
+    var input = document.getElementById('peopleSearch');
+    var box = document.getElementById('peopleSuggest');
+    if (!input || !box) return;
 
-<!-- ================= IDEA 2 ================= -->
-<section class="idea">
-  <div class="idea__head">
-    <span class="idea__num">Idea 2</span>
-    <h2>Horizontal filters, A–Z jump and a view toggle</h2>
-    <span class="idea__ref">Closest to the NERA reference</span>
-  </div>
-  <p class="idea__sub">Keeps the full-width grid Frontier has today but makes it navigable: dropdown filters across the top, an alphabet strip for people who know the name they want, and a list view for scanning a lot of people quickly.</p>
+    var EXPERTISE = [
+      { label: 'Energy', kind: 'Sector', count: 86 },
+      { label: 'Water', kind: 'Sector', count: 41 },
+      { label: 'Transport', kind: 'Sector', count: 38 },
+      { label: 'Financial Services', kind: 'Sector', count: 33 },
+      { label: 'Health and Social Care', kind: 'Sector', count: 29 },
+      { label: 'Communications', kind: 'Sector', count: 27 },
+      { label: 'Economics of AI', kind: 'Sector', count: 19 },
+      { label: 'Regulation', kind: 'Service', count: 64 },
+      { label: 'Competition', kind: 'Service', count: 58 },
+      { label: 'Public Policy', kind: 'Service', count: 52 },
+      { label: 'Data Science & AI', kind: 'Service', count: 31 },
+      { label: 'Merger Benefits Unit', kind: 'Service', count: 12 },
+      { label: 'Behavioural Economics', kind: 'Service', count: 17 },
+      { label: 'Transfer Pricing', kind: 'Service', count: 14 },
+      { label: 'International Trade', kind: 'Service', count: 16 }
+    ];
 
-  <div class="frame">
-    <div class="frame__label">People — landing page</div>
-    <div class="frame__body">
-      <div class="site-top"><span class="site-logo">LOGO</span><nav><span>People</span><span>Careers</span><span>Contact us</span></nav></div>
+    var PEOPLE = [
+      { name: 'Moritz Absenger', role: 'Senior Consultant, London' },
+      { name: 'Jon Adlard', role: 'Executive Director, London' },
+      { name: 'Mette Alfter', role: 'Executive Director, Cologne' },
+      { name: 'Lia Alscher', role: 'Consultant, Berlin' },
+      { name: 'Chiara Anselmetti', role: 'Senior Consultant, Brussels' },
+      { name: 'Kristine Appleton', role: 'Senior Principal, London' },
+      { name: 'Frédéric Axisa', role: 'Senior Consultant, Paris' },
+      { name: 'Thomas Badger', role: 'Principal, London' },
+      { name: 'Acacia To', role: 'Consultant, London' },
+      { name: 'Simon Gaysford', role: 'Executive Director, London' },
+      { name: 'Phil Maggs', role: 'Executive Director, London' },
+      { name: 'Phil Sneade', role: 'Executive Director, London' }
+    ];
 
-      <div style="background:var(--fill);padding:28px 28px 24px;border-bottom:1px solid var(--line)">
-        <h2 style="font-size:26px;margin:0 0 8px">Our people</h2>
-        <p class="muted" style="margin:0;max-width:60ch">423 economists in nine offices, working on the questions that matter to governments and businesses.</p>
-      </div>
+    function esc(s) {
+      return s.replace(/[&<>"]/g, function (c) {
+        return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c];
+      });
+    }
 
-      <div class="pad">
-        <div class="field" style="margin-bottom:14px">Example: Moritz Absenger <span class="btn btn--sm btn--solid">Search</span></div>
+    function hl(text, q) {
+      var i = text.toLowerCase().indexOf(q.toLowerCase());
+      if (i < 0) return esc(text);
+      return esc(text.slice(0, i)) + '<mark>' + esc(text.slice(i, i + q.length)) +
+             '</mark>' + esc(text.slice(i + q.length));
+    }
 
-        <div class="grid g4" style="gap:12px;margin-bottom:16px">
-          <div class="select">Sector <span>&#9662;</span></div>
-          <div class="select">Service <span>&#9662;</span></div>
-          <div class="select">Office <span>&#9662;</span></div>
-          <div class="select">Job title <span>&#9662;</span></div>
-        </div>
+    function render(q) {
+      var term = q.trim();
+      if (term.length < 2) { box.hidden = true; box.innerHTML = ''; return; }
 
-        <div class="az" style="margin-bottom:14px">
-          <a href="#" class="is-on">A</a><a href="#">B</a><a href="#">C</a><a href="#">D</a><a href="#">E</a><a href="#">F</a><a href="#">G</a><a href="#">H</a><a href="#">I</a><a href="#">J</a><a href="#">K</a><a href="#">L</a><a href="#">M</a><a href="#">N</a><a href="#">O</a><a href="#">P</a><a href="#" class="is-off">Q</a><a href="#">R</a><a href="#">S</a><a href="#">T</a><a href="#">U</a><a href="#">V</a><a href="#">W</a><a href="#" class="is-off">X</a><a href="#">Y</a><a href="#" class="is-off">Z</a>
-          <span class="tiny muted" style="margin-left:10px;align-self:center">Greyed letters have no results <span class="mk-in">3</span></span>
-        </div>
+      var ex = EXPERTISE.filter(function (e) {
+        return e.label.toLowerCase().indexOf(term.toLowerCase()) > -1;
+      }).slice(0, 3);
 
-        <div class="row" style="justify-content:space-between;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:10px 0;margin-bottom:20px">
-          <span class="small">Displaying 1–9 of 423 results</span>
-          <span class="row" data-view-group="#peopleGrid2" style="gap:6px">
-            <button class="chip is-on" data-view="grid">Grid</button>
-            <button class="chip" data-view="list">List <span class="mk-in">4</span></button>
-          </span>
-        </div>
+      var pp = PEOPLE.filter(function (p) {
+        return p.name.toLowerCase().indexOf(term.toLowerCase()) > -1;
+      }).slice(0, 4);
 
-        <div class="grid g3 people-grid" id="peopleGrid2">
-          <article class="person"><div class="ph ph--x" style="aspect-ratio:1/1">Photo</div><h5>Moritz Absenger</h5><span class="role">Senior Consultant</span><span class="tiny muted">London &middot; Energy, Regulation</span></article>
-          <article class="person"><div class="ph ph--x" style="aspect-ratio:1/1">Photo</div><h5>Jon Adlard</h5><span class="role">Executive Director</span><span class="tiny muted">London &middot; Energy, Water</span></article>
-          <article class="person"><div class="ph ph--x" style="aspect-ratio:1/1">Photo</div><h5>Mette Alfter</h5><span class="role">Executive Director</span><span class="tiny muted">Cologne &middot; Communications</span></article>
-          <article class="person"><div class="ph ph--x" style="aspect-ratio:1/1">Photo</div><h5>Lia Alscher</h5><span class="role">Consultant</span><span class="tiny muted">Berlin &middot; Public Policy</span></article>
-          <article class="person"><div class="ph ph--x" style="aspect-ratio:1/1">Photo</div><h5>Chiara Anselmetti</h5><span class="role">Senior Consultant</span><span class="tiny muted">Brussels &middot; Competition</span></article>
-          <article class="person"><div class="ph ph--x" style="aspect-ratio:1/1">Photo</div><h5>Kristine Appleton</h5><span class="role">Senior Principal</span><span class="tiny muted">London &middot; Public Policy</span></article>
-          <article class="person"><div class="ph ph--x" style="aspect-ratio:1/1">Photo</div><h5>Frédéric Axisa</h5><span class="role">Senior Consultant</span><span class="tiny muted">Paris &middot; Transport</span></article>
-          <article class="person"><div class="ph ph--x" style="aspect-ratio:1/1">Photo</div><h5>Thomas Badger</h5><span class="role">Principal</span><span class="tiny muted">London &middot; Transport</span></article>
-          <article class="person"><div class="ph ph--x" style="aspect-ratio:1/1">Photo</div><h5>Acacia To</h5><span class="role">Consultant</span><span class="tiny muted">London &middot; Data Science &amp; AI</span></article>
-        </div>
+      var html = '';
+      if (ex.length) {
+        html += '<div class="grp">Expertise — applies as a filter</div>';
+        ex.forEach(function (e) {
+          html += '<a href="#" data-apply="' + esc(e.label) + '">' +
+                  '<span class="tag">' + e.kind + '</span> ' + hl(e.label, term) +
+                  '<span class="tiny muted" style="margin-left:auto">' + e.count + ' people</span></a>';
+        });
+      }
+      if (pp.length) {
+        html += '<div class="grp">People</div>';
+        pp.forEach(function (p) {
+          html += '<a href="#"><span class="avatar" style="width:26px;height:26px"></span>' +
+                  hl(p.name, term) + ' <span class="tiny muted">' + esc(p.role) + '</span></a>';
+        });
+      }
+      if (!html) {
+        html = '<div class="none">No matches for &ldquo;' + esc(term) +
+               '&rdquo;. Try a sector, a service or a surname.</div>';
+      }
+      box.innerHTML = html;
+      box.hidden = false;
+    }
 
-        <div class="center" style="padding:24px 0 4px"><a class="btn btn--solid" href="#">Load more</a></div>
-      </div>
-    </div>
-  </div>
+    input.addEventListener('input', function () { render(input.value); });
+    input.addEventListener('focus', function () { render(input.value); });
 
-  <div class="anno">
-    <ul style="margin-top:0">
-      <li><span class="mk">3</span><strong>The A–Z strip does two jobs.</strong> It gives a fast route to a known name, and greying out empty letters means the visitor never lands on a dead result set.</li>
-      <li><span class="mk">4</span><strong>Try the grid / list toggle.</strong> List view fits roughly four times as many people on screen with office and expertise in aligned columns — much better for someone scanning a whole practice. It also loads far fewer photographs.</li>
-      <li>Filters as dropdowns keep the page width for results, but they hide the options until clicked. If Frontier expects most visitors to filter rather than search, Idea 1 will perform better.</li>
-      <li>Sector and service tags on each card double as links into the relevant sector pages — a useful cross-sell the current directory does not have.</li>
-    </ul>
-  </div>
-</section>
+    input.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape') { box.hidden = true; input.blur(); }
+      if (e.key === 'ArrowDown') {
+        var first = box.querySelector('a');
+        if (first) { e.preventDefault(); first.focus(); }
+      }
+    });
 
-<!-- ================= IDEA 3 ================= -->
-<section class="idea">
-  <div class="idea__head">
-    <span class="idea__num">Idea 3</span>
-    <h2>Task-led — “find the right expert”</h2>
-  </div>
-  <p class="idea__sub">A different premise. Most visitors do not want to browse 423 people; they want the right person for a specific problem. This template leads with routes in — by question, by sector, by office — and keeps the full A–Z directory further down for those who want it.</p>
-
-  <div class="frame">
-    <div class="frame__label">People — landing page</div>
-    <div class="frame__body">
-      <div class="site-top"><span class="site-logo">LOGO</span><nav><span>People</span><span>Careers</span><span>Contact us</span></nav></div>
-
-      <div class="pad" style="border-bottom:1px solid var(--line)">
-        <h2 style="font-size:27px;margin:0 0 6px;max-width:20ch">Find the right economist for your question</h2>
-        <p class="muted" style="margin:0 0 18px;max-width:60ch">Search by name or by the problem you are working on — “water price review”, “merger benefits”, “transfer pricing”.</p>
-        <div class="bigsearch" style="max-width:640px"><span class="f">Search people and expertise</span><span class="btn btn--solid" style="border:0;padding:14px 22px">Search</span></div>
-        <p class="tiny muted" style="margin:10px 0 0">Popular: <a href="#">Energy regulation</a> &middot; <a href="#">Merger benefits</a> &middot; <a href="#">Water</a> &middot; <a href="#">Behavioural economics</a> &middot; <a href="#">Data science &amp; AI</a> <span class="mk-in">5</span></p>
-      </div>
-
-      <div class="pad" style="border-bottom:1px solid var(--line)">
-        <div class="sec-head"><h3>Browse by sector</h3><a class="btn btn--sm btn--ghost" href="#">All sectors</a></div>
-        <div class="grid g4" style="gap:12px">
-          <a class="sector-tile" href="#"><strong>Energy</strong><span class="tiny muted">86 economists</span></a>
-          <a class="sector-tile" href="#"><strong>Water</strong><span class="tiny muted">41 economists</span></a>
-          <a class="sector-tile" href="#"><strong>Transport</strong><span class="tiny muted">38 economists</span></a>
-          <a class="sector-tile" href="#"><strong>Financial Services</strong><span class="tiny muted">33 economists</span></a>
-          <a class="sector-tile" href="#"><strong>Health and Social Care</strong><span class="tiny muted">29 economists</span></a>
-          <a class="sector-tile" href="#"><strong>Communications</strong><span class="tiny muted">27 economists</span></a>
-          <a class="sector-tile" href="#"><strong>Retail and Consumer</strong><span class="tiny muted">24 economists</span></a>
-          <a class="sector-tile" href="#"><strong>Economics of AI</strong><span class="tiny muted">19 economists</span></a>
-        </div>
-      </div>
-
-      <div class="pad" style="border-bottom:1px solid var(--line)">
-        <div class="sec-head"><h3>Leading our practices</h3><span class="tiny muted">Hand-picked in the CMS <span class="mk-in">6</span></span></div>
-        <div class="grid g4">
-          <article class="person"><div class="ph ph--x" style="aspect-ratio:4/5">Photo</div><h5>Simon Gaysford</h5><span class="role">Executive Director</span></article>
-          <article class="person"><div class="ph ph--x" style="aspect-ratio:4/5">Photo</div><h5>Phil Maggs</h5><span class="role">Executive Director</span></article>
-          <article class="person"><div class="ph ph--x" style="aspect-ratio:4/5">Photo</div><h5>Phil Sneade</h5><span class="role">Executive Director</span></article>
-          <article class="person"><div class="ph ph--x" style="aspect-ratio:4/5">Photo</div><h5>Mette Alfter</h5><span class="role">Executive Director</span></article>
-        </div>
-      </div>
-
-      <div class="pad">
-        <div class="sec-head"><h3>All people</h3><span class="small muted">423 economists</span></div>
-        <div class="az" style="margin-bottom:16px">
-          <a href="#" class="is-on">A</a><a href="#">B</a><a href="#">C</a><a href="#">D</a><a href="#">E</a><a href="#">F</a><a href="#">G</a><a href="#">H</a><a href="#">I</a><a href="#">J</a><a href="#">K</a><a href="#">L</a><a href="#">M</a><a href="#">N</a><a href="#">O</a><a href="#">P</a><a href="#" class="is-off">Q</a><a href="#">R</a><a href="#">S</a><a href="#">T</a><a href="#">U</a><a href="#">V</a><a href="#">W</a><a href="#" class="is-off">X</a><a href="#">Y</a><a href="#" class="is-off">Z</a>
-        </div>
-        <div class="grid g4" style="gap:14px">
-          <div class="row" style="gap:10px"><span class="avatar" style="width:38px;height:38px"></span><span><strong style="font-size:13px">Moritz Absenger</strong><br><span class="tiny muted">Senior Consultant</span></span></div>
-          <div class="row" style="gap:10px"><span class="avatar" style="width:38px;height:38px"></span><span><strong style="font-size:13px">Jon Adlard</strong><br><span class="tiny muted">Executive Director</span></span></div>
-          <div class="row" style="gap:10px"><span class="avatar" style="width:38px;height:38px"></span><span><strong style="font-size:13px">Mette Alfter</strong><br><span class="tiny muted">Executive Director</span></span></div>
-          <div class="row" style="gap:10px"><span class="avatar" style="width:38px;height:38px"></span><span><strong style="font-size:13px">Lia Alscher</strong><br><span class="tiny muted">Consultant</span></span></div>
-          <div class="row" style="gap:10px"><span class="avatar" style="width:38px;height:38px"></span><span><strong style="font-size:13px">Chiara Anselmetti</strong><br><span class="tiny muted">Senior Consultant</span></span></div>
-          <div class="row" style="gap:10px"><span class="avatar" style="width:38px;height:38px"></span><span><strong style="font-size:13px">Kristine Appleton</strong><br><span class="tiny muted">Senior Principal</span></span></div>
-          <div class="row" style="gap:10px"><span class="avatar" style="width:38px;height:38px"></span><span><strong style="font-size:13px">Frédéric Axisa</strong><br><span class="tiny muted">Senior Consultant</span></span></div>
-          <div class="row" style="gap:10px"><span class="avatar" style="width:38px;height:38px"></span><span><strong style="font-size:13px">Thomas Badger</strong><br><span class="tiny muted">Principal</span></span></div>
-        </div>
-      </div>
-    </div>
-  </div>
+    document.addEventListener('click', function (e) {
+      var seed = e.target.closest('[data-seed]');
+      if (seed) {
+        e.preventDefault();
+        input.value = seed.dataset.seed;
+        input.focus();
+        render(input.value);
+        return;
+      }
+      var apply = e.target.closest('[data-apply]');
+      if (apply) {
+        e.preventDefault();
+        var label = apply.dataset.apply;
+        var match = [].slice.call(document.querySelectorAll('#filtersF .check'))
+          .filter(function (c) { return (c.dataset.label || '').trim() === label; })[0];
+        if (match && !match.classList.contains('is-on')) match.click();
+        input.value = '';
+        box.hidden = true;
+        return;
+      }
+      if (!e.target.closest('.searchwrap')) box.hidden = true;
+    });
+  })();
+  </script>
 
   <div class="anno">
     <ul style="margin-top:0">
-      <li><span class="mk">5</span><strong>Search covers expertise, not just names.</strong> Suggested searches double as a statement of what Frontier works on — which helps the “what do they do” problem raised about the home page too.</li>
-      <li><span class="mk">6</span><strong>An editorially controlled row.</strong> Practice leads are chosen rather than alphabetical, so the first faces a client sees are the ones Frontier would want them to meet.</li>
-      <li>The A–Z list at the bottom uses small avatars rather than large cut-outs, so a full letter fits on one screen and the page stays light.</li>
-      <li><strong>Trade-off:</strong> this is the biggest departure from the current page and needs the most content work — sector counts, practice leads and search synonyms all have to be maintained.</li>
+      <li><span class="mk">1</span><strong>Suggestions appear as you type — try “ener”, “merg” or a surname.</strong> The field is empty on load and the list opens over the content beneath rather than pushing it down, so the search sits tight against the results and nothing moves on the page. Suggestions start at two characters; below that the list stays closed.</li>
+      <li><strong>Expertise results apply as a filter.</strong> Pick “Energy” or “Regulation” from the list and watch the rail, the chips and the count update — the visitor stays on the page rather than being thrown to a separate results screen. Search and filters are one system, not two.</li>
+      <li><span class="mk">2</span><strong>Popular searches seed the box.</strong> Click one to see it typed in and matched. They double as a statement of what Frontier works on, and over time they tell us what visitors actually look for, which should drive the filter order.</li>
+      <li><strong>The no-match state is written, not blank.</strong> Type something like “xyz” to see it. Arrow-down moves into the list and Escape closes it, so the field works without a mouse.</li>
+      <li><span class="mk">3</span><strong>Count and chips are always visible.</strong> The current overlay panel hides filter state as soon as it closes; keeping it in view is the single biggest usability gain here.</li>
+      <li><span class="mk">4</span><strong>The one-line summary, in the person’s own voice.</strong> This is the field that makes the directory browsable, and it is reused verbatim on the profile page (Feature 04).</li>
+      <li><span class="mk">5</span><strong>The card works without it.</strong> With 423 people the summary will not be written everywhere at launch, so a card with no summary falls back to sector and service tags rather than leaving a gap. Suggest a limit of <strong>110 characters</strong> so no card runs to more than two lines.</li>
+      <li>“Show more” replaces 34 pages of pagination. Filters and search terms should be held in the URL so a filtered view can be sent to a colleague or a client.</li>
     </ul>
   </div>
 </section>
 
 
   <div class="footer-note">
-    Lo-fi wireframes for discussion. Greyscale and unstyled on purpose &mdash; layout, hierarchy and behaviour only.
-    Content taken from <a href="https://www.frontier-economics.com/uk/en/home/" target="_blank" rel="noopener">frontier-economics.com</a>.
-    <br>Use the tabs above to move between features.
+    Round 2 &mdash; one resolved option per feature, following client feedback. Greyscale and lo-fi on purpose:
+    layout, hierarchy and behaviour only. Content taken from
+    <a href="https://www.frontier-economics.com/uk/en/home/" target="_blank" rel="noopener">frontier-economics.com</a>.
   </div>
 </main>
 

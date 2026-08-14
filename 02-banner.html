@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Home page banner — wireframes</title>
+<title>Home page banner — final</title>
 <style>
 /* ============================================================
    Frontier Economics — lo-fi wireframe kit
@@ -320,7 +320,7 @@ body.anno-off .anno,body.anno-off .mk-in{display:none}
 
 <header class="proto-nav">
   <div class="proto-nav__inner">
-    <span class="proto-nav__brand">Frontier &mdash; wireframes</span>
+    <span class="proto-nav__brand">Frontier &mdash; final direction</span>
     <nav class="proto-nav__links">
         <a class="pn" href="index.html">Overview</a>
         <a class="pn" href="01-featured-items.html">Featured items</a>
@@ -336,55 +336,40 @@ body.anno-off .anno,body.anno-off .mk-in{display:none}
 
 <main class="wrap">
 <style>
-  .bnr-split{display:grid;grid-template-columns:1.05fr 1fr;min-height:320px}
+  .bnr-split{display:grid;grid-template-columns:1.05fr 1fr;min-height:330px}
   .bnr-copy{padding:34px 34px;display:flex;flex-direction:column;justify-content:center}
   .bnr-copy h2{font-size:27px;line-height:1.2;margin:0 0 12px;max-width:20ch}
   .bnr-img{position:relative}
-  .bnr-img .ph{height:100%}
-  .overlay-card{
-    position:absolute;left:26px;bottom:26px;right:26px;
-    background:#fff;border:1px solid var(--line);padding:16px 18px;
-  }
-  .pill-card{
-    position:absolute;left:34px;bottom:38px;max-width:440px;
-    background:#fff;border:1px solid var(--line);border-radius:60px;padding:22px 32px;
-  }
+  .overlay-card{position:absolute;left:26px;bottom:26px;right:26px;background:#fff;border:1px solid var(--line);padding:16px 18px}
   .dots{display:flex;gap:6px}
-  .dot{width:7px;height:7px;border-radius:50%;background:var(--fill-dark)}
+  .dot{width:7px;height:7px;border-radius:50%;background:var(--fill-dark);border:0;padding:0;cursor:pointer}
   .dot.is-on{background:var(--ink)}
-  .quicklinks{display:flex;flex-wrap:wrap;gap:0;border-top:1px solid var(--line)}
-  .quicklinks a{
-    flex:1 1 auto;text-align:center;padding:12px 14px;font-size:11.5px;
-    letter-spacing:.08em;text-transform:uppercase;border-right:1px solid var(--line);
-    text-decoration:none;color:var(--ink-soft);white-space:nowrap;
-  }
-  .quicklinks a:last-child{border-right:0}
-  .quicklinks a:hover{background:var(--fill);color:var(--ink)}
-  .hmeter{
-    font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:#b04a4a;
-    border-left:2px solid #b04a4a;padding:2px 0 2px 8px;margin:0;
-  }
+  .track{display:flex;gap:20px;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:8px}
+  .track::-webkit-scrollbar{height:6px}
+  .track::-webkit-scrollbar-thumb{background:var(--fill-mid)}
+  .track > *{flex:0 0 calc((100% - 40px)/3);scroll-snap-align:start}
+  .prog{height:3px;background:var(--fill-mid);margin-top:14px;position:relative}
+  .prog i{position:absolute;left:0;top:0;height:100%;width:56%;background:var(--ink)}
 </style>
 
 <div class="page-head">
-  <p class="eyebrow">Feature 02</p>
+  <p class="eyebrow">Feature 02 &middot; Final direction</p>
   <h1>Home page banner</h1>
   <div class="brief">
-    <p><strong>The ask:</strong> reduce the height so it is clearer what Frontier does above the fold.</p>
-    <p class="src">The current banner on the <a href="https://www.frontier-economics.com/uk/en/home/" target="_blank" rel="noopener">home page</a> fills close to the full viewport with a rotating image slide and an overlay panel, so on a standard laptop almost nothing else is visible until you scroll. All three options below are drawn at roughly true height, with a marker showing where a 1440 × 800 laptop would cut off.</p>
+    <p><strong>What changed:</strong> Idea 1 carried forward largely as drawn — the direction you picked already solved both problems. Refinements below are about making the separation from the navigation explicit and tightening the featured-story card.</p>
+    <p class="src">The banner sits <em>below</em> the navigation rather than behind it, so the tabs always have a solid background and there is no overlap. Height is fixed in pixels, not viewport units, so a larger monitor shows more content rather than a larger image.</p>
   </div>
 </div>
 
-<!-- ================= IDEA 1 ================= -->
 <section class="idea">
   <div class="idea__head">
-    <span class="idea__num">Idea 1</span>
+    <span class="idea__num">Final</span>
     <h2>Split banner — proposition left, featured story right</h2>
   </div>
-  <p class="idea__sub">The positioning line stops competing with the photography. At around 320px the banner, a full content section and the top of the next one all sit above the fold. The rotating featured stories survive, but as the smaller half of the layout.</p>
+  <p class="idea__sub">Drawn at true height. The marker shows where a 1440 &times; 800 laptop cuts off.</p>
 
   <div class="frame">
-    <div class="frame__label">Home page — top of page &middot; banner height approx. 320px</div>
+    <div class="frame__label">Home page — top of page &middot; banner 330px</div>
     <div class="frame__body">
       <div class="site-top">
         <span class="site-logo">LOGO</span>
@@ -392,35 +377,101 @@ body.anno-off .anno,body.anno-off .mk-in{display:none}
       </div>
       <div class="site-sub"><div>Sectors</div><div>Expertise</div><div>News &amp; Insights</div><div>About us</div></div>
 
-      <div class="bnr-split">
-        <div class="bnr-copy">
-          <span class="eyebrow-sm" style="margin-bottom:10px">Frontier Economics</span>
-          <h2>An economic consultancy with energy, imagination and flair <span class="mk-in">1</span></h2>
-          <p class="muted" style="margin:0 0 18px;max-width:44ch">We go beyond the numbers to find out what’s really going on. Objective advice, clearly expressed, for better decisions.</p>
-          <div class="row">
-            <a class="btn" href="#">What we do</a>
-            <a class="btn btn--ghost" href="#">Find an expert</a>
+      <div style="border-bottom:1px solid var(--line)">
+        <div class="bnr-split">
+          <div class="bnr-copy">
+            <span class="eyebrow-sm" style="margin-bottom:10px">Frontier Economics</span>
+            <h2>An economic consultancy with energy, imagination and flair <span class="mk-in">1</span></h2>
+            <p class="muted" style="margin:0 0 20px;max-width:46ch">We go beyond the numbers to find out what’s really going on. Objective advice, clearly expressed, so our clients make better decisions and get better results.</p>
+            <div class="row">
+              <a class="btn" href="#">What we do</a>
+              <a class="btn btn--ghost" href="#">Find an expert</a>
+            </div>
           </div>
-        </div>
-        <div class="bnr-img">
-          <div class="ph ph--x" style="height:100%;border:0;border-left:1px solid var(--line)">Image</div>
-          <div class="overlay-card">
-            <span class="eyebrow-sm">Featured &middot; Public Policy &amp; Financial Services <span class="mk-in">2</span></span>
-            <h4 style="margin:6px 0 8px;font-size:15px;line-height:1.3">Revealed: payment scam policies proven to reduce fraud</h4>
-            <div class="row" style="justify-content:space-between">
-              <a class="tiny" href="#" style="letter-spacing:.1em;text-transform:uppercase">Read more &rarr;</a>
-              <span class="dots"><i class="dot is-on"></i><i class="dot"></i><i class="dot"></i></span>
+          <div class="bnr-img">
+            <div class="ph ph--x" style="height:100%;border:0;border-left:1px solid var(--line)">Image — fills the panel, cropped to a set focal point <span class="mk-in">2</span></div>
+            <div class="overlay-card">
+              <span class="eyebrow-sm">Featured &middot; Public Policy &amp; Financial Services</span>
+              <h4 style="margin:6px 0 12px;font-size:15px;line-height:1.3">Revealed: payment scam policies proven to reduce fraud</h4>
+              <div class="row" style="justify-content:space-between">
+                <a class="tiny" href="#" style="letter-spacing:.1em;text-transform:uppercase">Read more &rarr;</a>
+                <span class="dots"><button class="dot is-on" aria-label="Story 1"></button><button class="dot" aria-label="Story 2"></button><button class="dot" aria-label="Story 3"></button> <span class="mk-in">3</span></span>
+              </div>
             </div>
           </div>
         </div>
       </div>
 
-      <div class="pad" style="border-top:1px solid var(--line)">
-        <div class="sec-head"><h3>Latest thoughts</h3><a class="btn btn--sm" href="#">View all</a></div>
-        <div class="grid g3">
-          <div class="card"><div class="card__body"><span class="eyebrow-sm">Competition &middot; Aug 2026</span><h4 class="clamp2">Multiple Frontier experts listed in the Lexology 2026 Competition report</h4></div></div>
-          <div class="card"><div class="card__body"><span class="eyebrow-sm">Energy &middot; Jul 2026</span><h4 class="clamp2">North Sea oil &amp; gas production: the trade-offs</h4></div></div>
-          <div class="card"><div class="card__body"><span class="eyebrow-sm">Public Policy &middot; Jul 2026</span><h4 class="clamp2">The Towns Fund is helping regeneration on England’s high streets</h4></div></div>
+      <div class="pad">
+        <div data-carousel>
+          <div class="sec-head">
+            <h3>Latest thoughts <span class="mk-in">4</span></h3>
+            <div class="rt">
+              <a class="btn btn--pill btn--sm" href="#">View all insights</a>
+              <button class="arrow-btn" data-slide="prev" aria-label="Previous">&larr;</button>
+              <button class="arrow-btn" data-slide="next" aria-label="Next">&rarr;</button>
+            </div>
+          </div>
+
+          <div class="track" data-track>
+            <article class="card">
+              <div class="ph ph--x" style="aspect-ratio:16/9">Image — 16:9</div>
+              <div class="card__body">
+                <div class="row" style="justify-content:space-between">
+                  <span class="tag">Competition</span><span class="date">Aug 2026</span>
+                </div>
+                <h4 class="clamp2">Multiple Frontier experts listed in the Lexology 2026 Competition report</h4>
+                <p class="clamp3">Frontier economists have again been recognised among the world’s leading competition experts, as advisers and as expert witnesses.</p>
+                <div class="foot"><a class="btn btn--pill btn--sm" href="#">Read more</a></div>
+              </div>
+            </article>
+            <article class="card">
+              <div class="ph ph--x" style="aspect-ratio:16/9">Image — 16:9</div>
+              <div class="card__body">
+                <div class="row" style="justify-content:space-between">
+                  <span class="tag">Energy</span><span class="date">Jul 2026</span>
+                </div>
+                <h4 class="clamp2">North Sea oil &amp; gas production: the trade-offs</h4>
+                <p class="clamp3">Two new independent reports take a closer look at the many factors around this complex issue.</p>
+                <div class="foot"><a class="btn btn--pill btn--sm" href="#">Read more</a></div>
+              </div>
+            </article>
+            <article class="card">
+              <div class="ph ph--x" style="aspect-ratio:16/9">Image — 16:9</div>
+              <div class="card__body">
+                <div class="row" style="justify-content:space-between">
+                  <span class="tag">Public Policy</span><span class="date">Jul 2026</span>
+                </div>
+                <h4 class="clamp2">The Towns Fund is helping regeneration on England’s high streets</h4>
+                <p class="clamp3">Evidence that targeted regeneration funding is changing the fortunes of England’s high streets.</p>
+                <div class="foot"><a class="btn btn--pill btn--sm" href="#">Read more</a></div>
+              </div>
+            </article>
+            <article class="card">
+              <div class="ph ph--x" style="aspect-ratio:16/9">Image — 16:9</div>
+              <div class="card__body">
+                <div class="row" style="justify-content:space-between">
+                  <span class="tag">Public Policy</span><span class="date">Jul 2026</span>
+                </div>
+                <h4 class="clamp2">Create Growth Programme strengthens foundations for creative businesses</h4>
+                <p class="clamp3">Our evaluation finds the programme has strengthened the commercial foundations of creative businesses across England.</p>
+                <div class="foot"><a class="btn btn--pill btn--sm" href="#">Read more</a></div>
+              </div>
+            </article>
+            <article class="card">
+              <div class="ph ph--x" style="aspect-ratio:16/9">Image — 16:9</div>
+              <div class="card__body">
+                <div class="row" style="justify-content:space-between">
+                  <span class="tag">Competition</span><span class="date">Jul 2026</span>
+                </div>
+                <h4 class="clamp2">European Commission proposes major shift in how merger benefits are assessed</h4>
+                <p class="clamp3">Brussels is rethinking how benefits are weighed in merger control. We look at what would change in practice.</p>
+                <div class="foot"><a class="btn btn--pill btn--sm" href="#">Read more</a></div>
+              </div>
+            </article>
+          </div>
+
+          <div class="prog"><i></i></div>
         </div>
       </div>
 
@@ -439,143 +490,21 @@ body.anno-off .anno,body.anno-off .mk-in{display:none}
 
   <div class="anno">
     <ul style="margin-top:0">
-      <li><span class="mk">1</span><strong>What Frontier does is now text, not an image caption.</strong> The proposition and a plain-English second line sit in the first screen, with two routes onward — one for what you do, one for who does it.</li>
-      <li><span class="mk">2</span><strong>The carousel is kept, but demoted.</strong> Three featured stories still rotate, in a small overlay card rather than a full-height slide. That preserves the promotion slot the team relies on without spending the whole viewport on it.</li>
-      <li>Roughly 480px of content is recovered above the fold compared with the current banner.</li>
-    </ul>
-  </div>
-</section>
-
-<!-- ================= IDEA 2 ================= -->
-<section class="idea">
-  <div class="idea__head">
-    <span class="idea__num">Idea 2</span>
-    <h2>Statement band — no image at all</h2>
-  </div>
-  <p class="idea__sub">The most aggressive reduction. A short typographic band states the proposition and hands straight over to content. Everything the banner carousel used to do moves into the featured items module directly beneath it.</p>
-
-  <div class="frame">
-    <div class="frame__label">Home page — top of page &middot; banner height approx. 190px</div>
-    <div class="frame__body">
-      <div class="site-top">
-        <span class="site-logo">LOGO</span>
-        <nav><span>People</span><span>Careers</span><span>Contact us</span><span>EN</span><span>&#9906;</span></nav>
-      </div>
-      <div class="site-sub"><div>Sectors</div><div>Expertise</div><div>News &amp; Insights</div><div>About us</div></div>
-
-      <div style="padding:36px 34px 30px">
-        <h2 style="font-size:30px;line-height:1.2;margin:0 0 12px;max-width:24ch">An economic consultancy with energy, imagination and flair <span class="mk-in">3</span></h2>
-        <p class="muted" style="margin:0;max-width:70ch">We use financial analysis, data science, game theory and behavioural economics to turn data into practical advice for governments and businesses.</p>
-      </div>
-
-      <div class="quicklinks">
-        <a href="#">Energy</a><a href="#">Competition</a><a href="#">Public Policy</a><a href="#">Regulation</a>
-        <a href="#">Water</a><a href="#">Transport</a><a href="#">Financial Services</a><a href="#">All sectors &rarr;</a>
-      </div>
-
-      <div class="pad" style="border-top:1px solid var(--line)">
-        <div class="sec-head"><h3>Featured</h3><a class="btn btn--sm" href="#">View all</a></div>
-        <div class="grid g3">
-          <div class="card">
-            <div class="ph ph--x" style="aspect-ratio:16/10">Image</div>
-            <div class="card__body"><span class="eyebrow-sm">Public Policy &amp; Financial Services</span><h4 class="clamp2">Revealed: payment scam policies proven to reduce fraud</h4></div>
-          </div>
-          <div class="card">
-            <div class="ph ph--x" style="aspect-ratio:16/10">Image</div>
-            <div class="card__body"><span class="eyebrow-sm">Energy</span><h4 class="clamp2">North Sea oil &amp; gas production: the trade-offs</h4></div>
-          </div>
-          <div class="card">
-            <div class="ph ph--x" style="aspect-ratio:16/10">Image</div>
-            <div class="card__body"><span class="eyebrow-sm">AI Regulation</span><h4 class="clamp2">The UK’s AI regulation opportunity</h4></div>
-          </div>
-        </div>
-      </div>
-
-      <div class="fold"><span>Fold — 1440 &times; 800</span></div>
-
-      <div class="pad" style="opacity:.45">
-        <div class="sec-head"><h3>Latest thoughts</h3></div>
-        <div class="grid g3">
-          <div class="ph" style="height:70px">Below the fold</div>
-          <div class="ph" style="height:70px">Below the fold</div>
-          <div class="ph" style="height:70px">Below the fold</div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="anno">
-    <ul style="margin-top:0">
-      <li><span class="mk">3</span><strong>Three featured stories, fully visible, no rotation.</strong> Nothing is hidden behind a carousel the visitor has to wait for — a common complaint about slide-based banners, and it removes the promotion bottleneck of one slot at a time.</li>
-      <li>The sector strip answers “what do they do?” concretely and immediately, and gives the sector pages a strong entry point from the home page.</li>
-      <li><strong>Trade-off to discuss:</strong> the home page loses its hero photography entirely. If brand imagery matters to Frontier, Idea 1 or 3 will sit more comfortably.</li>
-    </ul>
-  </div>
-</section>
-
-<!-- ================= IDEA 3 ================= -->
-<section class="idea">
-  <div class="idea__head">
-    <span class="idea__num">Idea 3</span>
-    <h2>Image band with overlay card</h2>
-    <span class="idea__ref">Closest to the LCP reference</span>
-  </div>
-  <p class="idea__sub">Keeps a strong image band, but caps it at a fixed height rather than the full viewport, with the story sitting in a floating card. A slim proposition bar directly beneath means the image is never the only thing on the first screen.</p>
-
-  <div class="frame">
-    <div class="frame__label">Home page — top of page &middot; banner height approx. 380px</div>
-    <div class="frame__body">
-      <div class="site-top">
-        <span class="site-logo">LOGO</span>
-        <nav><span>People</span><span>Careers</span><span>Contact us</span><span>EN</span><span>&#9906;</span></nav>
-      </div>
-      <div class="site-sub"><div>Sectors</div><div>Expertise</div><div>News &amp; Insights</div><div>About us</div></div>
-
-      <div style="position:relative;height:380px">
-        <div class="ph ph--x" style="height:100%;border:0">Image — fixed 380px band, cropped to focal point <span class="mk-in">4</span></div>
-        <div class="pill-card">
-          <span class="eyebrow-sm">Energy</span>
-          <h2 style="font-size:21px;line-height:1.25;margin:6px 0 8px">North Sea oil &amp; gas production: the trade-offs</h2>
-          <p class="muted small" style="margin:0 0 10px">Two new independent reports take a closer look at the many factors around this complex issue. <a href="#">&rarr;</a></p>
-          <span class="dots"><i class="dot is-on"></i><i class="dot"></i><i class="dot"></i></span>
-        </div>
-        <button class="arrow-btn" style="position:absolute;right:60px;bottom:38px">&larr;</button>
-        <button class="arrow-btn" style="position:absolute;right:20px;bottom:38px">&rarr;</button>
-      </div>
-
-      <div style="padding:20px 34px;border-top:1px solid var(--line);display:flex;align-items:center;gap:26px;flex-wrap:wrap">
-        <strong style="font-size:16px">An economic consultancy with energy, imagination and flair <span class="mk-in">5</span></strong>
-        <span class="muted small" style="flex:1;min-width:240px">Objective advice, clearly expressed — so clients make better decisions and get better results.</span>
-        <a class="btn btn--sm" href="#">About Frontier</a>
-      </div>
-
-      <div class="fold"><span>Fold — 1440 &times; 800</span></div>
-
-      <div class="pad" style="opacity:.45">
-        <div class="sec-head"><h3>Latest thoughts</h3></div>
-        <div class="grid g3">
-          <div class="ph" style="height:70px">Below the fold</div>
-          <div class="ph" style="height:70px">Below the fold</div>
-          <div class="ph" style="height:70px">Below the fold</div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="anno">
-    <ul style="margin-top:0">
-      <li><span class="mk">4</span><strong>Fixed pixel height, not viewport height.</strong> The single change that solves the brief. The band stays 380px on every screen, so a large monitor shows more content rather than a bigger picture.</li>
-      <li><span class="mk">5</span><strong>The proposition sits below the image, not on it.</strong> Text over photography is the reason the current banner is hard to read; separating them fixes legibility and accessibility contrast at the same time.</li>
-      <li>This is the closest of the three to the LCP example Frontier liked. It keeps the most brand presence, but recovers the least space — the fold now lands just below the proposition bar rather than inside the content.</li>
+      <li><span class="mk">1</span><strong>The proposition is text on a plain background.</strong> Nothing sits over the photography, so contrast is reliable and the message reads at any screen size. This is also what removes the overlap with the navigation you flagged — the image now starts below the tab row rather than running underneath it.</li>
+      <li><span class="mk">2</span><strong>The image panel is fixed height, flexible width.</strong> It fills whatever space is left beside the copy, so a very wide monitor widens the picture rather than deepening the banner. Set one focal point per image and the crop follows it at every breakpoint.</li>
+      <li><span class="mk">3</span><strong>Dots are clickable, not just indicators.</strong> Three featured stories rotate here; making them selectable means someone who spots a story part-way through can get back to it. Auto-rotation should pause on hover and stop entirely once a visitor interacts.</li>
+      <li><span class="mk">4</span><strong>The featured items module exactly as signed off in Feature 01.</strong> Shown here in place so you can see the two working together — same cards, same 16:9 crop, same carousel controls.</li>
+      <li><strong>Above the fold on a standard laptop:</strong> the proposition, both calls to action, one featured story and the first row of featured items down to the summary line. Roughly 480px recovered against the current banner.</li>
+      <li><strong>On mobile</strong> the two halves stack — copy first, then the image with the story card beneath it rather than overlaid, since an overlay at that width leaves too little room for either.</li>
     </ul>
   </div>
 </section>
 
 
   <div class="footer-note">
-    Lo-fi wireframes for discussion. Greyscale and unstyled on purpose &mdash; layout, hierarchy and behaviour only.
-    Content taken from <a href="https://www.frontier-economics.com/uk/en/home/" target="_blank" rel="noopener">frontier-economics.com</a>.
-    <br>Use the tabs above to move between features.
+    Round 2 &mdash; one resolved option per feature, following client feedback. Greyscale and lo-fi on purpose:
+    layout, hierarchy and behaviour only. Content taken from
+    <a href="https://www.frontier-economics.com/uk/en/home/" target="_blank" rel="noopener">frontier-economics.com</a>.
   </div>
 </main>
 

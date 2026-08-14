@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>People profile — wireframes</title>
+<title>People profile — final</title>
 <style>
 /* ============================================================
    Frontier Economics — lo-fi wireframe kit
@@ -320,7 +320,7 @@ body.anno-off .anno,body.anno-off .mk-in{display:none}
 
 <header class="proto-nav">
   <div class="proto-nav__inner">
-    <span class="proto-nav__brand">Frontier &mdash; wireframes</span>
+    <span class="proto-nav__brand">Frontier &mdash; final direction</span>
     <nav class="proto-nav__links">
         <a class="pn" href="index.html">Overview</a>
         <a class="pn" href="01-featured-items.html">Featured items</a>
@@ -339,43 +339,36 @@ body.anno-off .anno,body.anno-off .mk-in{display:none}
   .pro-split{display:grid;grid-template-columns:290px 1fr;gap:34px;align-items:start}
   .pro-rail{border:1px solid var(--line);padding:0 0 16px;position:sticky;top:70px}
   .pro-rail .inner{padding:16px 16px 0}
-  .contact-line{display:flex;gap:8px;align-items:center;font-size:12.5px;padding:6px 0;border-bottom:1px solid var(--fill-mid)}
+  .contact-line{display:flex;gap:8px;align-items:center;font-size:12.5px;padding:7px 0;border-bottom:1px solid var(--fill-mid)}
   .contact-line:last-child{border-bottom:0}
-  .agg-item{display:grid;grid-template-columns:96px 1fr;gap:14px;padding:14px 0;border-bottom:1px solid var(--line);align-items:start}
+  .agg-item{display:grid;grid-template-columns:104px 1fr;gap:16px;padding:16px 0;border-bottom:1px solid var(--line);align-items:start}
   .agg-item:first-of-type{border-top:1px solid var(--line)}
-  .agg-compact{display:flex;flex-direction:column;gap:0}
-  .agg-compact a{
-    display:block;padding:11px 0;border-bottom:1px solid var(--line);
-    text-decoration:none;color:inherit;font-size:13px;line-height:1.35;
-  }
-  .agg-compact a:hover{color:#000}
+  .agg-compact a{display:block;padding:11px 0;border-bottom:1px solid var(--line);text-decoration:none;color:inherit;font-size:13px;line-height:1.35}
   .variant{border:1px solid var(--line-strong);background:var(--paper)}
   .variant__label{background:var(--ink);color:#fff;font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;padding:6px 12px}
-  .profile-head{display:grid;grid-template-columns:200px 1fr;gap:26px;align-items:center}
-  .empty{border:1px dashed var(--line-strong);background:var(--fill);padding:18px;font-size:13px;color:var(--ink-soft)}
+  .empty{border:1px dashed var(--line-strong);background:var(--fill);padding:16px;font-size:13px;color:var(--ink-soft)}
 </style>
 
 <div class="page-head">
-  <p class="eyebrow">Feature 04</p>
+  <p class="eyebrow">Feature 04 &middot; Final direction</p>
   <h1>People profile</h1>
   <div class="brief">
-    <p><strong>The ask:</strong> remove the Q&amp;A and replace it with something that guides people to content related to that profile — blogs, articles and similar — where such content exists. The aggregator should be built so that a reduced version can be reused elsewhere on the site.</p>
-    <p class="src">Based on <a href="https://www.frontier-economics.com/uk/en/about/people/people-i9624-moritz-absenger/" target="_blank" rel="noopener">Moritz Absenger’s profile</a>. Content shown in the aggregators below is indicative, drawn from Frontier’s energy and regulation publications.</p>
+    <p><strong>What changed:</strong> Idea 1 kept as the direction. The refinements tighten the aggregator — a type filter for people with a lot of published work, and the empty state now drawn on the same template rather than described.</p>
+    <p class="src">The Q&amp;A is gone. In its place, a list of that person’s articles, news and case studies, populated automatically from content tagged with them.</p>
   </div>
 </div>
 
-<!-- ================= IDEA 1 ================= -->
 <section class="idea">
   <div class="idea__head">
-    <span class="idea__num">Idea 1</span>
-    <h2>Sticky contact rail with a stacked profile</h2>
+    <span class="idea__num">Final</span>
+    <h2>Sticky contact rail, biography, then related content</h2>
   </div>
-  <p class="idea__sub">Contact details and expertise stay on screen the whole way down, so “get in touch” is never more than a glance away. The Q&amp;A slot is taken by the content aggregator, which sits directly after the biography.</p>
 
   <div class="frame">
     <div class="frame__label">People profile — Moritz Absenger</div>
     <div class="frame__body">
       <div class="site-top"><span class="site-logo">LOGO</span><nav><span>People</span><span>Careers</span><span>Contact us</span></nav></div>
+      <div class="site-sub"><div>Sectors</div><div>Expertise</div><div>News &amp; Insights</div><div>About us</div></div>
       <div class="crumb">Home &rsaquo; About &rsaquo; People &rsaquo; Moritz Absenger</div>
 
       <div class="pad">
@@ -388,57 +381,77 @@ body.anno-off .anno,body.anno-off .mk-in{display:none}
               <div class="contact-line"><span>&#9993;</span> Email Moritz</div>
               <div class="contact-line"><span>&#9742;</span> +44 (0) 207 031 7000</div>
               <div class="contact-line"><span>in</span> LinkedIn profile</div>
-              <p class="eyebrow-sm" style="margin:16px 0 8px">Works on <span class="mk-in">1</span></p>
+              <p class="eyebrow-sm" style="margin:18px 0 8px">Works on <span class="mk-in">1</span></p>
               <div class="row" style="gap:6px">
                 <a class="tag" href="#">Energy</a>
                 <a class="tag" href="#">Regulation</a>
                 <a class="tag" href="#">Health and Social Care</a>
               </div>
+              <p class="eyebrow-sm" style="margin:18px 0 8px">Languages</p>
+              <p class="small muted" style="margin:0">German, English, French</p>
             </div>
           </aside>
 
           <div>
             <span class="eyebrow-sm">Senior Consultant</span>
-            <h2 style="font-size:30px;margin:6px 0 18px">Moritz Absenger</h2>
-            <p style="max-width:70ch">Moritz is a Senior Consultant in Frontier’s London office and has worked across different practices.</p>
-            <p class="muted" style="max-width:70ch">His recent work includes advising governments and regulators on the regulatory design of energy markets, social care reform, the economic impact of universities and the sustainability of digital business models. He has also worked on anti-trust litigation matters and has been involved in an investor-state arbitration in the energy sector.</p>
-            <p class="muted" style="max-width:70ch">Moritz holds an MPhil in Economics from the University of Oxford and a BSc in Economics from the University of Vienna. He also holds a master’s degree in law and is registered as an Accredited Researcher at the ONS.</p>
+            <h2 style="font-size:30px;margin:6px 0 14px">Moritz Absenger</h2>
+            <p style="max-width:70ch;font-size:15.5px">I work on regulatory design in energy markets, social care reform and digital business models. <span class="mk-in">2</span></p>
+            <p class="muted" style="max-width:70ch">Moritz is a Senior Consultant in Frontier’s London office and has worked across different practices. His recent work includes advising governments and regulators on the regulatory design of energy markets, social care reform, the economic impact of universities and the sustainability of digital business models. He has also worked on anti-trust litigation matters and has been involved in an investor-state arbitration in the energy sector.</p>
+            <p class="muted" style="max-width:70ch">Prior to joining Frontier, Moritz gained work experience in banking, insurance, law and as a research assistant in behavioural economics. He holds an MPhil in Economics from the University of Oxford and a BSc in Economics from the University of Vienna, a master’s degree in law, and is registered as an Accredited Researcher at the ONS.</p>
 
             <div class="hr"></div>
 
-            <div class="sec-head" style="margin-bottom:6px">
-              <h3>Moritz’s insights <span class="mk-in">2</span></h3>
-              <a class="btn btn--sm btn--ghost" href="#">All insights &rarr;</a>
+            <div class="sec-head" style="margin-bottom:12px">
+              <h3>Moritz’s insights</h3>
+              <a class="btn btn--sm btn--ghost" href="#">All 12 &rarr;</a>
             </div>
 
-            <div class="agg-item">
-              <div class="ph" style="height:66px">Image</div>
-              <div>
-                <span class="eyebrow-sm">Article &middot; Energy &middot; July 2026</span>
-                <h4 style="margin:4px 0 4px;font-size:15px;line-height:1.35"><a href="#" style="text-decoration:none">North Sea oil &amp; gas production: the trade-offs</a></h4>
-                <p class="small muted clamp2" style="margin:0">Two new independent reports take a closer look at the many factors around this complex issue.</p>
-              </div>
+            <div class="row" data-filter-group="#aggF" style="margin-bottom:4px">
+              <button class="chip is-on" data-filter="all">All</button>
+              <button class="chip" data-filter="article">Articles</button>
+              <button class="chip" data-filter="news">News</button>
+              <button class="chip" data-filter="case">Case studies</button>
+              <span class="tiny muted" style="margin-left:auto">Shown only where a person has 6+ items <span class="mk-in">3</span></span>
             </div>
-            <div class="agg-item">
-              <div class="ph" style="height:66px">Image</div>
-              <div>
-                <span class="eyebrow-sm">Case study &middot; Regulation &middot; May 2026</span>
-                <h4 style="margin:4px 0 4px;font-size:15px;line-height:1.35"><a href="#" style="text-decoration:none">Designing price controls that keep pace with investment</a></h4>
-                <p class="small muted clamp2" style="margin:0">How regulators can balance affordability against the capital that networks need to raise.</p>
+
+            <div id="aggF">
+              <div class="agg-item" data-cat="article">
+                <div class="ph ph--x" style="aspect-ratio:16/9">Image</div>
+                <div>
+                  <span class="eyebrow-sm">Article &middot; Energy &middot; July 2026</span>
+                  <h4 style="margin:4px 0 4px;font-size:15px;line-height:1.35"><a href="#" style="text-decoration:none">North Sea oil &amp; gas production: the trade-offs</a></h4>
+                  <p class="small muted clamp2" style="margin:0">Two new independent reports take a closer look at the many factors around this complex issue.</p>
+                </div>
               </div>
-            </div>
-            <div class="agg-item">
-              <div class="ph" style="height:66px">Image</div>
-              <div>
-                <span class="eyebrow-sm">News &middot; Health and Social Care &middot; March 2026</span>
-                <h4 style="margin:4px 0 4px;font-size:15px;line-height:1.35"><a href="#" style="text-decoration:none">Costing social care reform: what the options really mean</a></h4>
-                <p class="small muted clamp2" style="margin:0">Modelling the long-run cost of each reform pathway currently on the table.</p>
+              <div class="agg-item" data-cat="case">
+                <div class="ph ph--x" style="aspect-ratio:16/9">Image</div>
+                <div>
+                  <span class="eyebrow-sm">Case study &middot; Regulation &middot; May 2026</span>
+                  <h4 style="margin:4px 0 4px;font-size:15px;line-height:1.35"><a href="#" style="text-decoration:none">Designing price controls that keep pace with investment</a></h4>
+                  <p class="small muted clamp2" style="margin:0">How regulators can balance affordability against the capital that networks need to raise.</p>
+                </div>
+              </div>
+              <div class="agg-item" data-cat="news">
+                <div class="ph ph--x" style="aspect-ratio:16/9">Image</div>
+                <div>
+                  <span class="eyebrow-sm">News &middot; Health and Social Care &middot; March 2026</span>
+                  <h4 style="margin:4px 0 4px;font-size:15px;line-height:1.35"><a href="#" style="text-decoration:none">Costing social care reform: what the options really mean</a></h4>
+                  <p class="small muted clamp2" style="margin:0">Modelling the long-run cost of each reform pathway currently on the table.</p>
+                </div>
+              </div>
+              <div class="agg-item" data-cat="article">
+                <div class="ph ph--x" style="aspect-ratio:16/9">Image</div>
+                <div>
+                  <span class="eyebrow-sm">Article &middot; Energy &middot; January 2026</span>
+                  <h4 style="margin:4px 0 4px;font-size:15px;line-height:1.35"><a href="#" style="text-decoration:none">Reframing net zero as a driver of growth</a></h4>
+                  <p class="small muted clamp2" style="margin:0">Rapid decarbonisation packages could unlock substantial growth while achieving net zero before 2050.</p>
+                </div>
               </div>
             </div>
 
             <div class="hr"></div>
             <p class="eyebrow-sm" style="margin:0 0 10px">Related sectors and services</p>
-            <div class="row"><a class="btn btn--sm btn--ghost" href="#">Energy</a><a class="btn btn--sm btn--ghost" href="#">Regulation</a></div>
+            <div class="row"><a class="btn btn--sm btn--ghost" href="#">Energy</a><a class="btn btn--sm btn--ghost" href="#">Regulation</a><a class="btn btn--sm btn--ghost" href="#">Health and Social Care</a></div>
           </div>
         </div>
       </div>
@@ -447,212 +460,78 @@ body.anno-off .anno,body.anno-off .mk-in{display:none}
 
   <div class="anno">
     <ul style="margin-top:0">
-      <li><span class="mk">1</span><strong>Expertise tags become navigation.</strong> They link through to the sector and service pages, so a profile is a route deeper into the site rather than a dead end.</li>
-      <li><span class="mk">2</span><strong>The aggregator replaces the Q&amp;A.</strong> Each row shows type, topic, date, title and a one-line summary — enough for a visitor to judge relevance. It is populated automatically from items tagged with this person, so nothing has to be maintained by hand.</li>
-      <li>Where a person has no tagged content, this whole block is simply not rendered, and the profile ends on related sectors. See Idea 3 for an alternative treatment of that case.</li>
+      <li><span class="mk">1</span><strong>Expertise tags are links.</strong> They route through to the sector and service pages, turning the profile into a way further into the site rather than a dead end.</li>
+      <li><span class="mk">2</span><strong>The same one-line summary as the directory card.</strong> Written once on the person record, shown in both places — so the two templates never drift apart.</li>
+      <li><span class="mk">3</span><strong>Type filters appear only when they earn their place.</strong> Below six items they add clutter to a list you can already read in one glance; above it they save scrolling. Try them here.</li>
+      <li>Everything in this block is populated automatically from content tagged with the person. Nothing needs maintaining by hand, but it does depend on authors being tagged consistently — worth a check of how reliably that happens today.</li>
     </ul>
   </div>
 </section>
 
-<!-- ================= IDEA 2 ================= -->
 <section class="idea">
   <div class="idea__head">
-    <span class="idea__num">Idea 2</span>
-    <h2>Header band with tabbed sections</h2>
+    <span class="idea__num">Empty state</span>
+    <h2>A profile with no published content</h2>
   </div>
-  <p class="idea__sub">A short introduction band puts name, role, photo and contact in the first screen. Everything below is split into tabs, so a long publication list never buries the biography — useful for the most prolific directors.</p>
+  <p class="idea__sub">With 423 people this will be the more common case, so it is drawn rather than described. Same template, same rail — only the insights block changes.</p>
 
   <div class="frame">
-    <div class="frame__label">People profile — Moritz Absenger</div>
-    <div class="frame__body">
-      <div class="site-top"><span class="site-logo">LOGO</span><nav><span>People</span><span>Careers</span><span>Contact us</span></nav></div>
-
-      <div class="pad" style="background:var(--fill);border-bottom:1px solid var(--line)">
-        <div class="profile-head">
-          <div class="ph ph--x" style="aspect-ratio:1/1;background:var(--paper)">Photo</div>
-          <div>
-            <span class="eyebrow-sm">Senior Consultant &middot; London</span>
-            <h2 style="font-size:28px;margin:6px 0 10px">Moritz Absenger</h2>
-            <p class="muted" style="margin:0 0 16px;max-width:60ch">Advising governments and regulators on the regulatory design of energy markets, social care reform and the sustainability of digital business models. <span class="mk-in">3</span></p>
-            <div class="row"><a class="btn btn--sm btn--solid" href="#">Email Moritz</a><a class="btn btn--sm" href="#">LinkedIn</a><span class="small muted">+44 (0) 207 031 7000</span></div>
-          </div>
-        </div>
-      </div>
-
-      <div class="pad" data-tab-group>
-        <div class="tabs">
-          <button class="tab is-on" data-tab="bio">Biography</button>
-          <button class="tab" data-tab="insights">Insights <span class="muted">(12)</span> <span class="mk-in">4</span></button>
-          <button class="tab" data-tab="expertise">Sectors &amp; services</button>
-        </div>
-
-        <div class="tabpane is-on" data-pane="bio">
-          <p style="max-width:72ch">Moritz is a Senior Consultant in Frontier’s London office and has worked across different practices.</p>
-          <p class="muted" style="max-width:72ch">His recent work includes advising governments and regulators on the regulatory design of energy markets, social care reform, the economic impact of universities and the sustainability of digital business models. He has also worked on anti-trust litigation matters and has been involved in an investor-state arbitration in the energy sector.</p>
-          <p class="muted" style="max-width:72ch">Prior to joining Frontier, Moritz gained work experience in banking, insurance, law and as a research assistant in behavioural economics. He holds an MPhil in Economics from the University of Oxford and a BSc in Economics from the University of Vienna.</p>
-        </div>
-
-        <div class="tabpane" data-pane="insights">
-          <div class="row" style="margin-bottom:16px">
-            <button class="chip is-on">All (12)</button>
-            <button class="chip">Articles (6)</button>
-            <button class="chip">News (4)</button>
-            <button class="chip">Case studies (2)</button>
-          </div>
-          <div class="grid g3">
-            <article class="card">
-              <div class="ph ph--x" style="aspect-ratio:16/10">Image</div>
-              <div class="card__body"><span class="eyebrow-sm">Article &middot; Energy</span><h4 class="clamp2">North Sea oil &amp; gas production: the trade-offs</h4><div class="foot tiny muted">July 2026</div></div>
-            </article>
-            <article class="card">
-              <div class="ph ph--x" style="aspect-ratio:16/10">Image</div>
-              <div class="card__body"><span class="eyebrow-sm">Case study &middot; Regulation</span><h4 class="clamp2">Designing price controls that keep pace with investment</h4><div class="foot tiny muted">May 2026</div></div>
-            </article>
-            <article class="card">
-              <div class="ph ph--x" style="aspect-ratio:16/10">Image</div>
-              <div class="card__body"><span class="eyebrow-sm">News &middot; Health and Social Care</span><h4 class="clamp2">Costing social care reform: what the options really mean</h4><div class="foot tiny muted">March 2026</div></div>
-            </article>
-          </div>
-          <div class="center" style="padding:22px 0 0"><a class="btn btn--sm" href="#">Show more</a></div>
-        </div>
-
-        <div class="tabpane" data-pane="expertise">
-          <div class="grid g2" style="max-width:640px">
-            <div>
-              <p class="eyebrow-sm" style="margin:0 0 10px">Sectors</p>
-              <div class="stack" style="gap:6px"><a href="#">Energy</a><a href="#">Health and Social Care</a><a href="#">Technology</a></div>
-            </div>
-            <div>
-              <p class="eyebrow-sm" style="margin:0 0 10px">Services</p>
-              <div class="stack" style="gap:6px"><a href="#">Regulation</a><a href="#">Public Policy</a><a href="#">Dispute Support</a></div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="anno">
-    <ul style="margin-top:0">
-      <li><span class="mk">3</span><strong>A one-line summary at the top.</strong> The same short field used on the directory cards in Feature 03 — written once, shown in both places.</li>
-      <li><span class="mk">4</span><strong>Tabs carry a count.</strong> The visitor can see there are twelve pieces before clicking. When a person has none, the tab is not rendered at all and the profile falls back to a single-column biography.</li>
-      <li><strong>Worth testing:</strong> tabs hide content from search engines’ view of the page and from anyone who scrolls without clicking. If insights are the point of the change, Idea 1 or 3 puts them in front of more people.</li>
-    </ul>
-  </div>
-</section>
-
-<!-- ================= IDEA 3 ================= -->
-<section class="idea">
-  <div class="idea__head">
-    <span class="idea__num">Idea 3</span>
-    <h2>Editorial profile, led by the work</h2>
-  </div>
-  <p class="idea__sub">Puts the content aggregator higher up the page and gives it the most room. The biography is treated as supporting information. This option also shows the fallback for a person who has no published content — the case the brief asks us to handle.</p>
-
-  <div class="frame">
-    <div class="frame__label">People profile — with published content</div>
-    <div class="frame__body">
-      <div class="site-top"><span class="site-logo">LOGO</span><nav><span>People</span><span>Careers</span><span>Contact us</span></nav></div>
-
-      <div class="pad">
-        <div class="grid g2" style="gap:34px;align-items:center">
-          <div>
-            <span class="eyebrow-sm">Senior Consultant &middot; London</span>
-            <h2 style="font-size:32px;margin:8px 0 14px">Moritz Absenger</h2>
-            <p style="margin:0 0 18px;max-width:46ch;font-size:16px">“I work with governments and regulators on how energy markets should be designed — and what it costs when they aren’t.” <span class="mk-in">5</span></p>
-            <div class="row"><a class="btn btn--sm btn--solid" href="#">Email Moritz</a><a class="btn btn--sm" href="#">LinkedIn</a></div>
-          </div>
-          <div class="ph ph--x" style="aspect-ratio:4/3">Photo</div>
-        </div>
-
-        <div class="hr"></div>
-
-        <div class="sec-head"><h3>Latest from Moritz</h3><a class="btn btn--sm btn--ghost" href="#">View all 12 &rarr;</a></div>
-        <div class="grid g3">
-          <article class="card">
-            <div class="ph ph--x" style="aspect-ratio:16/10">Image</div>
-            <div class="card__body"><span class="eyebrow-sm">Article &middot; Energy</span><h4 class="clamp2">North Sea oil &amp; gas production: the trade-offs</h4><p class="clamp2">Two new independent reports take a closer look at the many factors around this complex issue.</p><div class="foot tiny muted">July 2026</div></div>
-          </article>
-          <article class="card">
-            <div class="ph ph--x" style="aspect-ratio:16/10">Image</div>
-            <div class="card__body"><span class="eyebrow-sm">Case study &middot; Regulation</span><h4 class="clamp2">Designing price controls that keep pace with investment</h4><p class="clamp2">Balancing affordability against the capital that networks need to raise.</p><div class="foot tiny muted">May 2026</div></div>
-          </article>
-          <article class="card">
-            <div class="ph ph--x" style="aspect-ratio:16/10">Image</div>
-            <div class="card__body"><span class="eyebrow-sm">News &middot; Health and Social Care</span><h4 class="clamp2">Costing social care reform: what the options really mean</h4><p class="clamp2">Modelling the long-run cost of each reform pathway on the table.</p><div class="foot tiny muted">March 2026</div></div>
-          </article>
-        </div>
-
-        <div class="hr"></div>
-
-        <div class="grid g2" style="gap:34px">
-          <div>
-            <h3 style="font-size:17px;margin:0 0 10px">About Moritz</h3>
-            <p class="muted small">Moritz is a Senior Consultant in Frontier’s London office and has worked across different practices. His recent work includes advising governments and regulators on the regulatory design of energy markets, social care reform, the economic impact of universities and the sustainability of digital business models.</p>
-            <p class="muted small">He holds an MPhil in Economics from the University of Oxford and a BSc in Economics from the University of Vienna, and is registered as an Accredited Researcher at the ONS.</p>
-          </div>
-          <div>
-            <h3 style="font-size:17px;margin:0 0 10px">Also working on Energy</h3>
-            <div class="grid g3" style="gap:12px">
-              <div class="person"><div class="ph" style="aspect-ratio:1/1">Photo</div><h5 style="font-size:12.5px">Jon Adlard</h5><span class="tiny muted">Executive Director</span></div>
-              <div class="person"><div class="ph" style="aspect-ratio:1/1">Photo</div><h5 style="font-size:12.5px">Thomas Badger</h5><span class="tiny muted">Principal</span></div>
-              <div class="person"><div class="ph" style="aspect-ratio:1/1">Photo</div><h5 style="font-size:12.5px">Acacia To</h5><span class="tiny muted">Consultant</span></div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="frame" style="margin-top:16px">
-    <div class="frame__label">Same template — person with no published content <span class="mk-in">6</span></div>
+    <div class="frame__label">People profile — Lia Alscher</div>
     <div class="frame__body pad">
-      <div class="grid g2" style="gap:34px;align-items:center;margin-bottom:22px">
+      <div class="pro-split">
+        <aside class="pro-rail" style="position:static">
+          <div class="ph ph--x" style="aspect-ratio:4/5;border:0;border-bottom:1px solid var(--line)">Photo</div>
+          <div class="inner">
+            <h3 style="margin:0 0 2px;font-size:19px">Lia Alscher</h3>
+            <p class="muted small" style="margin:0 0 14px">Consultant &middot; Berlin</p>
+            <div class="contact-line"><span>&#9993;</span> Email Lia</div>
+            <div class="contact-line"><span>&#9742;</span> +49 (0) 30 700 1450</div>
+            <div class="contact-line"><span>in</span> LinkedIn profile</div>
+            <p class="eyebrow-sm" style="margin:18px 0 8px">Works on</p>
+            <div class="row" style="gap:6px"><a class="tag" href="#">Public Policy</a><a class="tag" href="#">Health and Social Care</a></div>
+          </div>
+        </aside>
         <div>
-          <span class="eyebrow-sm">Consultant &middot; Berlin</span>
-          <h2 style="font-size:28px;margin:8px 0 12px">Lia Alscher</h2>
-          <p class="muted" style="margin:0 0 16px;max-width:46ch">Working on public policy evaluation across German federal and state programmes.</p>
-          <div class="row"><a class="btn btn--sm btn--solid" href="#">Email Lia</a><a class="btn btn--sm" href="#">LinkedIn</a></div>
+          <span class="eyebrow-sm">Consultant</span>
+          <h2 style="font-size:30px;margin:6px 0 14px">Lia Alscher</h2>
+          <p class="muted" style="max-width:70ch">Lia is a Consultant in Frontier’s Berlin office, working on public policy evaluation across German federal and state programmes. She holds an MSc in Economics from Humboldt University of Berlin.</p>
+
+          <div class="hr"></div>
+          <div class="empty" style="margin-bottom:20px"><strong>No personal insights block.</strong> Where a person has no tagged content, that heading is not rendered at all — an empty “Lia’s insights” would read as a gap. The sector feed below takes its place, so the page still leads somewhere. <span class="mk-in">4</span></div>
+
+          <div class="sec-head" style="margin-bottom:6px"><h3 style="font-size:17px">Latest in Public Policy</h3><a class="btn btn--sm btn--ghost" href="#">View all</a></div>
+          <div class="agg-compact">
+            <a href="#">The Towns Fund is helping regeneration on England’s high streets<br><span class="tiny muted">Article &middot; July 2026</span></a>
+            <a href="#">Create Growth Programme strengthens foundations for creative businesses<br><span class="tiny muted">Case study &middot; July 2026</span></a>
+            <a href="#">France 2030: understanding the territorial anchoring of future investment<br><span class="tiny muted">News &middot; July 2026</span></a>
+          </div>
         </div>
-        <div class="ph ph--x" style="aspect-ratio:4/3">Photo</div>
-      </div>
-      <div class="empty"><strong>No insights block.</strong> Where a person has no tagged content, the aggregator is replaced with the sector-level feed below — so the page never shows an empty section, and the visitor still has somewhere to go.</div>
-      <div class="hr"></div>
-      <div class="sec-head"><h3 style="font-size:17px">Latest in Public Policy</h3><a class="btn btn--sm btn--ghost" href="#">View all</a></div>
-      <div class="agg-compact">
-        <a href="#"><span class="eyebrow-sm">Article &middot; July 2026</span><br>The Towns Fund is helping regeneration on England’s high streets</a>
-        <a href="#"><span class="eyebrow-sm">Case study &middot; July 2026</span><br>Create Growth Programme strengthens foundations for creative businesses</a>
-        <a href="#"><span class="eyebrow-sm">News &middot; July 2026</span><br>France 2030: understanding the territorial anchoring of future investment</a>
       </div>
     </div>
   </div>
 
   <div class="anno">
-    <ul style="margin-top:0">
-      <li><span class="mk">5</span><strong>A short quote in place of the Q&amp;A.</strong> If Frontier wants to keep some personality on the profile without the three-question format, one line in the person’s own voice does that job and stays useful to a client audience.</li>
-      <li><span class="mk">6</span><strong>The empty case is designed, not left to chance.</strong> With 423 people, most profiles will have little or no tagged content — so the fallback matters more than the populated state.</li>
-    </ul>
+    <p style="margin:0"><span class="mk">4</span><strong>Two fallback levels, set per template.</strong> First try the person’s own content; if there is none, widen to their primary sector; if that somehow returns nothing, hide the block entirely. No page can render an empty heading.</p>
   </div>
 </section>
 
-<!-- ================= REUSABLE COMPONENT ================= -->
 <section class="idea">
   <div class="idea__head">
     <span class="idea__num">Component</span>
     <h2>The aggregator at three sizes</h2>
   </div>
-  <p class="idea__sub">One component, three configurations, so the same block can be reused across the site as the brief asks. It always takes the same inputs — a source, a filter, a number of items and a heading — and only the presentation changes.</p>
+  <p class="idea__sub">Unchanged from the earlier round, and now aligned to the 16:9 crop used by the featured items module — so the two components share one image ratio across the site.</p>
 
   <div class="grid g3" style="align-items:start">
     <div class="variant">
       <div class="variant__label">Full — profile pages</div>
       <div style="padding:16px">
         <p class="eyebrow-sm" style="margin:0 0 12px">Moritz’s insights</p>
-        <article class="card" style="margin-bottom:12px">
-          <div class="ph ph--x" style="aspect-ratio:16/9">Image</div>
-          <div class="card__body" style="padding:12px"><span class="eyebrow-sm">Article &middot; Energy</span><h4 class="clamp2" style="font-size:14px">North Sea oil &amp; gas production: the trade-offs</h4><p class="clamp2" style="margin:0">Two new reports look at the factors around this complex issue.</p></div>
-        </article>
-        <p class="tiny muted" style="margin:0">3–6 items &middot; image, type, topic, date, title, summary</p>
+        <div class="agg-item" style="grid-template-columns:80px 1fr;border-top:0;padding:0 0 12px">
+          <div class="ph ph--x" style="aspect-ratio:16/9">Img</div>
+          <div><span class="eyebrow-sm">Article &middot; Energy &middot; Jul 2026</span><h4 style="margin:3px 0 3px;font-size:13px;line-height:1.3">North Sea oil &amp; gas production: the trade-offs</h4><p class="tiny muted clamp2" style="margin:0">Two new reports look at the factors around this complex issue.</p></div>
+        </div>
+        <p class="tiny muted" style="margin:0">3–6 items &middot; image, type, topic, date, title, summary &middot; type filters above 6</p>
       </div>
     </div>
 
@@ -660,12 +539,12 @@ body.anno-off .anno,body.anno-off .mk-in{display:none}
       <div class="variant__label">Reduced — sector &amp; service pages</div>
       <div style="padding:16px">
         <p class="eyebrow-sm" style="margin:0 0 12px">Related insights</p>
-        <div class="agg-item" style="grid-template-columns:64px 1fr;padding:10px 0">
-          <div class="ph" style="height:48px">Img</div>
+        <div class="agg-item" style="grid-template-columns:64px 1fr;border-top:0;padding:0 0 10px">
+          <div class="ph" style="aspect-ratio:16/9">Img</div>
           <div><span class="eyebrow-sm">Article &middot; Jul 2026</span><h4 style="margin:3px 0 0;font-size:13px;line-height:1.3">North Sea oil &amp; gas production: the trade-offs</h4></div>
         </div>
-        <div class="agg-item" style="grid-template-columns:64px 1fr;padding:10px 0;border-top:0">
-          <div class="ph" style="height:48px">Img</div>
+        <div class="agg-item" style="grid-template-columns:64px 1fr;border-top:0;padding:0">
+          <div class="ph" style="aspect-ratio:16/9">Img</div>
           <div><span class="eyebrow-sm">Case study &middot; May 2026</span><h4 style="margin:3px 0 0;font-size:13px;line-height:1.3">Designing price controls that keep pace with investment</h4></div>
         </div>
         <p class="tiny muted" style="margin:10px 0 0">3–4 items &middot; thumbnail, type, date, title</p>
@@ -687,21 +566,21 @@ body.anno-off .anno,body.anno-off .mk-in{display:none}
   </div>
 
   <div class="anno">
-    <p style="margin:0 0 6px"><strong>How one component serves all three.</strong></p>
+    <p style="margin:0 0 6px"><strong>One component, four settings per placement.</strong></p>
     <ul>
       <li><strong>Source</strong> — articles, news, case studies, events, or any combination.</li>
-      <li><strong>Filter</strong> — by person, by sector, by service, or hand-picked. This is what lets the same block sit on a profile, a sector page or an article footer without a new build each time.</li>
-      <li><strong>Presentation</strong> — full, reduced or compact, chosen per placement.</li>
-      <li><strong>Fallback</strong> — if the filter returns nothing, widen to the parent sector, or hide the block. Set once per placement so no page can render an empty heading.</li>
+      <li><strong>Filter</strong> — by person, sector, service, or hand-picked.</li>
+      <li><strong>Presentation</strong> — full, reduced or compact.</li>
+      <li><strong>Fallback</strong> — widen to the parent sector, or hide. Set once, so no placement can fail into an empty heading.</li>
     </ul>
   </div>
 </section>
 
 
   <div class="footer-note">
-    Lo-fi wireframes for discussion. Greyscale and unstyled on purpose &mdash; layout, hierarchy and behaviour only.
-    Content taken from <a href="https://www.frontier-economics.com/uk/en/home/" target="_blank" rel="noopener">frontier-economics.com</a>.
-    <br>Use the tabs above to move between features.
+    Round 2 &mdash; one resolved option per feature, following client feedback. Greyscale and lo-fi on purpose:
+    layout, hierarchy and behaviour only. Content taken from
+    <a href="https://www.frontier-economics.com/uk/en/home/" target="_blank" rel="noopener">frontier-economics.com</a>.
   </div>
 </main>
 

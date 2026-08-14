@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Featured items module — wireframes</title>
+<title>Featured items module — final</title>
 <style>
 /* ============================================================
    Frontier Economics — lo-fi wireframe kit
@@ -320,7 +320,7 @@ body.anno-off .anno,body.anno-off .mk-in{display:none}
 
 <header class="proto-nav">
   <div class="proto-nav__inner">
-    <span class="proto-nav__brand">Frontier &mdash; wireframes</span>
+    <span class="proto-nav__brand">Frontier &mdash; final direction</span>
     <nav class="proto-nav__links">
         <a class="pn" href="index.html">Overview</a>
         <a class="pn is-current" href="01-featured-items.html">Featured items</a>
@@ -336,43 +336,40 @@ body.anno-off .anno,body.anno-off .mk-in{display:none}
 
 <main class="wrap">
 <style>
-  .track{display:flex;gap:20px;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:6px}
+  .track{display:flex;gap:20px;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:8px}
   .track::-webkit-scrollbar{height:6px}
   .track::-webkit-scrollbar-thumb{background:var(--fill-mid)}
   .track > *{flex:0 0 calc((100% - 40px)/3);scroll-snap-align:start}
-  .lead{display:grid;grid-template-columns:1.25fr 1fr;gap:24px}
-  .feedrow{display:flex;gap:14px;padding:14px 0;border-bottom:1px solid var(--line)}
-  .feedrow:last-child{border-bottom:0}
-  .curate{display:flex;gap:8px;align-items:center;background:var(--fill);padding:8px 12px;border:1px dashed var(--line-strong)}
-  .slot{border:1px dashed var(--line-strong);background:var(--fill);padding:10px 12px;font-size:12px;color:var(--ink-soft);display:flex;justify-content:space-between;gap:10px;align-items:center}
-  [data-switch-pane]{display:none}
-  [data-switch-pane].is-on{display:block}
+  .prog{height:3px;background:var(--fill-mid);margin-top:14px;position:relative}
+  .prog i{position:absolute;left:0;top:0;height:100%;width:56%;background:var(--ink)}
+  .cms-row{display:flex;justify-content:space-between;gap:12px;align-items:center;border:1px dashed var(--line-strong);background:var(--fill);padding:10px 12px;font-size:12px}
+  .counter{font-size:11px;color:var(--ink-soft);white-space:nowrap}
+  .counter b{color:var(--ink)}
+  .over{color:#b04a4a}
 </style>
 
 <div class="page-head">
-  <p class="eyebrow">Feature 01</p>
+  <p class="eyebrow">Feature 01 &middot; Final direction</p>
   <h1>Featured items module</h1>
   <div class="brief">
-    <p><strong>The ask:</strong> content should feel more consistent — titles, summaries, imagery and spacing — and the team wants more flexibility over what appears.</p>
-    <p class="src">Currently the “Latest thoughts” module on the <a href="https://www.frontier-economics.com/uk/en/home/" target="_blank" rel="noopener">home page</a>. Today the items are different sizes, some carry images and some don’t, summaries run to different lengths, and a rotating statement sits in the middle of the grid.</p>
+    <p><strong>What changed:</strong> Idea 1’s uniform card carousel, now with an image in every card. The summary stays exactly as it was — it was doing the work the client valued, so it keeps its place and its three-line limit.</p>
+    <p class="src">The image sits above the tag and title so the card reads top to bottom: picture, context, headline, summary, action. Every image uses the same 16:9 crop, which is what stops the module drifting back into the inconsistency it had before.</p>
   </div>
 </div>
 
-<!-- ================= IDEA 1 ================= -->
 <section class="idea">
   <div class="idea__head">
-    <span class="idea__num">Idea 1</span>
-    <h2>Uniform card carousel</h2>
-    <span class="idea__ref">Closest to the Freshfields reference</span>
+    <span class="idea__num">Final</span>
+    <h2>Uniform card carousel with imagery</h2>
   </div>
-  <p class="idea__sub">Every item is the same card, in the same order, with the same fields. Consistency is enforced by the template rather than by editorial discipline. A carousel lets the module hold six to nine items without growing the page.</p>
+  <p class="idea__sub">Five to nine items, one card design, no optional fields. Use the arrows to page through — the cards do not change shape as you go.</p>
 
   <div class="frame">
     <div class="frame__label">Home page — featured items</div>
     <div class="frame__body pad">
       <div data-carousel>
         <div class="sec-head">
-          <h3>Staying on the cutting edge <span class="mk-in">1</span></h3>
+          <h3>Latest thoughts</h3>
           <div class="rt">
             <a class="btn btn--pill btn--sm" href="#">View all insights</a>
             <button class="arrow-btn" data-slide="prev" aria-label="Previous">&larr;</button>
@@ -382,17 +379,19 @@ body.anno-off .anno,body.anno-off .mk-in{display:none}
 
         <div class="track" data-track>
           <article class="card">
+            <div class="ph ph--x" style="aspect-ratio:16/9">Image — 16:9 <span class="mk-in">1</span></div>
             <div class="card__body">
               <div class="row" style="justify-content:space-between">
                 <span class="tag">Competition</span><span class="date">Aug 2026</span>
               </div>
               <h4 class="clamp2">Multiple Frontier experts listed in the Lexology 2026 Competition report</h4>
-              <p class="clamp3">Frontier economists have again been recognised among the world’s leading competition experts in Lexology’s 2026 report.</p>
+              <p class="clamp3">Frontier economists have again been recognised among the world’s leading competition experts, as advisers and as expert witnesses.</p>
               <div class="foot"><a class="btn btn--pill btn--sm" href="#">Read more</a></div>
             </div>
           </article>
 
           <article class="card">
+            <div class="ph ph--x" style="aspect-ratio:16/9">Image — 16:9</div>
             <div class="card__body">
               <div class="row" style="justify-content:space-between">
                 <span class="tag">Public Policy</span><span class="date">Jul 2026</span>
@@ -404,6 +403,19 @@ body.anno-off .anno,body.anno-off .mk-in{display:none}
           </article>
 
           <article class="card">
+            <div class="ph ph--x" style="aspect-ratio:16/9">Image — 16:9</div>
+            <div class="card__body">
+              <div class="row" style="justify-content:space-between">
+                <span class="tag">Energy</span><span class="date">Jul 2026</span>
+              </div>
+              <h4 class="clamp2">North Sea oil &amp; gas production: the trade-offs</h4>
+              <p class="clamp3">Two new independent reports take a closer look at the many factors around this complex issue.</p>
+              <div class="foot"><a class="btn btn--pill btn--sm" href="#">Read more</a></div>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="ph ph--x" style="aspect-ratio:16/9">Image — 16:9</div>
             <div class="card__body">
               <div class="row" style="justify-content:space-between">
                 <span class="tag">Public Policy</span><span class="date">Jul 2026</span>
@@ -415,6 +427,7 @@ body.anno-off .anno,body.anno-off .mk-in{display:none}
           </article>
 
           <article class="card">
+            <div class="ph ph--x" style="aspect-ratio:16/9">Image — 16:9</div>
             <div class="card__body">
               <div class="row" style="justify-content:space-between">
                 <span class="tag">Competition</span><span class="date">Jul 2026</span>
@@ -426,125 +439,65 @@ body.anno-off .anno,body.anno-off .mk-in{display:none}
           </article>
 
           <article class="card">
+            <div class="ph" style="aspect-ratio:16/9;background:var(--fill-dark);border-color:var(--line-strong)">No image supplied — category block <span class="mk-in">2</span></div>
             <div class="card__body">
               <div class="row" style="justify-content:space-between">
-                <span class="tag">Energy</span><span class="date">Jul 2026</span>
+                <span class="tag">AI Regulation</span><span class="date">Jun 2026</span>
               </div>
-              <h4 class="clamp2">North Sea oil &amp; gas production: the trade-offs</h4>
-              <p class="clamp3">Two new independent reports take a closer look at the many factors around this complex issue.</p>
+              <h4 class="clamp2">The UK’s AI regulation opportunity</h4>
+              <p class="clamp3">Frontier Chair Sharon White examines how the UK can set a ‘third way’ on AI regulation, helping to unlock innovation.</p>
               <div class="foot"><a class="btn btn--pill btn--sm" href="#">Read more</a></div>
             </div>
           </article>
         </div>
+
+        <div class="prog"><i></i></div>
       </div>
     </div>
   </div>
 
   <div class="anno">
-    <p style="margin:0 0 6px"><span class="mk">1</span><strong>Consistency comes from a fixed card contract.</strong></p>
-    <ul>
-      <li>Same four fields on every card: <em>category tag, date, title, summary</em>. No optional slots, so nothing can look half-finished.</li>
-      <li>Titles clamp to two lines, summaries to three, so a long title can never push a card out of alignment. Suggest a character guide in the CMS (title ≤ 75, summary ≤ 140).</li>
-      <li>No imagery at all in this option — which removes the biggest current inconsistency. Worth testing: the module reads as calmer, but loses colour on the page.</li>
-      <li>Flexibility: the carousel holds 6–9 items rather than 6 fixed tiles, and the “view all” gives a route to the full listing.</li>
+    <ul style="margin-top:0">
+      <li><span class="mk">1</span><strong>One crop, enforced by the template.</strong> Every image is 16:9 and rendered at the same width. Editors upload at any size; the CMS crops to a focal point they set once. This is the mechanism that keeps the module consistent — not editorial discipline.</li>
+      <li><span class="mk">2</span><strong>A designed fallback for missing artwork.</strong> Where no image exists, the card shows a plain category block at the identical ratio rather than collapsing. The row stays level, so one item without a picture cannot break the module. <em>In the live design this would be a Frontier brand colour keyed to the category.</em></li>
+      <li>Cards keep their fixed field set: image, category, date, title (2 lines), summary (3 lines), link. Nothing is optional, so no card can look half-finished.</li>
+      <li>The progress bar under the track shows how much of the set remains — worth having now that images make each card taller and fewer fit on screen.</li>
     </ul>
   </div>
 </section>
 
-<!-- ================= IDEA 2 ================= -->
 <section class="idea">
   <div class="idea__head">
-    <span class="idea__num">Idea 2</span>
-    <h2>Lead item plus supporting feed, with curation controls</h2>
+    <span class="idea__num">CMS</span>
+    <h2>What the editor sees</h2>
   </div>
-  <p class="idea__sub">One deliberately chosen lead story carries the imagery; everything else is a clean text feed. This answers the flexibility ask directly — the module can run on “latest” automatically, or be hand-picked slot by slot.</p>
+  <p class="idea__sub">Carried over from the second concept, since it answers the original flexibility ask. Slots can be hand-picked or left to fill automatically, and the character limits are enforced at the point of writing rather than discovered on the live page.</p>
 
   <div class="frame">
-    <div class="frame__label">Home page — featured items</div>
-    <div class="frame__body pad">
-      <div class="sec-head">
-        <h3>Latest thoughts</h3>
-        <div class="rt"><a class="btn btn--sm" href="#">View all insights</a></div>
-      </div>
-
-      <div class="lead">
-        <article>
-          <div class="ph ph--x" style="aspect-ratio:16/10"><span>Lead image — 16:10 <span class="mk-in">2</span></span></div>
-          <div style="padding-top:14px">
-            <span class="tag">Public Policy &amp; Financial Services</span>
-            <h4 style="font-size:22px;margin:10px 0 8px;line-height:1.25">Revealed: payment scam policies proven to reduce fraud</h4>
-            <p class="muted" style="margin:0 0 14px;max-width:58ch">Our independent evaluation shows the UK’s Authorised Push Payment policies benefit consumer protection and cut fraud losses.</p>
-            <a class="btn btn--sm" href="#">Read more</a>
-          </div>
-        </article>
-
-        <div>
-          <div class="hr-strong"></div>
-          <div class="feedrow">
-            <div style="flex:1">
-              <span class="eyebrow-sm">Competition &middot; Aug 2026</span>
-              <h4 style="font-size:14.5px;margin:5px 0 0;line-height:1.35">Multiple Frontier experts listed in the Lexology 2026 Competition report</h4>
-            </div>
-            <div class="ph" style="width:74px;height:56px">img</div>
-          </div>
-          <div class="feedrow">
-            <div style="flex:1">
-              <span class="eyebrow-sm">Energy &middot; Jul 2026</span>
-              <h4 style="font-size:14.5px;margin:5px 0 0;line-height:1.35">North Sea oil &amp; gas production: the trade-offs</h4>
-            </div>
-            <div class="ph" style="width:74px;height:56px">img</div>
-          </div>
-          <div class="feedrow">
-            <div style="flex:1">
-              <span class="eyebrow-sm">Competition &middot; Jul 2026</span>
-              <h4 style="font-size:14.5px;margin:5px 0 0;line-height:1.35">Meet the Senior Advisory Council behind Frontier’s new Merger Benefits Unit</h4>
-            </div>
-            <div class="ph" style="width:74px;height:56px">img</div>
-          </div>
-          <div class="feedrow">
-            <div style="flex:1">
-              <span class="eyebrow-sm">Public Policy &middot; Jul 2026</span>
-              <h4 style="font-size:14.5px;margin:5px 0 0;line-height:1.35">The Towns Fund is helping regeneration on England’s high streets</h4>
-            </div>
-            <div class="ph" style="width:74px;height:56px">img</div>
-          </div>
-          <div class="feedrow">
-            <div style="flex:1">
-              <span class="eyebrow-sm">AI Regulation &middot; Jun 2026</span>
-              <h4 style="font-size:14.5px;margin:5px 0 0;line-height:1.35">The UK’s AI regulation opportunity</h4>
-            </div>
-            <div class="ph" style="width:74px;height:56px">img</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="frame" style="margin-top:16px">
-    <div class="frame__label">CMS view — how the module is populated <span class="mk-in">3</span></div>
+    <div class="frame__label">Featured items — module settings</div>
     <div class="frame__body pad" data-switch-group>
-      <div class="curate" style="margin-bottom:16px">
-        <span class="tiny" style="letter-spacing:.1em;text-transform:uppercase">Populate this module by</span>
+      <div class="row" style="margin-bottom:16px">
+        <span class="tiny" style="letter-spacing:.1em;text-transform:uppercase">Populate by</span>
         <button class="chip is-on" data-switch="manual">Hand-picked</button>
         <button class="chip" data-switch="auto">Latest, automatically</button>
       </div>
 
       <div data-switch-pane="manual" class="is-on">
         <div class="stack">
-          <div class="slot"><span><strong>Lead slot</strong> — Revealed: payment scam policies proven to reduce fraud</span><span class="btn btn--sm btn--ghost">Change</span></div>
-          <div class="slot"><span><strong>Slot 2</strong> — Multiple Frontier experts listed in the Lexology 2026 report</span><span class="btn btn--sm btn--ghost">Change</span></div>
-          <div class="slot"><span><strong>Slot 3</strong> — North Sea oil &amp; gas production: the trade-offs</span><span class="btn btn--sm btn--ghost">Change</span></div>
-          <div class="slot"><span><strong>Slot 4</strong> — <em>Empty — falls back to next most recent item</em></span><span class="btn btn--sm btn--ghost">Choose</span></div>
-          <div class="slot" style="border-style:solid;background:#fff"><span class="muted">+ Add slot (max 6)</span><span></span></div>
+          <div class="cms-row"><span><strong>Slot 1</strong> — Multiple Frontier experts listed in the Lexology 2026 Competition report</span><span class="row" style="gap:10px"><span class="counter">Title <b>68</b>/75 &middot; Summary <b>121</b>/140 &middot; Image <b>&#10003;</b></span><span class="btn btn--sm btn--ghost">Change</span></span></div>
+          <div class="cms-row"><span><strong>Slot 2</strong> — France 2030: understanding the territorial anchoring of future investment</span><span class="row" style="gap:10px"><span class="counter">Title <b>71</b>/75 &middot; Summary <b>118</b>/140 &middot; Image <b>&#10003;</b></span><span class="btn btn--sm btn--ghost">Change</span></span></div>
+          <div class="cms-row"><span><strong>Slot 3</strong> — The UK’s AI regulation opportunity</span><span class="row" style="gap:10px"><span class="counter over">Title <b>34</b>/75 &middot; Summary <b>147</b>/140 &middot; No image <span class="mk-in">3</span></span><span class="btn btn--sm btn--ghost">Change</span></span></div>
+          <div class="cms-row"><span><strong>Slot 4</strong> — <em>Empty — falls back to the next most recent item</em></span><span class="btn btn--sm btn--ghost">Choose</span></div>
+          <div class="cms-row" style="border-style:solid;background:#fff"><span class="muted">+ Add slot (max 9)</span><span></span></div>
         </div>
       </div>
 
       <div data-switch-pane="auto">
         <div class="stack">
-          <div class="slot"><span><strong>Source</strong> — Articles, News, Case studies</span><span class="btn btn--sm btn--ghost">Edit</span></div>
-          <div class="slot"><span><strong>Filter by tag</strong> — any sector, any service</span><span class="btn btn--sm btn--ghost">Edit</span></div>
-          <div class="slot"><span><strong>Number of items</strong> — 6</span><span class="btn btn--sm btn--ghost">Edit</span></div>
-          <div class="slot"><span><strong>Pin to top</strong> — 1 item may still be pinned above the automatic list</span><span class="btn btn--sm btn--ghost">Choose</span></div>
+          <div class="cms-row"><span><strong>Source</strong> — Articles, News, Case studies</span><span class="btn btn--sm btn--ghost">Edit</span></div>
+          <div class="cms-row"><span><strong>Filter by tag</strong> — any sector, any service</span><span class="btn btn--sm btn--ghost">Edit</span></div>
+          <div class="cms-row"><span><strong>Number of items</strong> — 6</span><span class="btn btn--sm btn--ghost">Edit</span></div>
+          <div class="cms-row"><span><strong>Pin to front</strong> — one item may still be pinned ahead of the automatic list</span><span class="btn btn--sm btn--ghost">Choose</span></div>
         </div>
       </div>
     </div>
@@ -552,111 +505,17 @@ body.anno-off .anno,body.anno-off .mk-in{display:none}
 
   <div class="anno">
     <ul style="margin-top:0">
-      <li><span class="mk">2</span><strong>One image, one aspect ratio.</strong> Only the lead item needs artwork, at a single fixed crop. Supporting items use a small uniform thumbnail that can fall back to a plain tag block when no image exists — so a missing image never leaves a gap.</li>
-      <li><span class="mk">3</span><strong>The flexibility ask, made explicit.</strong> Editors either hand-pick each slot or let the module pull the latest against a tag filter, with the option to pin one item. Empty slots fall back rather than collapse, so the layout is always full.</li>
-      <li>The rotating “Tackling the big economic questions facing…” statement is removed from inside the grid here. It could sit above the module as its own band — worth a view from Frontier on whether it earns its place.</li>
-    </ul>
-  </div>
-</section>
-
-<!-- ================= IDEA 3 ================= -->
-<section class="idea">
-  <div class="idea__head">
-    <span class="idea__num">Idea 3</span>
-    <h2>Equal grid with content-type filters</h2>
-  </div>
-  <p class="idea__sub">No hierarchy at all — six identical tiles on a strict grid. Filters let the visitor narrow the module themselves, which reduces the pressure on editors to pick the perfect six.</p>
-
-  <div class="frame">
-    <div class="frame__label">Home page — featured items</div>
-    <div class="frame__body pad">
-      <div class="sec-head">
-        <h3>Latest thoughts</h3>
-        <div class="rt"><a class="btn btn--sm" href="#">View all insights</a></div>
-      </div>
-
-      <div class="row" data-filter-group="#grid3" style="margin-bottom:18px">
-        <button class="chip is-on" data-filter="all">All</button>
-        <button class="chip" data-filter="article">Articles</button>
-        <button class="chip" data-filter="news">News</button>
-        <button class="chip" data-filter="case">Case studies</button>
-        <button class="chip" data-filter="event">Events</button>
-        <span class="tiny muted" style="margin-left:auto"><span data-count>6</span> items shown</span>
-      </div>
-
-      <div class="grid g3" id="grid3">
-        <article class="card" data-cat="news">
-          <div class="ph ph--x" style="aspect-ratio:3/2">Image 3:2</div>
-          <div class="card__body">
-            <span class="eyebrow-sm">News &middot; Competition</span>
-            <h4 class="clamp2">Multiple Frontier experts listed in the Lexology 2026 Competition report</h4>
-            <p class="clamp2">Frontier economists again recognised among the world’s leading competition experts.</p>
-            <div class="foot tiny muted">August 2026</div>
-          </div>
-        </article>
-        <article class="card" data-cat="article">
-          <div class="ph ph--x" style="aspect-ratio:3/2">Image 3:2</div>
-          <div class="card__body">
-            <span class="eyebrow-sm">Article &middot; AI Regulation</span>
-            <h4 class="clamp2">The UK’s AI regulation opportunity</h4>
-            <p class="clamp2">Sharon White examines how the UK can set a ‘third way’ on AI regulation.</p>
-            <div class="foot tiny muted">June 2026</div>
-          </div>
-        </article>
-        <article class="card" data-cat="case">
-          <div class="ph ph--x" style="aspect-ratio:3/2">Image 3:2</div>
-          <div class="card__body">
-            <span class="eyebrow-sm">Case study &middot; Public Policy</span>
-            <h4 class="clamp2">Create Growth Programme strengthens foundations for creative businesses</h4>
-            <p class="clamp2">Our evaluation of a programme supporting creative businesses across England.</p>
-            <div class="foot tiny muted">July 2026</div>
-          </div>
-        </article>
-        <article class="card" data-cat="news">
-          <div class="ph ph--x" style="aspect-ratio:3/2">Image 3:2</div>
-          <div class="card__body">
-            <span class="eyebrow-sm">News &middot; Competition</span>
-            <h4 class="clamp2">European Commission proposes major shift in how merger benefits are assessed</h4>
-            <p class="clamp2">What would change in practice if Brussels reweighs benefits in merger control.</p>
-            <div class="foot tiny muted">July 2026</div>
-          </div>
-        </article>
-        <article class="card" data-cat="article">
-          <div class="ph ph--x" style="aspect-ratio:3/2">Image 3:2</div>
-          <div class="card__body">
-            <span class="eyebrow-sm">Article &middot; Public Policy</span>
-            <h4 class="clamp2">The Towns Fund is helping regeneration on England’s high streets</h4>
-            <p class="clamp2">Evidence that targeted regeneration funding is changing high street fortunes.</p>
-            <div class="foot tiny muted">July 2026</div>
-          </div>
-        </article>
-        <article class="card" data-cat="event">
-          <div class="ph ph--x" style="aspect-ratio:3/2">Image 3:2</div>
-          <div class="card__body">
-            <span class="eyebrow-sm">Event &middot; Competition</span>
-            <h4 class="clamp2">Meet the Senior Advisory Council behind Frontier’s new Merger Benefits Unit</h4>
-            <p class="clamp2">The senior advisers guiding our new merger benefits team.</p>
-            <div class="foot tiny muted">July 2026</div>
-          </div>
-        </article>
-      </div>
-    </div>
-  </div>
-
-  <div class="anno">
-    <ul style="margin-top:0">
-      <li><strong>Strict grid, strict crop.</strong> Every tile uses a 3:2 image and a two-line title. Spacing is a single gutter value throughout, which fixes the uneven rhythm in the current module.</li>
-      <li><strong>Every item needs an image.</strong> That is the trade-off here. It’s worth checking how many news items currently have suitable artwork before committing — a category-coloured block could stand in.</li>
-      <li>Try the filter chips above. Filtering is client-side within the pre-loaded set, so it stays fast on the home page.</li>
+      <li><span class="mk">3</span><strong>Warn, don’t block.</strong> An over-length summary is flagged in the editor and clamped on the page, so a rushed publish never breaks the layout. A missing image is flagged the same way but still publishes, using the category block.</li>
+      <li>Suggested limits for sign-off: <strong>title 75 characters</strong> (about two lines), <strong>summary 140 characters</strong> (about three). Worth checking these against a handful of your longest existing headlines before we fix them.</li>
     </ul>
   </div>
 </section>
 
 
   <div class="footer-note">
-    Lo-fi wireframes for discussion. Greyscale and unstyled on purpose &mdash; layout, hierarchy and behaviour only.
-    Content taken from <a href="https://www.frontier-economics.com/uk/en/home/" target="_blank" rel="noopener">frontier-economics.com</a>.
-    <br>Use the tabs above to move between features.
+    Round 2 &mdash; one resolved option per feature, following client feedback. Greyscale and lo-fi on purpose:
+    layout, hierarchy and behaviour only. Content taken from
+    <a href="https://www.frontier-economics.com/uk/en/home/" target="_blank" rel="noopener">frontier-economics.com</a>.
   </div>
 </main>
 

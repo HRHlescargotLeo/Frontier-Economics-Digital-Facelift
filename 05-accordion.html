@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Accordion — wireframes</title>
+<title>Accordion — final</title>
 <style>
 /* ============================================================
    Frontier Economics — lo-fi wireframe kit
@@ -320,7 +320,7 @@ body.anno-off .anno,body.anno-off .mk-in{display:none}
 
 <header class="proto-nav">
   <div class="proto-nav__inner">
-    <span class="proto-nav__brand">Frontier &mdash; wireframes</span>
+    <span class="proto-nav__brand">Frontier &mdash; final direction</span>
     <nav class="proto-nav__links">
         <a class="pn" href="index.html">Overview</a>
         <a class="pn" href="01-featured-items.html">Featured items</a>
@@ -336,150 +336,83 @@ body.anno-off .anno,body.anno-off .mk-in{display:none}
 
 <main class="wrap">
 <style>
-  .vsplit{display:grid;grid-template-columns:300px 1fr;gap:0;border:1px solid var(--line)}
+  .vsplit{display:grid;grid-template-columns:310px 1fr;gap:0;border:1px solid var(--line)}
   .vlist{border-right:1px solid var(--line);background:var(--fill)}
   .vlist button{
-    display:block;width:100%;text-align:left;background:transparent;border:0;
+    display:flex;align-items:center;justify-content:space-between;gap:10px;
+    width:100%;text-align:left;background:transparent;border:0;
     border-bottom:1px solid var(--line);font:inherit;font-size:14.5px;font-weight:600;
     padding:16px 18px;cursor:pointer;color:var(--ink-soft);
   }
   .vlist button:last-child{border-bottom:0}
   .vlist button:hover{color:var(--ink);background:#ececec}
   .vlist button.is-on{background:var(--paper);color:var(--ink);box-shadow:inset 3px 0 0 var(--ink)}
-  .vpane{display:none;padding:26px 28px}
+  .vlist button .ch{opacity:0;font-size:13px}
+  .vlist button.is-on .ch{opacity:1}
+  .vpane{display:none;padding:28px 30px}
   .vpane.is-on{display:block}
-  .vpane p{margin:0 0 12px;max-width:66ch;color:var(--ink-soft);font-size:13.5px}
-  .acc-card{border:1px solid var(--line);margin-bottom:12px;background:var(--paper)}
-  .acc-card .acc-btn{padding:18px 20px}
-  .acc-card .acc-panel{padding:0 20px 20px}
-  .acc-card.is-open{border-color:var(--ink-soft)}
-  .teaser{font-size:12.5px;color:var(--ink-faint);margin:4px 0 0;max-width:70ch}
-  .acc-item.is-open .teaser{display:none}
-  .statbox{border-left:3px solid var(--ink);padding:4px 0 4px 14px}
-  .statbox strong{font-size:24px;display:block;line-height:1.1}
+  .vpane p{margin:0 0 12px;max-width:62ch;color:var(--ink-soft);font-size:13.5px}
+  .vpane .lede{color:var(--ink);font-size:15px;max-width:58ch}
+  .cms-row{display:flex;justify-content:space-between;gap:12px;align-items:center;border:1px dashed var(--line-strong);background:var(--fill);padding:10px 12px;font-size:12px}
+  .counter{font-size:11px;color:var(--ink-soft);white-space:nowrap}
+  .counter b{color:var(--ink)}
+  .over{color:#b04a4a}
+  .meter{width:90px;height:5px;background:var(--fill-mid);display:inline-block;vertical-align:middle;margin-left:8px;position:relative}
+  .meter i{position:absolute;left:0;top:0;height:100%;background:var(--ink-soft)}
+  .meter.over i{background:#b04a4a}
 </style>
 
 <div class="page-head">
-  <p class="eyebrow">Feature 05</p>
+  <p class="eyebrow">Feature 05 &middot; Final direction</p>
   <h1>Accordion</h1>
   <div class="brief">
-    <p><strong>The ask:</strong> a refresh.</p>
-    <p class="src">Currently on <a href="https://www.frontier-economics.com/uk/en/about/who-we-are/" target="_blank" rel="noopener">Who we are</a>. The existing pattern works, but the closed rows give no clue what is inside them, the hairline rules and doubled borders make the spacing look uneven, and an opened panel indents its text away from the heading it belongs to.</p>
+    <p><strong>What changed:</strong> Idea 2 — index left, content right — kept as the direction, with the word-count control you raised built in rather than left as guidance.</p>
+    <p class="src">This pattern makes a length limit easy to justify: every panel occupies the same fixed frame beside the index, so overlong copy is visible immediately as an outlier rather than quietly pushing the page longer. Panels stay a consistent depth and the page never jumps as you move between sections.</p>
   </div>
 </div>
 
-<!-- ================= IDEA 1 ================= -->
 <section class="idea">
   <div class="idea__head">
-    <span class="idea__num">Idea 1</span>
-    <h2>Same pattern, properly tuned</h2>
-  </div>
-  <p class="idea__sub">The lowest-risk option: keep the full-width list, but add a teaser line to every closed row, align the panel text with its heading, and give the whole thing a consistent vertical rhythm.</p>
-
-  <div class="frame">
-    <div class="frame__label">Who we are — accordion</div>
-    <div class="frame__body pad">
-      <div class="row" style="justify-content:space-between;align-items:flex-end;margin-bottom:6px">
-        <h3 style="margin:0;font-size:20px">More about Frontier</h3>
-        <button class="btn btn--sm btn--ghost" data-acc-all="#acc1" data-state="closed">Expand all <span class="mk-in">1</span></button>
-      </div>
-      <div class="hr-strong" style="margin-bottom:0"></div>
-
-      <div id="acc1" data-acc-group="multi">
-        <div class="acc-item is-open">
-          <button class="acc-btn" data-acc>
-            <span>
-              <h4>Our past, present and future</h4>
-              <p class="teaser">Founded in 1999, owned entirely by our staff — and why that still shapes the work.</p>
-            </span>
-            <span class="acc-sign">+</span>
-          </button>
-          <div class="acc-panel">
-            <p>Frontier Economics was founded by a team of economists with imagination. We wanted to create a sustainable business, working on the most interesting problems for the most interesting clients.</p>
-            <p>The bedrock of our business is that we are owned entirely by our staff. This means everyone is driven to deliver the highest quality work, with an independent mind, for clients we really care about.</p>
-            <p>People like what we do, and our business has grown. The problems we solve change constantly, but our values do not. Our clients come back again and again, and many of our founders still work within the business. <span class="mk-in">2</span></p>
-          </div>
-        </div>
-
-        <div class="acc-item">
-          <button class="acc-btn" data-acc>
-            <span>
-              <h4>Valuing diversity and inclusion</h4>
-              <p class="teaser">A diverse workforce across nine offices, and what we do to make it an inclusive one.</p>
-            </span>
-            <span class="acc-sign">+</span>
-          </button>
-          <div class="acc-panel">
-            <p>We are a firm with a diverse workforce spread across different countries, encompassing many cultures and outlooks. We want to reflect and embrace the power of diversity and cultural difference in everything we do for our clients and through our internal work.</p>
-            <p>We are an inclusive workplace where people are free to be who they want to be and able to bring their true selves into the workplace. We will be bold, visible and proactive to make sure that Frontier is and continues to be a workplace that embraces diversity.</p>
-            <p><a href="#">Read more about our D&amp;I initiatives &rarr;</a></p>
-          </div>
-        </div>
-
-        <div class="acc-item">
-          <button class="acc-btn" data-acc>
-            <span>
-              <h4>A shared work ethic</h4>
-              <p class="teaser">Nine offices, decades of client relationships, and one way of working.</p>
-            </span>
-            <span class="acc-sign">+</span>
-          </button>
-          <div class="acc-panel">
-            <p>We work with clients all over the world from our offices in Amsterdam, Berlin, Brussels, Cologne, Dublin, Madrid, London, Paris and Prague.</p>
-            <p>We’ve grown through recessions, booms and busts and count some of the most admired organisations in the world among our long-standing clients.</p>
-            <p>We believe in strong client relationships, have a passion for understanding the truth and employ people who want to make a difference.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="anno">
-    <ul style="margin-top:0">
-      <li><span class="mk">1</span><strong>Expand all.</strong> Useful when someone wants to read or print the whole section, and it helps search engines and screen readers reach content that is otherwise hidden.</li>
-      <li><span class="mk">2</span><strong>Panel text aligns with its heading.</strong> The current indent breaks the connection between a title and its content, which is part of why the section feels loose.</li>
-      <li>A one-line teaser under each closed row means the visitor can decide what to open without guessing. Multiple rows can be open at once — the current behaviour.</li>
-      <li>Rules are single and consistent: one line between items, a heavier rule above the group. Vertical padding is one value throughout.</li>
-    </ul>
-  </div>
-</section>
-
-<!-- ================= IDEA 2 ================= -->
-<section class="idea">
-  <div class="idea__head">
-    <span class="idea__num">Idea 2</span>
+    <span class="idea__num">Final</span>
     <h2>Index left, content right</h2>
   </div>
-  <p class="idea__sub">All the section titles stay visible while you read, so it works more like a set of chapters than a stack of drawers. The page does not jump as panels open and close, which is the main irritation with long accordions.</p>
+  <p class="idea__sub">Click through the four sections. The titles stay in view the whole time, so the reader always knows what else is there.</p>
 
   <div class="frame">
     <div class="frame__label">Who we are — sectioned content</div>
     <div class="frame__body pad">
-      <h3 style="margin:0 0 16px;font-size:20px">More about Frontier</h3>
+      <div class="row" style="justify-content:space-between;align-items:flex-end;margin-bottom:16px">
+        <h3 style="margin:0;font-size:20px">More about Frontier</h3>
+        <span class="tiny muted">4 sections</span>
+      </div>
+
       <div class="vsplit" data-vtab-group>
         <div class="vlist">
-          <button data-vtab="a" class="is-on">Our past, present and future</button>
-          <button data-vtab="b">Valuing diversity and inclusion</button>
-          <button data-vtab="c">A shared work ethic</button>
-          <button data-vtab="d">What defines Frontier <span class="mk-in">3</span></button>
+          <button data-vtab="a" class="is-on">Our past, present and future <span class="ch">&rarr;</span></button>
+          <button data-vtab="b">Valuing diversity and inclusion <span class="ch">&rarr;</span></button>
+          <button data-vtab="c">A shared work ethic <span class="ch">&rarr;</span></button>
+          <button data-vtab="d">What defines Frontier <span class="ch">&rarr;</span></button>
         </div>
         <div>
           <div class="vpane is-on" data-vpane="a">
-            <p>Frontier Economics was founded by a team of economists with imagination. We wanted to create a sustainable business, working on the most interesting problems for the most interesting clients.</p>
+            <p class="lede">Founded in 1999 by economists who wanted to work on the most interesting problems, for the most interesting clients. <span class="mk-in">1</span></p>
             <p>The bedrock of our business is that we are owned entirely by our staff. This means everyone is driven to deliver the highest quality work, with an independent mind, for clients we really care about.</p>
-            <p>People like what we do, and our business has grown. The problems we solve change constantly, but our values do not.</p>
+            <p>People like what we do, and our business has grown. The problems we solve change constantly, but our values do not. Our clients come back again and again, and many of our founders still work within the business.</p>
+            <a class="btn btn--sm" href="#">How we created Frontier</a>
           </div>
           <div class="vpane" data-vpane="b">
-            <p>We are a firm with a diverse workforce spread across different countries, encompassing many cultures and outlooks. We want to reflect and embrace the power of diversity and cultural difference in everything we do for our clients and through our internal work.</p>
-            <p>We are an inclusive workplace where people are free to be who they want to be and able to bring their true selves into the workplace. We will be bold, visible and proactive to make sure that Frontier is and continues to be a workplace that embraces diversity.</p>
-            <p><a href="#">Read more about our D&amp;I initiatives &rarr;</a></p>
+            <p class="lede">A workforce spread across nine countries, and a workplace we want everyone to be able to be themselves in.</p>
+            <p>We want to reflect and embrace the power of diversity and cultural difference in everything we do for our clients and through our internal work.</p>
+            <p>We are an inclusive workplace where people are free to be who they want to be. We will be bold, visible and proactive to make sure that Frontier is and continues to be a workplace that embraces diversity.</p>
+            <a class="btn btn--sm" href="#">Our D&amp;I initiatives</a>
           </div>
           <div class="vpane" data-vpane="c">
-            <p>We work with clients all over the world from our offices in Amsterdam, Berlin, Brussels, Cologne, Dublin, Madrid, London, Paris and Prague.</p>
+            <p class="lede">We work with clients all over the world, from offices in Amsterdam, Berlin, Brussels, Cologne, Dublin, Madrid, London, Paris and Prague.</p>
             <p>We’ve grown through recessions, booms and busts and count some of the most admired organisations in the world among our long-standing clients.</p>
             <p>We believe in strong client relationships, have a passion for understanding the truth and employ people who want to make a difference.</p>
           </div>
           <div class="vpane" data-vpane="d">
+            <p class="lede">Three things shape how we work, whoever the client and whatever the question.</p>
             <p><strong>Uncompromising thinking</strong> — we deliver exceptional work with integrity and objectivity.</p>
             <p><strong>Looking beyond the obvious</strong> — we think more widely than the immediate question, and deliver more than expected.</p>
             <p><strong>A refreshing experience</strong> — we’re smart and friendly people who communicate complex ideas with clarity.</p>
@@ -491,114 +424,61 @@ body.anno-off .anno,body.anno-off .mk-in{display:none}
 
   <div class="anno">
     <ul style="margin-top:0">
-      <li><span class="mk">3</span><strong>Scales past three items.</strong> The current section has three; this pattern stays readable at six or eight, so it can absorb content that sits loose elsewhere on the page.</li>
-      <li>On mobile this collapses back to a standard accordion — same content, same order, no separate build.</li>
-      <li><strong>Trade-off:</strong> only one section is visible at a time, and it is harder to scan the full text in one pass. If Frontier wants everything readable in a single scroll, Idea 1 is the safer choice.</li>
+      <li><span class="mk">1</span><strong>An opening line, then the detail.</strong> Each panel now leads with one sentence at a larger size. It gives the reader the point before they commit to the paragraph, and it gives editors a clear structure to write into — which makes a word limit far easier to hit.</li>
+      <li><strong>Panels sit within a 60–90 word range.</strong> All four sections here have been trimmed to fit it, using your existing copy. That range keeps every panel roughly one screen deep with no scrolling inside the frame. The counts are an editor-side control only — see the CMS view below — and never appear on the live page.</li>
+      <li>Titles stay visible while reading, and the page height never changes as you switch section — the main irritation with a stacked accordion.</li>
+      <li><strong>On mobile</strong> this collapses to a standard stacked accordion: same content, same order, one build. The word limit matters more there, since a long panel pushes the remaining titles well off screen.</li>
+      <li>Each section takes a permanent anchor, so it can be linked to directly from elsewhere on the site and opens already selected.</li>
     </ul>
   </div>
 </section>
 
-<!-- ================= IDEA 3 ================= -->
 <section class="idea">
   <div class="idea__head">
-    <span class="idea__num">Idea 3</span>
-    <h2>Cards that can carry more than text</h2>
+    <span class="idea__num">CMS</span>
+    <h2>Enforcing the limit</h2>
   </div>
-  <p class="idea__sub">Each row becomes a bordered card with optional extras — a figure, an image, a link out. This turns the accordion from a place to hide long copy into a genuine content module, and it can absorb the “In numbers” content that currently sits separately on the page.</p>
+  <p class="idea__sub">The hard stop you asked about, drawn as it would appear to an editor. Counts are live as they type, so the constraint is visible while the copy is being written rather than after it is published.</p>
 
   <div class="frame">
-    <div class="frame__label">Who we are — accordion cards</div>
+    <div class="frame__label">Accordion — section settings</div>
     <div class="frame__body pad">
-      <div class="row" style="justify-content:space-between;align-items:flex-end;margin-bottom:16px">
-        <h3 style="margin:0;font-size:20px">More about Frontier</h3>
-        <button class="btn btn--sm btn--ghost" data-acc-all="#acc3" data-state="closed">Expand all</button>
-      </div>
-
-      <div id="acc3" data-acc-group="single">
-        <div class="acc-item acc-card is-open">
-          <button class="acc-btn" data-acc>
-            <span>
-              <span class="eyebrow-sm">Our story <span class="mk-in">4</span></span>
-              <h4 style="margin-top:4px">Our past, present and future</h4>
-            </span>
-            <span class="acc-sign">+</span>
-          </button>
-          <div class="acc-panel">
-            <div class="grid g2" style="gap:26px">
-              <div>
-                <p>Frontier Economics was founded by a team of economists with imagination. We wanted to create a sustainable business, working on the most interesting problems for the most interesting clients.</p>
-                <p>The bedrock of our business is that we are owned entirely by our staff. This means everyone is driven to deliver the highest quality work, with an independent mind, for clients we really care about.</p>
-                <a class="btn btn--sm" href="#">How we created Frontier</a>
-              </div>
-              <div class="stack" style="gap:18px">
-                <div class="statbox"><strong>1999</strong><span class="tiny muted">Founded in London</span></div>
-                <div class="statbox"><strong>100%</strong><span class="tiny muted">Owned by our staff</span></div>
-                <div class="statbox"><strong>423</strong><span class="tiny muted">People across nine offices</span></div>
-              </div>
-            </div>
-          </div>
+      <div class="stack">
+        <div class="cms-row">
+          <span><strong>Section 1</strong> — Our past, present and future</span>
+          <span class="counter">Title <b>27</b>/40 &middot; Body <b>78</b>/90 words <span class="meter"><i style="width:87%"></i></span></span>
         </div>
-
-        <div class="acc-item acc-card">
-          <button class="acc-btn" data-acc>
-            <span>
-              <span class="eyebrow-sm">Our people</span>
-              <h4 style="margin-top:4px">Valuing diversity and inclusion</h4>
-            </span>
-            <span class="acc-sign">+</span>
-          </button>
-          <div class="acc-panel">
-            <div class="grid g2" style="gap:26px">
-              <div>
-                <p>We are a firm with a diverse workforce spread across different countries, encompassing many cultures and outlooks. We want to reflect and embrace the power of diversity and cultural difference in everything we do for our clients and through our internal work.</p>
-                <p>We are an inclusive workplace where people are free to be who they want to be and able to bring their true selves into the workplace.</p>
-                <a class="btn btn--sm" href="#">Our D&amp;I initiatives</a>
-              </div>
-              <div class="ph ph--x" style="aspect-ratio:4/3">Optional image <span class="mk-in">5</span></div>
-            </div>
-          </div>
+        <div class="cms-row">
+          <span><strong>Section 2</strong> — Valuing diversity and inclusion</span>
+          <span class="counter">Title <b>30</b>/40 &middot; Body <b>76</b>/90 words <span class="meter"><i style="width:84%"></i></span></span>
         </div>
-
-        <div class="acc-item acc-card">
-          <button class="acc-btn" data-acc>
-            <span>
-              <span class="eyebrow-sm">How we work</span>
-              <h4 style="margin-top:4px">A shared work ethic</h4>
-            </span>
-            <span class="acc-sign">+</span>
-          </button>
-          <div class="acc-panel">
-            <div class="grid g2" style="gap:26px">
-              <div>
-                <p>We work with clients all over the world from our offices in Amsterdam, Berlin, Brussels, Cologne, Dublin, Madrid, London, Paris and Prague.</p>
-                <p>We’ve grown through recessions, booms and busts and count some of the most admired organisations in the world among our long-standing clients.</p>
-              </div>
-              <div class="stack" style="gap:18px">
-                <div class="statbox"><strong>62</strong><span class="tiny muted">Countries we’ve worked in</span></div>
-                <div class="statbox"><strong>32</strong><span class="tiny muted">Languages spoken between us</span></div>
-              </div>
-            </div>
-          </div>
+        <div class="cms-row">
+          <span><strong>Section 3</strong> — A shared work ethic</span>
+          <span class="counter">Title <b>19</b>/40 &middot; Body <b>70</b>/90 words <span class="meter"><i style="width:78%"></i></span></span>
         </div>
+        <div class="cms-row">
+          <span><strong>Section 4</strong> — What defines Frontier and how we approach every piece of client work</span>
+          <span class="counter over">Title <b>68</b>/40 &middot; Body <b>134</b>/90 words <span class="meter over"><i style="width:100%"></i></span> <span class="mk-in">3</span></span>
+        </div>
+        <div class="cms-row" style="border-style:solid;background:#fff"><span class="muted">+ Add section (max 8)</span><span></span></div>
       </div>
     </div>
   </div>
 
   <div class="anno">
     <ul style="margin-top:0">
-      <li><span class="mk">4</span><strong>An eyebrow label above each title</strong> groups the items and gives editors a place to say what kind of content this is.</li>
-      <li><span class="mk">5</span><strong>Optional second column.</strong> Each panel can hold text alone, text plus figures, or text plus an image — all from the same component, so editors are not choosing between three different modules.</li>
-      <li>This example opens one card at a time, which keeps the page short. That is a setting, not a fixed behaviour — compare with Idea 1 above, where several can be open together.</li>
-      <li>Each card can take a permanent anchor link, so a specific section can be linked to directly from elsewhere on the site and opens already expanded.</li>
+      <li><span class="mk">3</span><strong>Hard or soft — your call, and it is worth making deliberately.</strong> A <em>hard</em> stop refuses to save beyond the limit and guarantees the pattern holds. A <em>soft</em> stop warns but allows publishing, and trusts editors with the occasional exception. Given the aim is to stop these modules sprawling again, we would suggest hard on the title and soft on the body, at least for the first few months.</li>
+      <li><strong>Suggested limits:</strong> title <strong>40 characters</strong>, body <strong>90 words</strong>, maximum <strong>8 sections</strong> per module. The four sections above all sit inside these using your existing copy, which is a reasonable sign the limits are livable.</li>
+      <li>Where content genuinely will not compress, the panel should link out to a full page rather than the limit being raised — that keeps the pattern intact and gives the longer piece somewhere better to live.</li>
     </ul>
   </div>
 </section>
 
 
   <div class="footer-note">
-    Lo-fi wireframes for discussion. Greyscale and unstyled on purpose &mdash; layout, hierarchy and behaviour only.
-    Content taken from <a href="https://www.frontier-economics.com/uk/en/home/" target="_blank" rel="noopener">frontier-economics.com</a>.
-    <br>Use the tabs above to move between features.
+    Round 2 &mdash; one resolved option per feature, following client feedback. Greyscale and lo-fi on purpose:
+    layout, hierarchy and behaviour only. Content taken from
+    <a href="https://www.frontier-economics.com/uk/en/home/" target="_blank" rel="noopener">frontier-economics.com</a>.
   </div>
 </main>
 

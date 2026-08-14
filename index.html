@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Frontier Economics — feature wireframes</title>
+<title>Frontier Economics — final direction</title>
 <style>
 /* ============================================================
    Frontier Economics — lo-fi wireframe kit
@@ -320,7 +320,7 @@ body.anno-off .anno,body.anno-off .mk-in{display:none}
 
 <header class="proto-nav">
   <div class="proto-nav__inner">
-    <span class="proto-nav__brand">Frontier &mdash; wireframes</span>
+    <span class="proto-nav__brand">Frontier &mdash; final direction</span>
     <nav class="proto-nav__links">
         <a class="pn is-current" href="index.html">Overview</a>
         <a class="pn" href="01-featured-items.html">Featured items</a>
@@ -336,93 +336,98 @@ body.anno-off .anno,body.anno-off .mk-in{display:none}
 
 <main class="wrap">
 <style>
-  .nav-card{
-    border:1px solid var(--line);background:var(--paper);padding:18px 20px;
-    text-decoration:none;color:inherit;display:flex;flex-direction:column;gap:6px;
-  }
+  .nav-card{border:1px solid var(--line);background:var(--paper);padding:18px 20px;text-decoration:none;color:inherit;display:flex;flex-direction:column;gap:6px}
   .nav-card:hover{border-color:var(--ink)}
   .nav-card strong{font-size:16px}
   .nav-card .n{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-faint)}
-  .key{display:grid;grid-template-columns:150px 1fr;gap:10px 18px;align-items:center;font-size:13px}
+  .chosen{display:grid;grid-template-columns:170px 1fr;gap:10px 18px;font-size:13px;align-items:start}
+  .chosen dt{font-weight:700}
+  .open-q{border-left:3px solid var(--anno-line);padding:2px 0 2px 14px;margin:0 0 14px}
+  .open-q strong{display:block}
 </style>
 
 <div class="page-head">
-  <p class="eyebrow">Frontier Economics</p>
-  <h1>Website feature concepts — lo-fi wireframes</h1>
+  <p class="eyebrow">Frontier Economics &middot; Round 2</p>
+  <h1>Final direction — one option per feature</h1>
   <div class="brief">
-    <p>Five features, three directions each, drawn deliberately in grey so the conversation stays on layout, hierarchy and behaviour rather than colour and typography. Content is taken from the live Frontier Economics site.</p>
-    <p>The wireframes are interactive where it matters — open the accordions, work the filters, switch the tabs, page the carousels. Everything else is a placeholder.</p>
+    <p>Your preferences worked through into a single resolved option for each feature, with the requested changes made and the loose ends tied off. Still greyscale and still lo-fi — colour and typography come next.</p>
+    <p>Everything remains interactive: page the carousel, work the filters and search, switch accordion sections, filter a profile’s insights.</p>
   </div>
 </div>
 
 <section class="idea">
-  <div class="idea__head"><span class="idea__num">Contents</span><h2>The five features</h2></div>
+  <div class="idea__head"><span class="idea__num">Contents</span><h2>The six pages</h2></div>
   <div class="grid g2" style="margin-top:16px">
     <a class="nav-card" href="01-featured-items.html">
-      <span class="n">Feature 01</span>
-      <strong>Featured items module</strong>
-      <span class="small muted">Make titles, summaries, imagery and spacing consistent, and give editors more control over what appears.</span>
+      <span class="n">Feature 01</span><strong>Featured items module</strong>
+      <span class="small muted">Idea 1’s uniform cards, now with a 16:9 image above each summary — plus a designed fallback for items with no artwork.</span>
     </a>
     <a class="nav-card" href="02-banner.html">
-      <span class="n">Feature 02</span>
-      <strong>Home page banner</strong>
-      <span class="small muted">Reduce the height so it is clearer what Frontier does above the fold.</span>
+      <span class="n">Feature 02</span><strong>Home page banner</strong>
+      <span class="small muted">Idea 1 refined: banner sits below the navigation, fixed at 330px, with selectable featured stories.</span>
     </a>
     <a class="nav-card" href="03-people-directory.html">
-      <span class="n">Feature 03</span>
-      <strong>People directory — landing page</strong>
-      <span class="small muted">A new template for browsing and filtering 423 people.</span>
+      <span class="n">Feature 03</span><strong>People directory</strong>
+      <span class="small muted">Idea 1’s filter rail and descriptive cards, with Idea 3’s prominent search lifted to the top of the page.</span>
     </a>
     <a class="nav-card" href="04-people-profile.html">
-      <span class="n">Feature 04</span>
-      <strong>People profile</strong>
-      <span class="small muted">Replace the Q&amp;A with a related-content aggregator that can be reused elsewhere in reduced form.</span>
+      <span class="n">Feature 04</span><strong>People profile</strong>
+      <span class="small muted">Idea 1 kept, with type filters on the insights list and the empty state drawn out in full.</span>
     </a>
     <a class="nav-card" href="05-accordion.html">
-      <span class="n">Feature 05</span>
-      <strong>Accordion</strong>
-      <span class="small muted">A refresh of the pattern used on Who we are.</span>
+      <span class="n">Feature 05</span><strong>Accordion</strong>
+      <span class="small muted">Idea 2’s index-left layout, with the word-count limit built into the editor rather than left to guidance.</span>
     </a>
     <a class="nav-card" href="06-image-and-text.html">
-      <span class="n">Feature 06</span>
-      <strong>Image and text</strong>
-      <span class="small muted">A smaller layout — three across — in place of a module that uses a lot of space for little information.</span>
+      <span class="n">Feature 06</span><strong>Image and text</strong>
+      <span class="small muted">Idea 2’s icon tiles, with the tone sequence fixed and variants for two, three and four items.</span>
     </a>
   </div>
 </section>
 
 <section class="idea">
-  <div class="idea__head"><span class="idea__num">How to read</span><h2>Conventions used throughout</h2></div>
+  <div class="idea__head"><span class="idea__num">Summary</span><h2>What we changed, and why</h2></div>
   <div class="frame">
     <div class="frame__body pad">
-      <div class="key">
-        <div class="ph ph--x" style="height:52px">Image</div>
-        <span>A crossed grey block is a placeholder image. The label states the aspect ratio where it matters.</span>
+      <dl class="chosen" style="margin:0">
+        <dt>Featured items</dt>
+        <dd>Image added above the tag and title so the card reads picture &rarr; context &rarr; headline &rarr; summary. The summary keeps its three-line limit unchanged — it was doing the work you valued. A single 16:9 crop is what holds the module together; items without artwork get a category block at the same ratio rather than a gap.</dd>
 
-        <div><span class="tline"></span><span class="tline s"></span></div>
-        <span>Grey bars stand in for body copy that has not been written yet. Most copy here is real, taken from the live site.</span>
+        <dt>Banner</dt>
+        <dd>Kept as drawn. The overlap you flagged is resolved by the banner starting below the navigation rather than behind it, and the height is fixed in pixels so a larger monitor reveals more content instead of a bigger image.</dd>
 
-        <div><span class="mk">1</span></div>
-        <span>A numbered marker points to something explained in the note beneath the wireframe.</span>
+        <dt>People directory</dt>
+        <dd>Search sits above the grid and returns expertise as well as names; selecting an expertise result applies it as a filter rather than leaving the page, so search and filters stay one system. The rail, count, chips and first-person cards are unchanged.</dd>
 
-        <div class="anno" style="margin:0;padding:8px 10px">Note</div>
-        <span>Yellow notes carry the reasoning, the trade-offs and the questions for Frontier. Use <strong>Hide notes</strong> in the top bar to present the layouts clean.</span>
+        <dt>People profile</dt>
+        <dd>Kept as drawn. Added type filters that appear only for people with six or more items, and drew the no-content fallback on the same template so it is a designed state rather than an assumption.</dd>
 
-        <div><span class="idea__ref">Closest to the reference</span></div>
-        <span>Marks the option that sits closest to a site Frontier has said they admire.</span>
-      </div>
+        <dt>Accordion</dt>
+        <dd>Kept as drawn, and the word-count control is now part of the design. Each panel opens with a single larger sentence, which gives editors a structure to write into and makes a 90-word limit achievable — all four sections fit it using your existing copy.</dd>
+
+        <dt>Image and text</dt>
+        <dd>Kept as drawn, photography removed. Tone alternates by position so editors never pick colours, and variants for two, three and four items come from the same component.</dd>
+      </dl>
     </div>
   </div>
+</section>
+
+<section class="idea">
+  <div class="idea__head"><span class="idea__num">Next</span><h2>Open questions for Frontier</h2></div>
   <div class="anno">
-    <p style="margin:0"><strong>A note on the split.</strong> The brief treats the people directory and the people profiles as one item. They are separated here because they need different templates and raise different questions, but they share the same person record and the same short summary field — so decisions on one affect the other.</p>
+    <div class="open-q"><strong>The one-line person summary.</strong> Used on both the directory card and the profile. 423 people is a lot of copy — is it written for everyone, for senior staff only, or gradually? The card falls back to sector tags where it is missing, so a phased rollout works.</div>
+    <div class="open-q"><strong>Hard or soft word limits.</strong> Our suggestion is hard on titles, soft on body copy for the first few months. Worth a decision before build, since it changes how the CMS behaves.</div>
+    <div class="open-q"><strong>The icon set.</strong> The image-and-text tiles need roughly a dozen icons drawn as one family. Does an existing set exist that we should extend, or is this new work?</div>
+    <div class="open-q"><strong>Author tagging.</strong> The profile aggregator is only as good as the tagging behind it. Worth auditing how consistently content is currently tagged to people before we rely on it.</div>
+    <div class="open-q"><strong>Character limits against real content.</strong> Suggested limits are on each page. Testing them against your longest existing headlines before sign-off will save changing them later.</div>
   </div>
 </section>
 
 
   <div class="footer-note">
-    Lo-fi wireframes for discussion. Greyscale and unstyled on purpose &mdash; layout, hierarchy and behaviour only.
-    Content taken from <a href="https://www.frontier-economics.com/uk/en/home/" target="_blank" rel="noopener">frontier-economics.com</a>.
-    <br>Use the tabs above to move between features.
+    Round 2 &mdash; one resolved option per feature, following client feedback. Greyscale and lo-fi on purpose:
+    layout, hierarchy and behaviour only. Content taken from
+    <a href="https://www.frontier-economics.com/uk/en/home/" target="_blank" rel="noopener">frontier-economics.com</a>.
   </div>
 </main>
 
