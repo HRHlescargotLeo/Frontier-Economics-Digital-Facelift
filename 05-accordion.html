@@ -353,13 +353,6 @@ body.anno-off .anno,body.anno-off .mk-in{display:none}
   .vpane.is-on{display:block}
   .vpane p{margin:0 0 12px;max-width:62ch;color:var(--ink-soft);font-size:13.5px}
   .vpane .lede{color:var(--ink);font-size:15px;max-width:58ch}
-  .cms-row{display:flex;justify-content:space-between;gap:12px;align-items:center;border:1px dashed var(--line-strong);background:var(--fill);padding:10px 12px;font-size:12px}
-  .counter{font-size:11px;color:var(--ink-soft);white-space:nowrap}
-  .counter b{color:var(--ink)}
-  .over{color:#b04a4a}
-  .meter{width:90px;height:5px;background:var(--fill-mid);display:inline-block;vertical-align:middle;margin-left:8px;position:relative}
-  .meter i{position:absolute;left:0;top:0;height:100%;background:var(--ink-soft)}
-  .meter.over i{background:#b04a4a}
 </style>
 
 <div class="page-head">
@@ -425,51 +418,10 @@ body.anno-off .anno,body.anno-off .mk-in{display:none}
   <div class="anno">
     <ul style="margin-top:0">
       <li><span class="mk">1</span><strong>An opening line, then the detail.</strong> Each panel now leads with one sentence at a larger size. It gives the reader the point before they commit to the paragraph, and it gives editors a clear structure to write into — which makes a word limit far easier to hit.</li>
-      <li><strong>Panels sit within a 60–90 word range.</strong> All four sections here have been trimmed to fit it, using your existing copy. That range keeps every panel roughly one screen deep with no scrolling inside the frame. The counts are an editor-side control only — see the CMS view below — and never appear on the live page.</li>
+      <li><strong>Panels sit within a 60–90 word range.</strong> All four sections here have been trimmed to fit it, using your existing copy. That range keeps every panel roughly one screen deep with no scrolling inside the frame. We'd suggest a hard stop on the title and a soft warning on the body for the first few months — happy to leave the exact mechanism to the CMS team, but flagging the distinction since it changes how a limit behaves for editors.</li>
       <li>Titles stay visible while reading, and the page height never changes as you switch section — the main irritation with a stacked accordion.</li>
       <li><strong>On mobile</strong> this collapses to a standard stacked accordion: same content, same order, one build. The word limit matters more there, since a long panel pushes the remaining titles well off screen.</li>
       <li>Each section takes a permanent anchor, so it can be linked to directly from elsewhere on the site and opens already selected.</li>
-    </ul>
-  </div>
-</section>
-
-<section class="idea">
-  <div class="idea__head">
-    <span class="idea__num">CMS</span>
-    <h2>Enforcing the limit</h2>
-  </div>
-  <p class="idea__sub">The hard stop you asked about, drawn as it would appear to an editor. Counts are live as they type, so the constraint is visible while the copy is being written rather than after it is published.</p>
-
-  <div class="frame">
-    <div class="frame__label">Accordion — section settings</div>
-    <div class="frame__body pad">
-      <div class="stack">
-        <div class="cms-row">
-          <span><strong>Section 1</strong> — Our past, present and future</span>
-          <span class="counter">Title <b>27</b>/40 &middot; Body <b>78</b>/90 words <span class="meter"><i style="width:87%"></i></span></span>
-        </div>
-        <div class="cms-row">
-          <span><strong>Section 2</strong> — Valuing diversity and inclusion</span>
-          <span class="counter">Title <b>30</b>/40 &middot; Body <b>76</b>/90 words <span class="meter"><i style="width:84%"></i></span></span>
-        </div>
-        <div class="cms-row">
-          <span><strong>Section 3</strong> — A shared work ethic</span>
-          <span class="counter">Title <b>19</b>/40 &middot; Body <b>70</b>/90 words <span class="meter"><i style="width:78%"></i></span></span>
-        </div>
-        <div class="cms-row">
-          <span><strong>Section 4</strong> — What defines Frontier and how we approach every piece of client work</span>
-          <span class="counter over">Title <b>68</b>/40 &middot; Body <b>134</b>/90 words <span class="meter over"><i style="width:100%"></i></span> <span class="mk-in">3</span></span>
-        </div>
-        <div class="cms-row" style="border-style:solid;background:#fff"><span class="muted">+ Add section (max 8)</span><span></span></div>
-      </div>
-    </div>
-  </div>
-
-  <div class="anno">
-    <ul style="margin-top:0">
-      <li><span class="mk">3</span><strong>Hard or soft — your call, and it is worth making deliberately.</strong> A <em>hard</em> stop refuses to save beyond the limit and guarantees the pattern holds. A <em>soft</em> stop warns but allows publishing, and trusts editors with the occasional exception. Given the aim is to stop these modules sprawling again, we would suggest hard on the title and soft on the body, at least for the first few months.</li>
-      <li><strong>Suggested limits:</strong> title <strong>40 characters</strong>, body <strong>90 words</strong>, maximum <strong>8 sections</strong> per module. The four sections above all sit inside these using your existing copy, which is a reasonable sign the limits are livable.</li>
-      <li>Where content genuinely will not compress, the panel should link out to a full page rather than the limit being raised — that keeps the pattern intact and gives the longer piece somewhere better to live.</li>
     </ul>
   </div>
 </section>

@@ -340,12 +340,6 @@ body.anno-off .anno,body.anno-off .mk-in{display:none}
   .track::-webkit-scrollbar{height:6px}
   .track::-webkit-scrollbar-thumb{background:var(--fill-mid)}
   .track > *{flex:0 0 calc((100% - 40px)/3);scroll-snap-align:start}
-  .prog{height:3px;background:var(--fill-mid);margin-top:14px;position:relative}
-  .prog i{position:absolute;left:0;top:0;height:100%;width:56%;background:var(--ink)}
-  .cms-row{display:flex;justify-content:space-between;gap:12px;align-items:center;border:1px dashed var(--line-strong);background:var(--fill);padding:10px 12px;font-size:12px}
-  .counter{font-size:11px;color:var(--ink-soft);white-space:nowrap}
-  .counter b{color:var(--ink)}
-  .over{color:#b04a4a}
 </style>
 
 <div class="page-head">
@@ -450,8 +444,6 @@ body.anno-off .anno,body.anno-off .mk-in{display:none}
             </div>
           </article>
         </div>
-
-        <div class="prog"><i></i></div>
       </div>
     </div>
   </div>
@@ -461,52 +453,6 @@ body.anno-off .anno,body.anno-off .mk-in{display:none}
       <li><span class="mk">1</span><strong>One crop, enforced by the template.</strong> Every image is 16:9 and rendered at the same width. Editors upload at any size; the CMS crops to a focal point they set once. This is the mechanism that keeps the module consistent — not editorial discipline.</li>
       <li><span class="mk">2</span><strong>A designed fallback for missing artwork.</strong> Where no image exists, the card shows a plain category block at the identical ratio rather than collapsing. The row stays level, so one item without a picture cannot break the module. <em>In the live design this would be a Frontier brand colour keyed to the category.</em></li>
       <li>Cards keep their fixed field set: image, category, date, title (2 lines), summary (3 lines), link. Nothing is optional, so no card can look half-finished.</li>
-      <li>The progress bar under the track shows how much of the set remains — worth having now that images make each card taller and fewer fit on screen.</li>
-    </ul>
-  </div>
-</section>
-
-<section class="idea">
-  <div class="idea__head">
-    <span class="idea__num">CMS</span>
-    <h2>What the editor sees</h2>
-  </div>
-  <p class="idea__sub">Carried over from the second concept, since it answers the original flexibility ask. Slots can be hand-picked or left to fill automatically, and the character limits are enforced at the point of writing rather than discovered on the live page.</p>
-
-  <div class="frame">
-    <div class="frame__label">Featured items — module settings</div>
-    <div class="frame__body pad" data-switch-group>
-      <div class="row" style="margin-bottom:16px">
-        <span class="tiny" style="letter-spacing:.1em;text-transform:uppercase">Populate by</span>
-        <button class="chip is-on" data-switch="manual">Hand-picked</button>
-        <button class="chip" data-switch="auto">Latest, automatically</button>
-      </div>
-
-      <div data-switch-pane="manual" class="is-on">
-        <div class="stack">
-          <div class="cms-row"><span><strong>Slot 1</strong> — Multiple Frontier experts listed in the Lexology 2026 Competition report</span><span class="row" style="gap:10px"><span class="counter">Title <b>68</b>/75 &middot; Summary <b>121</b>/140 &middot; Image <b>&#10003;</b></span><span class="btn btn--sm btn--ghost">Change</span></span></div>
-          <div class="cms-row"><span><strong>Slot 2</strong> — France 2030: understanding the territorial anchoring of future investment</span><span class="row" style="gap:10px"><span class="counter">Title <b>71</b>/75 &middot; Summary <b>118</b>/140 &middot; Image <b>&#10003;</b></span><span class="btn btn--sm btn--ghost">Change</span></span></div>
-          <div class="cms-row"><span><strong>Slot 3</strong> — The UK’s AI regulation opportunity</span><span class="row" style="gap:10px"><span class="counter over">Title <b>34</b>/75 &middot; Summary <b>147</b>/140 &middot; No image <span class="mk-in">3</span></span><span class="btn btn--sm btn--ghost">Change</span></span></div>
-          <div class="cms-row"><span><strong>Slot 4</strong> — <em>Empty — falls back to the next most recent item</em></span><span class="btn btn--sm btn--ghost">Choose</span></div>
-          <div class="cms-row" style="border-style:solid;background:#fff"><span class="muted">+ Add slot (max 9)</span><span></span></div>
-        </div>
-      </div>
-
-      <div data-switch-pane="auto">
-        <div class="stack">
-          <div class="cms-row"><span><strong>Source</strong> — Articles, News, Case studies</span><span class="btn btn--sm btn--ghost">Edit</span></div>
-          <div class="cms-row"><span><strong>Filter by tag</strong> — any sector, any service</span><span class="btn btn--sm btn--ghost">Edit</span></div>
-          <div class="cms-row"><span><strong>Number of items</strong> — 6</span><span class="btn btn--sm btn--ghost">Edit</span></div>
-          <div class="cms-row"><span><strong>Pin to front</strong> — one item may still be pinned ahead of the automatic list</span><span class="btn btn--sm btn--ghost">Choose</span></div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="anno">
-    <ul style="margin-top:0">
-      <li><span class="mk">3</span><strong>Warn, don’t block.</strong> An over-length summary is flagged in the editor and clamped on the page, so a rushed publish never breaks the layout. A missing image is flagged the same way but still publishes, using the category block.</li>
-      <li>Suggested limits for sign-off: <strong>title 75 characters</strong> (about two lines), <strong>summary 140 characters</strong> (about three). Worth checking these against a handful of your longest existing headlines before we fix them.</li>
     </ul>
   </div>
 </section>
