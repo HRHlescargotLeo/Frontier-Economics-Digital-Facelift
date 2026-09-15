@@ -339,11 +339,22 @@ body.anno-off .anno,body.anno-off .mk-in{display:none}
   .bnr-split{display:grid;grid-template-columns:1.05fr 1fr;min-height:330px}
   .bnr-copy{padding:34px 34px;display:flex;flex-direction:column;justify-content:center}
   .bnr-copy h2{font-size:27px;line-height:1.2;margin:0 0 12px;max-width:20ch}
-  .bnr-img{position:relative}
-  .overlay-card{position:absolute;left:26px;bottom:26px;right:26px;background:#fff;border:1px solid var(--line);padding:16px 18px}
+
+  .bnr-img{position:relative;height:100%;border-left:1px solid var(--line)}
+  .bnr-img__viewport{height:100%;overflow:hidden}
+  .bnr-img__track{display:flex;height:100%;width:300%;transition:transform .6s ease}
+  .bnr-img__panel{width:calc(100%/3);height:100%;position:relative;flex:none}
+  .bnr-img__panel .ph{height:100%;border:0}
+  .overlay-card{position:absolute;left:26px;bottom:26px;right:26px;background:#fff;border:1px solid var(--line);padding:16px 18px;z-index:2}
+  .hero-eyebrow{display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .hero-title{
+    margin:6px 0 12px;font-size:15px;line-height:1.3;min-height:39px;
+    display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;
+  }
   .dots{display:flex;gap:6px}
   .dot{width:7px;height:7px;border-radius:50%;background:var(--fill-dark);border:0;padding:0;cursor:pointer}
   .dot.is-on{background:var(--ink)}
+
   .track{display:flex;gap:20px;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:8px}
   .track::-webkit-scrollbar{height:6px}
   .track::-webkit-scrollbar-thumb{background:var(--fill-mid)}
@@ -386,14 +397,43 @@ body.anno-off .anno,body.anno-off .mk-in{display:none}
               <a class="btn btn--ghost" href="#">Find an expert</a>
             </div>
           </div>
-          <div class="bnr-img">
-            <div class="ph ph--x" style="height:100%;border:0;border-left:1px solid var(--line)">Image — fills the panel, cropped to a set focal point <span class="mk-in">2</span></div>
-            <div class="overlay-card">
-              <span class="eyebrow-sm">Featured &middot; Public Policy &amp; Financial Services</span>
-              <h4 style="margin:6px 0 12px;font-size:15px;line-height:1.3">Revealed: payment scam policies proven to reduce fraud</h4>
-              <div class="row" style="justify-content:space-between">
-                <a class="tiny" href="#" style="letter-spacing:.1em;text-transform:uppercase">Read more &rarr;</a>
-                <span class="dots"><button class="dot is-on" aria-label="Story 1"></button><button class="dot" aria-label="Story 2"></button><button class="dot" aria-label="Story 3"></button> <span class="mk-in">3</span></span>
+
+          <div class="bnr-img" data-hero data-hero-interval="4500">
+            <div class="bnr-img__viewport">
+              <div class="bnr-img__track" data-hero-track>
+                <div class="bnr-img__panel">
+                  <div class="ph ph--x">Image — Story 1 <span class="mk-in">2</span></div>
+                  <div class="overlay-card">
+                    <span class="eyebrow-sm hero-eyebrow">Featured &middot; Public Policy &amp; Financial Services</span>
+                    <h4 class="hero-title">Revealed: payment scam policies proven to reduce fraud</h4>
+                    <div class="row" style="justify-content:space-between">
+                      <a class="tiny" href="#" style="letter-spacing:.1em;text-transform:uppercase">Read more &rarr;</a>
+                      <span class="dots"><button class="dot is-on" data-hero-dot="0" aria-label="Story 1"></button><button class="dot" data-hero-dot="1" aria-label="Story 2"></button><button class="dot" data-hero-dot="2" aria-label="Story 3"></button> <span class="mk-in">3</span></span>
+                    </div>
+                  </div>
+                </div>
+                <div class="bnr-img__panel">
+                  <div class="ph ph--x">Image — Story 2</div>
+                  <div class="overlay-card">
+                    <span class="eyebrow-sm hero-eyebrow">Featured &middot; Energy</span>
+                    <h4 class="hero-title">North Sea oil &amp; gas production: the trade-offs</h4>
+                    <div class="row" style="justify-content:space-between">
+                      <a class="tiny" href="#" style="letter-spacing:.1em;text-transform:uppercase">Read more &rarr;</a>
+                      <span class="dots"><button class="dot" data-hero-dot="0" aria-label="Story 1"></button><button class="dot is-on" data-hero-dot="1" aria-label="Story 2"></button><button class="dot" data-hero-dot="2" aria-label="Story 3"></button></span>
+                    </div>
+                  </div>
+                </div>
+                <div class="bnr-img__panel">
+                  <div class="ph ph--x">Image — Story 3</div>
+                  <div class="overlay-card">
+                    <span class="eyebrow-sm hero-eyebrow">Featured &middot; AI Regulation</span>
+                    <h4 class="hero-title">The UK’s AI regulation opportunity</h4>
+                    <div class="row" style="justify-content:space-between">
+                      <a class="tiny" href="#" style="letter-spacing:.1em;text-transform:uppercase">Read more &rarr;</a>
+                      <span class="dots"><button class="dot" data-hero-dot="0" aria-label="Story 1"></button><button class="dot" data-hero-dot="1" aria-label="Story 2"></button><button class="dot is-on" data-hero-dot="2" aria-label="Story 3"></button></span>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -427,10 +467,10 @@ body.anno-off .anno,body.anno-off .mk-in{display:none}
               <div class="ph ph--x" style="aspect-ratio:16/9">Image — 16:9</div>
               <div class="card__body">
                 <div class="row" style="justify-content:space-between">
-                  <span class="tag">Energy</span><span class="date">Jul 2026</span>
+                  <span class="tag">Public Policy</span><span class="date">Jul 2026</span>
                 </div>
-                <h4 class="clamp2">North Sea oil &amp; gas production: the trade-offs</h4>
-                <p class="clamp3">Two new independent reports take a closer look at the many factors around this complex issue.</p>
+                <h4 class="clamp2">France 2030: understanding the territorial anchoring of future investment</h4>
+                <p class="clamp3">How France’s flagship investment programme is landing in the regions, and what that means for future public funding.</p>
                 <div class="foot"><a class="btn btn--pill btn--sm" href="#">Read more</a></div>
               </div>
             </article>
@@ -438,10 +478,10 @@ body.anno-off .anno,body.anno-off .mk-in{display:none}
               <div class="ph ph--x" style="aspect-ratio:16/9">Image — 16:9</div>
               <div class="card__body">
                 <div class="row" style="justify-content:space-between">
-                  <span class="tag">Public Policy</span><span class="date">Jul 2026</span>
+                  <span class="tag">Energy</span><span class="date">Jul 2026</span>
                 </div>
-                <h4 class="clamp2">The Towns Fund is helping regeneration on England’s high streets</h4>
-                <p class="clamp3">Evidence that targeted regeneration funding is changing the fortunes of England’s high streets.</p>
+                <h4 class="clamp2">North Sea oil &amp; gas production: the trade-offs</h4>
+                <p class="clamp3">Two new independent reports take a closer look at the many factors around this complex issue.</p>
                 <div class="foot"><a class="btn btn--pill btn--sm" href="#">Read more</a></div>
               </div>
             </article>
@@ -467,6 +507,17 @@ body.anno-off .anno,body.anno-off .mk-in{display:none}
                 <div class="foot"><a class="btn btn--pill btn--sm" href="#">Read more</a></div>
               </div>
             </article>
+            <article class="card">
+              <div class="ph" style="aspect-ratio:16/9;background:var(--fill-dark);border-color:var(--line-strong)">No image supplied — category block</div>
+              <div class="card__body">
+                <div class="row" style="justify-content:space-between">
+                  <span class="tag">AI Regulation</span><span class="date">Jun 2026</span>
+                </div>
+                <h4 class="clamp2">The UK’s AI regulation opportunity</h4>
+                <p class="clamp3">Frontier Chair Sharon White examines how the UK can set a ‘third way’ on AI regulation, helping to unlock innovation.</p>
+                <div class="foot"><a class="btn btn--pill btn--sm" href="#">Read more</a></div>
+              </div>
+            </article>
           </div>
         </div>
       </div>
@@ -484,14 +535,71 @@ body.anno-off .anno,body.anno-off .mk-in{display:none}
     </div>
   </div>
 
+  <script>
+  (function () {
+    document.querySelectorAll('[data-hero]').forEach(function (hero) {
+      var track = hero.querySelector('[data-hero-track]');
+      if (!track) return;
+      var panels = track.children.length;
+      var interval = parseInt(hero.dataset.heroInterval, 10) || 5000;
+      var idx = 0;
+      var timer = null;
+
+      function render() {
+        track.style.transform = 'translateX(-' + (idx * (100 / panels)) + '%)';
+        hero.querySelectorAll('[data-hero-dot]').forEach(function (d) {
+          d.classList.toggle('is-on', parseInt(d.dataset.heroDot, 10) === idx);
+        });
+      }
+
+      function go(i) {
+        idx = (i + panels) % panels;
+        render();
+      }
+
+      function start() {
+        stop();
+        timer = setInterval(function () { go(idx + 1); }, interval);
+      }
+      function stop() {
+        if (timer) clearInterval(timer);
+        timer = null;
+      }
+
+      hero.querySelectorAll('[data-hero-dot]').forEach(function (dot) {
+        dot.addEventListener('click', function (e) {
+          e.preventDefault();
+          go(parseInt(dot.dataset.heroDot, 10));
+          start();
+        });
+      });
+
+      hero.addEventListener('mouseenter', stop);
+      hero.addEventListener('mouseleave', start);
+
+      render();
+      start();
+    });
+  })();
+  </script>
+
   <div class="anno">
     <ul style="margin-top:0">
-      <li><span class="mk">1</span><strong>The proposition is text on a plain background.</strong> Nothing sits over the photography, so contrast is reliable and the message reads at any screen size. This is also what removes the overlap with the navigation you flagged — the image now starts below the tab row rather than running underneath it.</li>
-      <li><span class="mk">2</span><strong>The image panel is fixed height, flexible width.</strong> It fills whatever space is left beside the copy, so a very wide monitor widens the picture rather than deepening the banner. Set one focal point per image and the crop follows it at every breakpoint.</li>
-      <li><span class="mk">3</span><strong>Dots are clickable, not just indicators.</strong> Three featured stories rotate here; making them selectable means someone who spots a story part-way through can get back to it. Auto-rotation should pause on hover and stop entirely once a visitor interacts.</li>
-      <li><span class="mk">4</span><strong>The featured items module exactly as signed off in Feature 01.</strong> Shown here in place so you can see the two working together — same cards, same 16:9 crop, same carousel controls.</li>
-      <li><strong>Above the fold on a standard laptop:</strong> the proposition, both calls to action, one featured story and the first row of featured items down to the summary line. Roughly 480px recovered against the current banner.</li>
-      <li><strong>On mobile</strong> the two halves stack — copy first, then the image with the story card beneath it rather than overlaid, since an overlay at that width leaves too little room for either.</li>
+      <li><span class="mk">1</span><strong>The left-hand side is static.</strong> The proposition, both calls to action and the plain background never move or rotate — only the panel to the right does. Nothing sits over the photography either, so contrast is reliable at any screen size, and this is what removes the overlap with the navigation you flagged: the image now starts below the tab row rather than running underneath it.</li>
+      <li><span class="mk">2</span><strong>The right-hand panel slides on its own, at a regular interval.</strong> Try it — it moves to the next story automatically every few seconds. Hovering over the panel pauses it, and moving away starts it again, so it never rotates away from a story someone is in the middle of reading.</li>
+      <li><span class="mk">3</span><strong>The dots are clickable, not just indicators.</strong> Click one to jump straight to that story — the panel slides directly there rather than stepping through the ones in between, and the automatic rotation restarts from that point. The title area holds a fixed two-line height in every panel, so the dots sit in exactly the same spot regardless of how long a given headline runs.</li>
+      <li><span class="mk">4</span><strong>Latest thoughts is left exactly as designed in Feature 01</strong> — the plain uniform carousel, unchanged. It sits here only so you can see it in place beneath the banner; nothing about it has been altered for this page.</li>
+      <li><strong>Above the fold on a standard laptop:</strong> the proposition, both calls to action, one rotating story and the first row of the Latest thoughts carousel down to the summary line. Roughly 480px recovered against the current banner.</li>
+      <li><strong>On mobile</strong> the two halves of the banner stack — copy first, then the sliding panel beneath it rather than side by side, since the dots and text need the full width to stay legible at that size.</li>
+    </ul>
+  </div>
+
+  <div class="anno">
+    <p style="margin:0 0 6px"><strong>Notes from the session with developers</strong></p>
+    <ul style="margin:0">
+      <li>Re-use the existing BO manual curation for the rotating stories, rather than a new content type.</li>
+      <li>The static left-hand side is built from four BO properties.</li>
+      <li>Titles and descriptions pulled into the rotating panel are truncated at render.</li>
     </ul>
   </div>
 </section>

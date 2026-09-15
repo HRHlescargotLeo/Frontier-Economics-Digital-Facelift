@@ -359,8 +359,8 @@ body.anno-off .anno,body.anno-off .mk-in{display:none}
   <p class="eyebrow">Feature 05 &middot; Final direction</p>
   <h1>Accordion</h1>
   <div class="brief">
-    <p><strong>What changed:</strong> Idea 2 — index left, content right — kept as the direction, with the word-count control you raised built in rather than left as guidance.</p>
-    <p class="src">This pattern makes a length limit easy to justify: every panel occupies the same fixed frame beside the index, so overlong copy is visible immediately as an outlier rather than quietly pushing the page longer. Panels stay a consistent depth and the page never jumps as you move between sections.</p>
+    <p><strong>What changed:</strong> Idea 2 — index left, content right — kept as the direction.</p>
+    <p class="src">Every panel occupies the same fixed frame beside the index, so the layout stays even as you move between sections and the page never jumps.</p>
   </div>
 </div>
 
@@ -417,11 +417,20 @@ body.anno-off .anno,body.anno-off .mk-in{display:none}
 
   <div class="anno">
     <ul style="margin-top:0">
-      <li><span class="mk">1</span><strong>An opening line, then the detail.</strong> Each panel now leads with one sentence at a larger size. It gives the reader the point before they commit to the paragraph, and it gives editors a clear structure to write into — which makes a word limit far easier to hit.</li>
-      <li><strong>Panels sit within a 60–90 word range.</strong> All four sections here have been trimmed to fit it, using your existing copy. That range keeps every panel roughly one screen deep with no scrolling inside the frame. We'd suggest a hard stop on the title and a soft warning on the body for the first few months — happy to leave the exact mechanism to the CMS team, but flagging the distinction since it changes how a limit behaves for editors.</li>
+      <li><span class="mk">1</span><strong>An opening line, then the detail.</strong> Each panel now leads with one sentence at a larger size, giving the reader the point before they commit to the paragraph — and giving editors a clear structure to write into.</li>
+      <li>All four sections here use your existing copy, trimmed to fit comfortably within the frame, so each panel reads at roughly one screen deep with no scrolling inside it.</li>
       <li>Titles stay visible while reading, and the page height never changes as you switch section — the main irritation with a stacked accordion.</li>
-      <li><strong>On mobile</strong> this collapses to a standard stacked accordion: same content, same order, one build. The word limit matters more there, since a long panel pushes the remaining titles well off screen.</li>
+      <li><strong>On mobile</strong> this collapses to a standard stacked accordion: same content, same order, one build.</li>
       <li>Each section takes a permanent anchor, so it can be linked to directly from elsewhere on the site and opens already selected.</li>
+    </ul>
+  </div>
+
+  <div class="anno">
+    <p style="margin:0 0 6px"><strong>Notes from the session with developers</strong></p>
+    <ul style="margin:0">
+      <li>Built from existing BO properties — no new fields required.</li>
+      <li>Body content is rich text, not plain text.</li>
+      <li>The call-to-action button uses the existing style picker.</li>
     </ul>
   </div>
 </section>

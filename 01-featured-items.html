@@ -346,7 +346,7 @@ body.anno-off .anno,body.anno-off .mk-in{display:none}
   <p class="eyebrow">Feature 01 &middot; Final direction</p>
   <h1>Featured items module</h1>
   <div class="brief">
-    <p><strong>What changed:</strong> Idea 1’s uniform card carousel, now with an image in every card. The summary stays exactly as it was — it was doing the work the client valued, so it keeps its place and its three-line limit.</p>
+    <p><strong>What changed:</strong> Idea 1’s uniform card carousel, now with an image in every card. The summary stays exactly as it was — it was doing the work the client valued, so it keeps its place, clamped to three lines as before.</p>
     <p class="src">The image sits above the tag and title so the card reads top to bottom: picture, context, headline, summary, action. Every image uses the same 16:9 crop, which is what stops the module drifting back into the inconsistency it had before.</p>
   </div>
 </div>
@@ -450,9 +450,18 @@ body.anno-off .anno,body.anno-off .mk-in{display:none}
 
   <div class="anno">
     <ul style="margin-top:0">
-      <li><span class="mk">1</span><strong>One crop, enforced by the template.</strong> Every image is 16:9 and rendered at the same width. Editors upload at any size; the CMS crops to a focal point they set once. This is the mechanism that keeps the module consistent — not editorial discipline.</li>
+      <li><span class="mk">1</span><strong>One crop, enforced by the template.</strong> Every image is 16:9 and rendered at the same width. Editors upload at any size; the crop is set to a focal point once, which is what keeps the module consistent rather than editorial discipline.</li>
       <li><span class="mk">2</span><strong>A designed fallback for missing artwork.</strong> Where no image exists, the card shows a plain category block at the identical ratio rather than collapsing. The row stays level, so one item without a picture cannot break the module. <em>In the live design this would be a Frontier brand colour keyed to the category.</em></li>
       <li>Cards keep their fixed field set: image, category, date, title (2 lines), summary (3 lines), link. Nothing is optional, so no card can look half-finished.</li>
+    </ul>
+  </div>
+
+  <div class="anno">
+    <p style="margin:0 0 6px"><strong>Notes from the session with developers</strong></p>
+    <ul style="margin:0">
+      <li>Re-use the existing BO aggregator — this is not a new build.</li>
+      <li>No additional document types beyond what the aggregator already supports (case studies, for example, are out of scope).</li>
+      <li>Titles and descriptions pulled into the card are truncated at render, not hand-trimmed by editors.</li>
     </ul>
   </div>
 </section>

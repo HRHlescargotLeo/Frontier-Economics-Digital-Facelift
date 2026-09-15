@@ -397,8 +397,18 @@ body.anno-off .anno,body.anno-off .mk-in{display:none}
   <div class="anno">
     <ul style="margin-top:0">
       <li><strong>No gutters.</strong> Tiles butt against each other so the block reads as one band. That is what makes the module feel deliberate at any item count, rather than like cards that happen to be sitting near each other.</li>
-      <li><strong>Suggested limits:</strong> title <strong>55 characters</strong>, body <strong>110 characters</strong>. Every tile then holds two lines of title and two of body, and the row stays level without clamping.</li>
+      <li><strong>Title and body both clamp</strong> to two lines each, so the row stays level whatever length of copy an editor writes.</li>
       <li>Shown in greys. In the live design these use the Frontier palette — see the tone sequence below.</li>
+    </ul>
+  </div>
+
+  <div class="anno">
+    <p style="margin:0 0 6px"><strong>Notes from the session with developers</strong></p>
+    <ul style="margin:0">
+      <li>This is a new BO item — it is not built from an existing content type.</li>
+      <li>Background colour is set from a theme picker drawing on the brand palette; no selection made defaults to a fallback colour (still to be confirmed).</li>
+      <li>The chosen theme dictates the text colour, so contrast stays accessible without the editor having to set it separately.</li>
+      <li>The icon is selected by the editor in the CMS — it is not inferred automatically from the content.</li>
     </ul>
   </div>
 </section>

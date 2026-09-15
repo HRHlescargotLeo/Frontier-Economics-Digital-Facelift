@@ -364,7 +364,7 @@ body.anno-off .anno,body.anno-off .mk-in{display:none}
     </a>
     <a class="nav-card" href="02-banner.html">
       <span class="n">Feature 02</span><strong>Home page banner</strong>
-      <span class="small muted">Idea 1 refined: banner sits below the navigation, fixed at 330px, with selectable featured stories.</span>
+      <span class="small muted">Idea 1 refined: banner sits below the navigation, fixed at 330px, with the right-hand panel auto-rotating and navigable by the dots.</span>
     </a>
     <a class="nav-card" href="03-people-directory.html">
       <span class="n">Feature 03</span><strong>People directory</strong>
@@ -376,7 +376,7 @@ body.anno-off .anno,body.anno-off .mk-in{display:none}
     </a>
     <a class="nav-card" href="05-accordion.html">
       <span class="n">Feature 05</span><strong>Accordion</strong>
-      <span class="small muted">Idea 2’s index-left layout, structured to make a word-count limit realistic on every panel.</span>
+      <span class="small muted">Idea 2’s index-left layout, giving every panel a consistent, even depth.</span>
     </a>
     <a class="nav-card" href="06-image-and-text.html">
       <span class="n">Feature 06</span><strong>Image and text</strong>
@@ -394,7 +394,7 @@ body.anno-off .anno,body.anno-off .mk-in{display:none}
         <dd>Image added above the tag and title so the card reads picture &rarr; context &rarr; headline &rarr; summary. The summary keeps its three-line limit unchanged — it was doing the work you valued. A single 16:9 crop is what holds the module together; items without artwork get a category block at the same ratio rather than a gap.</dd>
 
         <dt>Banner</dt>
-        <dd>Kept as drawn. The overlap you flagged is resolved by the banner starting below the navigation rather than behind it, and the height is fixed in pixels so a larger monitor reveals more content instead of a bigger image.</dd>
+        <dd>Kept as drawn. The overlap you flagged is resolved by the banner starting below the navigation rather than behind it, and the height is fixed in pixels so a larger monitor reveals more content instead of a bigger image. The left-hand side is static; the right-hand panel now rotates through its stories automatically and can be jumped to directly using the dots.</dd>
 
         <dt>People directory</dt>
         <dd>Search sits above the grid and returns expertise as well as names; selecting an expertise result applies it as a filter rather than leaving the page, so search and filters stay one system. The rail, count, chips and first-person cards are unchanged.</dd>
@@ -403,7 +403,7 @@ body.anno-off .anno,body.anno-off .mk-in{display:none}
         <dd>Kept as drawn. Added type filters that appear only for people with six or more items, and drew the no-content fallback on the same template so it is a designed state rather than an assumption.</dd>
 
         <dt>Accordion</dt>
-        <dd>Kept as drawn. Each panel opens with a single larger sentence, which gives editors a structure to write into and makes a 90-word limit realistic — all four sections fit it using your existing copy. Enforcing the limit itself is a CMS decision, so we've left that to your existing editor tooling and your developers' judgement, and noted our suggestion (hard stop on the title, soft warning on the body) as an open question below.</dd>
+        <dd>Kept as drawn. Each panel opens with a single larger sentence, which gives editors a structure to write into, and the fixed frame beside the index keeps every section a consistent, even depth.</dd>
 
         <dt>Image and text</dt>
         <dd>Kept as drawn, photography removed. Tone alternates by position so editors never pick colours, and variants for two, three and four items come from the same component.</dd>
@@ -416,10 +416,8 @@ body.anno-off .anno,body.anno-off .mk-in{display:none}
   <div class="idea__head"><span class="idea__num">Next</span><h2>Open questions for Frontier</h2></div>
   <div class="anno">
     <div class="open-q"><strong>The one-line person summary.</strong> Used on both the directory card and the profile. 423 people is a lot of copy — is it written for everyone, for senior staff only, or gradually? The card falls back to sector tags where it is missing, so a phased rollout works.</div>
-    <div class="open-q"><strong>Hard or soft word limits.</strong> Our suggestion is hard on titles, soft on body copy for the first few months. Worth a decision before build, since it changes how the CMS behaves.</div>
     <div class="open-q"><strong>The icon set.</strong> The image-and-text tiles need roughly a dozen icons drawn as one family. Does an existing set exist that we should extend, or is this new work?</div>
     <div class="open-q"><strong>Author tagging.</strong> The profile aggregator is only as good as the tagging behind it. Worth auditing how consistently content is currently tagged to people before we rely on it.</div>
-    <div class="open-q"><strong>Character limits against real content.</strong> Suggested limits are on each page. Testing them against your longest existing headlines before sign-off will save changing them later.</div>
   </div>
 </section>
 
